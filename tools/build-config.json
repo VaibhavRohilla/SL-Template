@@ -1,0 +1,56 @@
+{
+  "buildEntry": "src/main.ts",
+  "buildOutput": "dist",
+  "viewJsonMerge": [],
+  "copier": [
+    {
+      "source": "assets",
+      "output": "dist/assets"
+    },
+    {
+      "source": "public",
+      "output": "dist"
+    }
+  ],
+  "assetList": {
+    "files": [
+      {
+        "source": [
+          "assets/boot"
+        ],
+        "output": "assets/manifest.json",
+        "bundle": "boot"
+      },
+      {
+        "source": [
+          "assets/main"
+        ],
+        "output": "assets/manifest.json",
+        "bundle": "main"
+      }
+    ],
+    "filePathPrefixToTrim": "assets/"
+  },
+  "audio": {
+    "source": [
+      "assets/audio/raw",
+      "assets/audio/sfx"
+    ],
+    "output": "assets/audio/sprites",
+    "spriteName": "sfx_sprite",
+    "pathToAppendInAudioSprite": "audio/sprites"
+  },
+  "assetAliases": {},
+  "assetGroups": {
+    "textures": {
+      "common": ["cell", "red_cell", "green_star", "yellow_star"],
+      "gameTable": ["GameTable"],
+      "bonus": ["bonus"],
+      "ui": ["ui"]
+    },
+    "audio": {
+      "sfx": ["sfx_sprite"],
+      "music": []
+    }
+  }
+}
