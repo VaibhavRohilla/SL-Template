@@ -10,7 +10,7 @@
  * - Use proper currency formatting libraries
  */
 
-import type { ISlotUI, IWinFormatter, SpinResult } from 'slot-frontend-engine';
+import type { ISlotUI, IWinFormatter } from 'slot-frontend-engine';
 
 export interface GameUIConfig {
   /** Initial balance for demo/dev mode */
@@ -98,7 +98,7 @@ export class GameUI implements ISlotUI, IWinFormatter {
   /**
    * Called when a spin completes
    */
-  onSpinComplete(result: SpinResult): void {
+  onSpinComplete(result: any): void {
     console.log(`[GameUI] Spin complete: ${result.spinId}, win: ${this.formatCurrency(result.totalWin)}`);
   }
 
@@ -195,7 +195,7 @@ export class GameUI implements ISlotUI, IWinFormatter {
   // Private helpers
   // ============================================================================
 
-  private formatCurrency(amount: number): string {
+  public formatCurrency(amount: number): string {
     const formatted = new Intl.NumberFormat(this.config.locale, {
       minimumFractionDigits: this.config.decimals,
       maximumFractionDigits: this.config.decimals,

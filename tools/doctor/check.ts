@@ -17,9 +17,6 @@ import {
   ProjectConfig,
   ToolConfig,
   OutputConfig,
-  BundleConfig,
-  AudioSpriteConfig,
-  getAssetPath,
 } from '../config.js';
 
 interface CheckResult {

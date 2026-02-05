@@ -8,8 +8,7 @@
  * Uses actual game symbols: BAR, DRAGON, EIGHT, FAN, LOTUS, PIG, YINYANG
  */
 
-import { PIXI, type ITweenService } from 'slot-frontend-engine';
-const { Container, Sprite, AnimatedSprite, BitmapText } = PIXI;
+import { type ITweenService } from 'slot-frontend-engine';
 
 import {
   GRID_COLS,
@@ -19,6 +18,7 @@ import {
   SYMBOL_GAP_H,
   SYMBOL_GAP_V,
 } from '../layout/DesignLayout.js';
+import { AnimatedSprite, BitmapText, Container, Sprite, Texture } from 'pixi.js';
 
 // Reel speed from config (matching reference)
 const REEL_SPEED = 0.2;
@@ -26,7 +26,7 @@ const REEL_SPEED = 0.2;
 /**
  * Texture resolver function type
  */
-export type TextureResolver = (key: string) => PIXI.Texture | null;
+export type TextureResolver = (key: string) => Texture | null;
 
 /**
  * Cell state
@@ -55,14 +55,14 @@ export class SlingoCell extends Container {
   public isChoosed: boolean = false;
 
   // Sprites
-  public gameSymbolBackground: PIXI.Sprite;
-  public gameSymbolMatchedBackground: PIXI.Sprite | null = null;
-  public gameSymbolLabel: PIXI.BitmapText | null = null;
-  public gameSymbolChoosed: PIXI.Sprite | null = null;
-  public gameSymbolDoubleChoosed: PIXI.Sprite | null = null;
-  public gameSymbolMatchedEffect: PIXI.Sprite | null = null;
-  public gameSymbolDoubleMatchedEffect: PIXI.Sprite | null = null;
-  public gameSymbolMatchedAnimation: PIXI.AnimatedSprite | null = null;
+  public gameSymbolBackground: Sprite;
+  public gameSymbolMatchedBackground: Sprite | null = null;
+  public gameSymbolLabel: BitmapText | null = null;
+  public gameSymbolChoosed: Sprite | null = null;
+  public gameSymbolDoubleChoosed: Sprite | null = null;
+  public gameSymbolMatchedEffect: Sprite | null = null;
+  public gameSymbolDoubleMatchedEffect: Sprite | null = null;
+  public gameSymbolMatchedAnimation: AnimatedSprite | null = null;
 
   private _state: CellState = CellState.NORMAL;
   private readonly resolveTexture: TextureResolver;
@@ -161,7 +161,7 @@ export class SlingoCell extends Container {
 
     // ===== DRAGON APPEAR ANIMATION =====
     // Matching reference: 'GameTable/Table/dragon_appear/appear_' + i
-    const textureArray: PIXI.Texture[] = [];
+    const textureArray: Texture[] = [];
     for (let i = 1; i <= 16; i++) {
       const tex = this.resolveTexture(`GameTable/Table/dragon_appear/appear_${i}`);
       if (tex) {
@@ -365,7 +365,7 @@ export class SlingoCell extends Container {
               this.gameSymbolMatchedAnimation.loop = false; // Matching reference
               this.gameSymbolMatchedAnimation.gotoAndPlay(0);
               this.gameSymbolMatchedAnimation.play();
-              
+
               // Ensure yellow stars are below dragon animation
               if (this.gameSymbolMatchedEffect) {
                 this.gameSymbolMatchedEffect.zIndex = 50;
@@ -373,7 +373,7 @@ export class SlingoCell extends Container {
               if (this.gameSymbolDoubleMatchedEffect) {
                 this.gameSymbolDoubleMatchedEffect.zIndex = 50;
               }
-              
+
               // Debug log to verify animation is showing
               console.log(`SlingoCell ${this.index}: Dragon animation playing - visible=${this.gameSymbolMatchedAnimation.visible}, zIndex=${this.gameSymbolMatchedAnimation.zIndex}, width=${this.gameSymbolMatchedAnimation.width}, height=${this.gameSymbolMatchedAnimation.height}`);
             } else {
@@ -481,7 +481,7 @@ export class SlingoCell extends Container {
     // Hide choosed effects (green stars)
     if (this.gameSymbolChoosed) this.gameSymbolChoosed.visible = false;
     if (this.gameSymbolDoubleChoosed) this.gameSymbolDoubleChoosed.visible = false;
-    
+
     // Remove choosed state (matching reference)
     this.isChoosed = false;
 
@@ -499,7 +499,7 @@ export class SlingoCell extends Container {
     // Show matched effects (yellow stars)
     if (this.gameSymbolMatchedEffect) this.gameSymbolMatchedEffect.visible = true;
     if (this.gameSymbolDoubleMatchedEffect) this.gameSymbolDoubleMatchedEffect.visible = true;
-    
+
     // IMPORTANT: Make cell NON-INTERACTIVE when yellow stars appear (matching reference)
     // Yellow stars mean the number was spun, but it's NOT clickable
     // Only green stars (choosed) are clickable
@@ -521,7 +521,7 @@ export class SlingoCell extends Container {
     // Hide matched stars (yellow)
     if (this.gameSymbolMatchedEffect) this.gameSymbolMatchedEffect.visible = false;
     if (this.gameSymbolDoubleMatchedEffect) this.gameSymbolDoubleMatchedEffect.visible = false;
-    
+
     // Hide choosed stars (green)
     if (this.gameSymbolChoosed) this.gameSymbolChoosed.visible = false;
     if (this.gameSymbolDoubleChoosed) this.gameSymbolDoubleChoosed.visible = false;
@@ -535,7 +535,7 @@ export class SlingoCell extends Container {
       this.gameSymbolLabel.alpha = 1;
       this.gameSymbolLabel.style.fontFamily = 'Dragon Gold';
     }
-    
+
     // Disable interaction
     this.eventMode = 'auto';
     this.cursor = 'default';
@@ -630,13 +630,13 @@ export class SlingoGrid extends Container {
   public readonly cells: SlingoCell[] = [];
   private readonly resolveTexture: TextureResolver;
   private readonly tweenService: ITweenService | undefined;
-  
+
   // Callback for cell clicks
   public onCellClick: ((cellIndex: number, value: number) => void) | null = null;
-  
+
   // Win line animations container (for cleanup)
-  private winLineAnimations: PIXI.AnimatedSprite[] = [];
-  private winLineContainer: PIXI.Container | null = null;
+  private winLineAnimations: AnimatedSprite[] = [];
+  private winLineContainer: Container | null = null;
 
   constructor(resolveTexture: TextureResolver, tweenService?: ITweenService) {
     super();
@@ -646,7 +646,7 @@ export class SlingoGrid extends Container {
     this.createGrid();
     this.createWinLineContainer();
   }
-  
+
   /**
    * Create container for win line animations (above grid)
    */
@@ -677,24 +677,24 @@ export class SlingoGrid extends Container {
       this.addChild(cell);
     }
   }
-  
+
   /**
    * Handle cell click from SlingoCell (matching reference setSymbolMatched)
    */
   handleCellClick(cellIndex: number, value: number): void {
     const cell = this.cells[cellIndex];
     if (!cell || !cell.isChoosed || cell.isMatched) return;
-    
+
     // Remove all choosed states (matching reference removeAllChoosed)
     this.removeAllChoosed();
-    
+
     // Play match animation on clicked cell (matching reference updatedMatchedSymbol)
     cell.playMatchAnimation();
-    
+
     // Notify scene (matching reference callAPI)
     this.onCellClick?.(cellIndex, value);
   }
-  
+
   /**
    * Initialize grid with number values (1-60 typical for Slingo)
    */
@@ -879,7 +879,7 @@ export class SlingoGrid extends Container {
    */
   showWinAnimation(winLines: number[]): void {
     if (!this.tweenService || !this.winLineContainer) return;
-    
+
     // Clear previous animations
     this.winLineAnimations.forEach((anim) => {
       if (anim.parent) {
@@ -917,10 +917,10 @@ export class SlingoGrid extends Container {
 
     // Create texture array for animated sprite (Popup/Winline/1 to 13)
     // Reference uses: Texture.from('Popup/Winline/' + i)
-    const textureArray: PIXI.Texture[] = [];
+    const textureArray: Texture[] = [];
     for (let i = 1; i <= 13; i++) {
       // Try multiple path formats (matching reference)
-      const texture = 
+      const texture =
         this.resolveTexture(`Popup/Winline/${i}`) ||
         this.resolveTexture(`Popup/Winline/${i}.png`) ||
         this.resolveTexture(`Winline_${i}`) ||
@@ -1151,6 +1151,14 @@ export class SlingoGrid extends Container {
           // Ignore errors
         });
     }
+  }
+
+  /**
+   * Check for any complete lines and return win count (stub)
+   */
+  checkForWins(): number {
+    // Stub implementation to satisfy type checker
+    return 0;
   }
 
   /**

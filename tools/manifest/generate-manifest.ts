@@ -48,7 +48,7 @@ interface Manifest {
 function createAssetEntry(relativePath: string, filename: string): AssetEntry | null {
   const ext = path.extname(filename).toLowerCase();
   const url = relativePath.replace(/\\/g, '/');
-  
+
   // Generate key from full relative path (without bundle prefix and extension)
   // Preserves the full directory structure and filename
   // Examples:
@@ -71,26 +71,26 @@ function createAssetEntry(relativePath: string, filename: string): AssetEntry | 
   const textureExts = AssetTypeConfig.extensionMap.texture;
   const audioExts = AssetTypeConfig.extensionMap.audio;
   const fontExts = AssetTypeConfig.extensionMap.font;
-  
+
   if (textureExts.includes(ext as typeof textureExts[number])) {
     return { key, type: 'texture', url };
   }
-  
+
   if (ext === '.json') {
     // Check patterns in priority order (from config)
     const spritesheetPatterns = AssetTypeConfig.filenamePatterns.spritesheet;
     const spinePatterns = AssetTypeConfig.filenamePatterns.spine;
     const audioSpritePatterns = AssetTypeConfig.filenamePatterns.audioSprite;
-    
+
     if (spritesheetPatterns.some(pattern => filename.includes(pattern))) {
       return { key, type: 'spritesheet', url };
     }
-    
+
     if (spinePatterns.some(pattern => filename.includes(pattern) || filename.endsWith(pattern))) {
       const atlasPath = url.replace('.json', '.atlas');
       return { key, type: 'spine', url, urls: { atlas: atlasPath } };
     }
-    
+
     if (audioSpritePatterns.some(pattern => filename.includes(pattern))) {
       // Audio sprite JSON - use 'json' type since engine may not support 'audioSprite' yet
       const basePath = url.replace(/\/[^/]+\.json$/, '');
@@ -105,14 +105,14 @@ function createAssetEntry(relativePath: string, filename: string): AssetEntry | 
         },
       };
     }
-    
+
     return { key, type: 'json', url };
   }
-  
+
   if (audioExts.includes(ext as typeof audioExts[number])) {
     return { key, type: 'audio', url };
   }
-  
+
   if (fontExts.includes(ext as typeof fontExts[number])) {
     return { key, type: 'font', url };
   }
@@ -157,17 +157,17 @@ function scanDirectory(dir: string, basePath: string = ''): AssetEntry[] {
 function normalizeAssetKey(key: string): string {
   // Apply case normalizations from config
   let normalized = key;
-  
+
   for (const [from, to] of Object.entries(KeyNormalizationConfig.caseNormalizations)) {
     // Case-insensitive replace for folder name mismatches
     const regex = new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
     normalized = normalized.replace(regex, to);
   }
-  
+
   // Apply build config aliases
   const aliases = BuildConfig.assetAliases || {};
   normalized = aliases[normalized] || normalized;
-  
+
   return normalized;
 }
 
@@ -262,10 +262,10 @@ function generateAssetTypes(manifest: Manifest): string {
   // Load audio sprite timing data (from config)
   const audioSpriteDir = getAssetPath(AudioSpriteConfig.outputDir);
   const audioSpriteData: Record<string, { sprite: Record<string, [number, number]>; src: string[] }> = {};
-  
+
   const audioSpriteKeys = assetKeysByType.audioSprite || [];
   const spriteName = AudioSpriteConfig.spriteName;
-  
+
   for (const spriteKey of audioSpriteKeys) {
     // Try to find the sprite JSON file (using config sprite name)
     const possibleNames = [
@@ -273,7 +273,7 @@ function generateAssetTypes(manifest: Manifest): string {
       `${spriteName}.json`,
       `${spriteKey}_sprite.json`,
     ];
-    
+
     for (const fileName of possibleNames) {
       const spritePath = path.join(audioSpriteDir, fileName);
       const data = loadAudioSpriteData(spritePath);
@@ -286,7 +286,7 @@ function generateAssetTypes(manifest: Manifest): string {
 
   // Load build config for suggestions (used for future enhancements)
   // const buildConfig = getBuildConfig();
-  
+
   // Generate TypeScript definitions with enhanced autocomplete
   const lines: string[] = [
     '/**',
@@ -308,10 +308,10 @@ function generateAssetTypes(manifest: Manifest): string {
     ' * @example',
     ...(assetKeysByType.texture && assetKeysByType.texture.length > 0
       ? [
-          ' * // Common textures:',
-          ...assetKeysByType.texture.slice(0, 5).map(k => ` * // - '${k}'`),
-          assetKeysByType.texture.length > 5 ? ` * // ... and ${assetKeysByType.texture.length - 5} more` : '',
-        ].filter(Boolean)
+        ' * // Common textures:',
+        ...assetKeysByType.texture.slice(0, 5).map(k => ` * // - '${k}'`),
+        assetKeysByType.texture.length > 5 ? ` * // ... and ${assetKeysByType.texture.length - 5} more` : '',
+      ].filter(Boolean)
       : [' * // No texture assets found']),
     ' */',
     `export type TextureAssetKey = ${(assetKeysByType.texture?.length ?? 0) > 0 ? assetKeysByType.texture!.map(k => `'${k}'`).join(' | ') : 'never'};`,
@@ -341,17 +341,17 @@ function generateAssetTypes(manifest: Manifest): string {
     ' */',
     ...(Object.keys(audioSpriteData).length > 0
       ? (() => {
-          const allSpriteKeys = new Set<string>();
-          for (const data of Object.values(audioSpriteData)) {
-            for (const key of Object.keys(data.sprite)) {
-              allSpriteKeys.add(key);
-            }
+        const allSpriteKeys = new Set<string>();
+        for (const data of Object.values(audioSpriteData)) {
+          for (const key of Object.keys(data.sprite)) {
+            allSpriteKeys.add(key);
           }
-          const sortedKeys = [...allSpriteKeys].sort();
-          return [
-            `export type AudioSpriteClipKey = ${sortedKeys.length > 0 ? sortedKeys.map(k => `'${k}'`).join(' | ') : 'never'};`,
-          ];
-        })()
+        }
+        const sortedKeys = [...allSpriteKeys].sort();
+        return [
+          `export type AudioSpriteClipKey = ${sortedKeys.length > 0 ? sortedKeys.map(k => `'${k}'`).join(' | ') : 'never'};`,
+        ];
+      })()
       : ['export type AudioSpriteClipKey = never;']),
     '',
     '/**',
@@ -428,39 +428,39 @@ function generateAssetTypes(manifest: Manifest): string {
     ' */',
     ...(Object.keys(audioSpriteData).length > 0
       ? [
-          'export const AudioSpriteTimings = {',
-          ...Object.entries(audioSpriteData).map(([spriteKey, data]) => {
-            const spriteEntries = Object.entries(data.sprite)
-              .sort(([a], [b]) => a.localeCompare(b))
-              .map(([clipKey, [start, duration]]) => {
-                return `    '${clipKey}': { start: ${start}, duration: ${duration} } as const,`;
-              });
-            return [
-              `  '${spriteKey}': {`,
-              ...spriteEntries,
-              '  } as const,',
-            ];
-          }).flat(),
-          '} as const;',
-          '',
-          '/**',
-          ' * Get timing information for an audio sprite clip',
-          ' * @param spriteKey - The audio sprite asset key',
-          ' * @param clipKey - The clip key within the sprite',
-          ' * @returns Timing information or undefined if not found',
-          ' */',
-          "export function getAudioSpriteTiming(spriteKey: AudioSpriteAssetKey, clipKey: AudioSpriteClipKey): AudioSpriteClip | undefined {",
-          "  const sprite = AudioSpriteTimings[spriteKey];",
-          "  return sprite?.[clipKey as keyof typeof sprite] as AudioSpriteClip | undefined;",
-          '}',
-        ]
+        'export const AudioSpriteTimings = {',
+        ...Object.entries(audioSpriteData).map(([spriteKey, data]) => {
+          const spriteEntries = Object.entries(data.sprite)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([clipKey, [start, duration]]) => {
+              return `    '${clipKey}': { start: ${start}, duration: ${duration} } as const,`;
+            });
+          return [
+            `  '${spriteKey}': {`,
+            ...spriteEntries,
+            '  } as const,',
+          ];
+        }).flat(),
+        '} as const;',
+        '',
+        '/**',
+        ' * Get timing information for an audio sprite clip',
+        ' * @param spriteKey - The audio sprite asset key',
+        ' * @param clipKey - The clip key within the sprite',
+        ' * @returns Timing information or undefined if not found',
+        ' */',
+        "export function getAudioSpriteTiming(spriteKey: AudioSpriteAssetKey, clipKey: AudioSpriteClipKey): AudioSpriteClip | undefined {",
+        "  const sprite = AudioSpriteTimings[spriteKey];",
+        "  return sprite?.[clipKey as keyof typeof sprite] as AudioSpriteClip | undefined;",
+        '}',
+      ]
       : [
-          'export const AudioSpriteTimings = {} as const;',
-          '',
-          "export function getAudioSpriteTiming(spriteKey: AudioSpriteAssetKey, clipKey: AudioSpriteClipKey): AudioSpriteClip | undefined {",
-          '  return undefined;',
-          '}',
-        ]),
+        'export const AudioSpriteTimings = {} as const;',
+        '',
+        "export function getAudioSpriteTiming(spriteKey: AudioSpriteAssetKey, clipKey: AudioSpriteClipKey): AudioSpriteClip | undefined {",
+        '  return undefined;',
+        '}',
+      ]),
     '',
     '/**',
     ' * Type-safe asset key getters by type',
@@ -607,11 +607,11 @@ function main(): void {
 
     const assetsRaw = scanDirectory(bundleDir.path, bundleDir.name);
     bundleAssetsRaw[bundleDir.name] = assetsRaw;
-    
+
     // Deduplicate assets
     const dedup = deduplicateAssets(assetsRaw);
     bundleAssets[bundleDir.name] = dedup.assets;
-    
+
     // Report duplicates
     if (dedup.duplicates.length > 0) {
       console.log(`\n⚠️  Found ${dedup.duplicates.length} duplicate asset key(s) in ${bundleDir.name} bundle:`);
@@ -623,14 +623,14 @@ function main(): void {
       }
     }
   }
-  
+
   // Scan audio sprites directory (JSON + audio files)
   const audioSpriteDir = getAssetPath(AudioSpriteConfig.outputDir);
   const audioAssetsRaw = scanDirectory(audioSpriteDir, AudioSpriteConfig.outputDir);
-  
+
   // Filter out individual audio files from sprites directory (they're part of the sprite)
   // Only keep the JSON file and let it reference the audio files via urls
-  const audioSpriteAssetsRaw = audioAssetsRaw.filter(asset => 
+  const audioSpriteAssetsRaw = audioAssetsRaw.filter(asset =>
     asset.type === 'audioSprite' || asset.type === 'json'
   );
 
@@ -679,14 +679,14 @@ function main(): void {
   const assetTypesContent = generateAssetTypes(manifest);
   fs.writeFileSync(OutputConfig.assetTypesFullPath, assetTypesContent);
   console.log(`✅ Asset types written to: ${OutputConfig.assetTypesFullPath}`);
-  
+
   // Summary
   const totalAssets = manifest.bundles.reduce((sum, b) => sum + b.assets.length, 0);
   const assetsByType = manifest.bundles.flatMap(b => b.assets).reduce((acc, asset) => {
     acc[asset.type] = (acc[asset.type] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
-  
+
   console.log(`\n📊 Summary:`);
   console.log(`   Total assets: ${totalAssets}`);
   for (const [type, count] of Object.entries(assetsByType).sort()) {

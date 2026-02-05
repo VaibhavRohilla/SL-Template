@@ -7,7 +7,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { ProjectConfig, OutputConfig } from './config.js';
+import { ProjectConfig } from './config.js';
 
 interface AssetSuggestion {
   key: string;
@@ -32,7 +32,7 @@ const suggestionsPath = path.join(ProjectConfig.rootDir, 'tools', 'asset-suggest
 /**
  * Analyze asset key to extract category and patterns
  */
-function analyzeAssetKey(key: string, bundle: string): {
+function analyzeAssetKey(key: string, _bundle: string): {
   category: string;
   tags: string[];
   related: string[];
@@ -55,8 +55,8 @@ function analyzeAssetKey(key: string, bundle: string): {
   // Find related assets (same directory, sequential numbers, etc.)
   const basePath = parts.slice(0, -1).join('/');
   const filename = parts[parts.length - 1];
-  const baseName = filename.replace(/\d+$/, '').replace(/[_-]\d+$/, '');
-  
+  const baseName = filename ? filename.replace(/\d+$/, '').replace(/[_-]\d+$/, '') : '';
+
   // Suggest related assets with numbers
   for (let i = 1; i <= 20; i++) {
     const relatedKey = basePath ? `${basePath}/${baseName}${i}` : `${baseName}${i}`;
@@ -81,7 +81,7 @@ export function generateSuggestions(manifest: any): SuggestionsData {
   for (const bundle of manifest.bundles || []) {
     for (const asset of bundle.assets || []) {
       const analysis = analyzeAssetKey(asset.key, bundle.name);
-      
+
       assets[asset.key] = {
         key: asset.key,
         type: asset.type,
@@ -96,14 +96,16 @@ export function generateSuggestions(manifest: any): SuggestionsData {
       if (!categories[analysis.category]) {
         categories[analysis.category] = [];
       }
-      categories[analysis.category].push(asset.key);
+
+
+      categories[analysis.category]!.push(asset.key);
 
       // Find common patterns
       const pattern = asset.key.split('/').slice(0, 2).join('/');
       if (!commonPatterns[pattern]) {
         commonPatterns[pattern] = [];
       }
-      commonPatterns[pattern].push(asset.key);
+      commonPatterns[pattern]!.push(asset.key);
     }
   }
 
@@ -158,7 +160,7 @@ export function getSuggestions(partialKey: string, type?: string): string[] {
 
   for (const [key, asset] of Object.entries(suggestions.assets)) {
     if (type && asset.type !== type) continue;
-    
+
     if (key.toLowerCase().includes(lower)) {
       matches.push(key);
     }

@@ -20,7 +20,12 @@
     "clean": "node scripts/clean.js"
   },
   "dependencies": {
-    "slot-frontend-engine": "file:../SlotFEngine"
+    "slot-frontend-engine": "file:../SlotFEngine/fnx-sl-engine-1.0.0.tgz",
+    "@esotericsoftware/spine-pixi-v8": "^4.2.74",
+    "@tweenjs/tween.js": "^25.0.0",
+    "howler": "^2.2.4",
+    "pixi.js": "^8.6.6",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
@@ -33,4 +38,3 @@
     "node": ">=18.0.0"
   }
 }
-

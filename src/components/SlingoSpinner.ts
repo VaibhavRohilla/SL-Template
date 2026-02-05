@@ -11,8 +11,8 @@
  * Reference: blingo_front/ui/GameScreen/GameTable/GameSpinSymbol.ts
  */
 
-import { PIXI, type ITweenService } from 'slot-frontend-engine';
-const { Container, Graphics, Sprite, AnimatedSprite, BitmapText, Text, TextStyle, BlurFilter } = PIXI;
+import { Container, Graphics, Sprite, AnimatedSprite, BitmapText, Text, TextStyle, BlurFilter, type Texture } from 'pixi.js';
+import { type ITweenService } from 'slot-frontend-engine';
 
 import type { TextureResolver } from './SlingoGrid.js';
 
@@ -67,26 +67,26 @@ export class SlingoReel extends Container {
   public readonly index: number;
 
   // Cell background - always visible
-  private cellSprite: PIXI.Sprite;
-  private matchedBackground: PIXI.Sprite | null = null;
+  private cellSprite: Sprite;
+  private matchedBackground: Sprite | null = null;
 
   // Two reel containers for seamless scrolling
-  private reelA: PIXI.Container;
-  private reelB: PIXI.Container;
+  private reelA: Container;
+  private reelB: Container;
   private isReelAActive = true;
 
   // Mask for clipping
-  private reelMask: PIXI.Graphics;
+  private reelMask: Graphics;
 
   // Match effect sprites
-  private yellowStar: PIXI.Sprite | null = null;
-  private yellowStarDouble: PIXI.Sprite | null = null;
-  private greenStar: PIXI.Sprite | null = null;
-  private greenStarDouble: PIXI.Sprite | null = null;
-  private dragonAnimation: PIXI.AnimatedSprite | null = null;
+  private yellowStar: Sprite | null = null;
+  private yellowStarDouble: Sprite | null = null;
+  private greenStar: Sprite | null = null;
+  private greenStarDouble: Sprite | null = null;
+  private dragonAnimation: AnimatedSprite | null = null;
 
   // Current symbol display
-  private currentSymbol: PIXI.Container | null = null;
+  private currentSymbol: Container | null = null;
 
   // Animation state
   public isSpinning = false;
@@ -182,7 +182,7 @@ export class SlingoReel extends Container {
     }
 
     // ===== DRAGON ANIMATION =====
-    const textureArray: PIXI.Texture[] = [];
+    const textureArray: Texture[] = [];
     for (let i = 1; i <= 16; i++) {
       const tex = resolveTexture(`GameTable/Table/dragon_appear/appear_${i}`);
       if (tex) {
@@ -244,13 +244,13 @@ export class SlingoReel extends Container {
    * Reference shows RANDOM NUMBERS (0-59) during spin, not symbols
    * @param applyBlur - Whether to apply blur filter (only during active spinning)
    */
-  private createRandomSymbol(applyBlur: boolean = false): PIXI.Container {
+  private createRandomSymbol(applyBlur: boolean = false): Container {
     const container = new Container();
 
     // Matching reference: random = Math.floor((Math.random() * 100) % 60)
     // Shows random NUMBERS (0-59) during spin, not symbols
     const random = Math.floor((Math.random() * 100) % 60);
-    
+
     // Create BitmapText for number (matching reference updateSpinSymbol with type='number')
     const text = new BitmapText({
       text: random.toString(),
@@ -264,7 +264,7 @@ export class SlingoReel extends Container {
     text.x = SYMBOL_W / 2;
     text.y = SYMBOL_H / 2;
     container.addChild(text);
-    
+
     // Add blur filter ONLY during active spinning (matching reference)
     // When spinner is stopped/initialized, no blur should be applied
     // Reference uses blur: 15, but reducing slightly for better visibility
@@ -281,7 +281,7 @@ export class SlingoReel extends Container {
    * Create symbol from result (matching reference updateSpinSymbol)
    * Handles: numbers, image sprites (D), and animated sprites (FS, PG, J, RJ, SJ)
    */
-  private createSymbolFromResult(result: SpinnerReelResult): PIXI.Container {
+  private createSymbolFromResult(result: SpinnerReelResult): Container {
     const container = new Container();
     // Ensure container is visible and has no filters initially
     container.visible = true;
@@ -334,8 +334,8 @@ export class SlingoReel extends Container {
         'coin': 'SJ', // Super Joker
       };
       const symbolKey = symbolKeyMap[result.type] ?? result.type.toUpperCase();
-      const textureArray: PIXI.Texture[] = [];
-      
+      const textureArray: Texture[] = [];
+
       for (let i = 1; i <= 16; i++) {
         const textureKey = `GameTable/Spin/${symbolKey}/${symbolKey}_${i}`;
         const texture = this.resolveTexture(textureKey);
@@ -343,7 +343,7 @@ export class SlingoReel extends Container {
           textureArray.push(texture);
         }
       }
-      
+
       if (textureArray.length === 16) {
         const animatedSprite = new AnimatedSprite(textureArray);
         animatedSprite.anchor.set(0, 0); // Use top-left anchor for positioning (matching reference)
@@ -358,7 +358,7 @@ export class SlingoReel extends Container {
         animatedSprite.alpha = 1;
         animatedSprite.play();
         container.addChild(animatedSprite);
-        
+
         // Show green stars for joker symbols (matching reference)
         if (result.type !== 'free_spin' && result.type !== 'super_joker') {
           // J, RJ show green stars
@@ -367,7 +367,7 @@ export class SlingoReel extends Container {
           if (this.yellowStar) this.yellowStar.visible = false;
           if (this.yellowStarDouble) this.yellowStarDouble.visible = false;
         }
-        
+
         console.log(`SlingoReel ${this.index}: Animated symbol created - type=${result.type}, key=${symbolKey}, x=${animatedSprite.x}, y=${animatedSprite.y}, width=${animatedSprite.width}, height=${animatedSprite.height}`);
       } else {
         console.warn(`SlingoReel ${this.index}: Animated symbol textures not found - type=${result.type}, key=${symbolKey}, loaded=${textureArray.length}/16`);
@@ -470,7 +470,7 @@ export class SlingoReel extends Container {
     finalSymbol.y = 0;
     finalSymbol.visible = true; // Ensure symbol is visible
     this.reelA.addChild(finalSymbol);
-    
+
     // Store current symbol for later use
     this.currentSymbol = finalSymbol;
   }
@@ -484,11 +484,11 @@ export class SlingoReel extends Container {
     // Remove any blur filters from the symbol
     if (this.currentSymbol) {
       this.currentSymbol.filters = [];
-      
+
       // Change font to Dragon Deep for matched numbers
       const text = this.currentSymbol.children.find(
         (child) => child instanceof BitmapText,
-      ) as PIXI.BitmapText | undefined;
+      ) as BitmapText | undefined;
       if (text) {
         text.style.fontFamily = 'Dragon Deep';
         text.visible = true; // Ensure text is visible
@@ -556,7 +556,7 @@ export class SlingoReel extends Container {
     if (this.currentSymbol) {
       const text = this.currentSymbol.children.find(
         (child) => child instanceof BitmapText,
-      ) as PIXI.BitmapText | undefined;
+      ) as BitmapText | undefined;
       if (text) {
         text.style.fontFamily = 'Dragon Deep';
         text.visible = true; // Ensure text is visible
@@ -598,7 +598,7 @@ export class SlingoReel extends Container {
               this.dragonAnimation.loop = false; // Matching reference
               this.dragonAnimation.gotoAndPlay(0);
               this.dragonAnimation.play();
-              
+
               // Debug log to verify animation is showing
               console.log(`SlingoReel ${this.index}: Dragon animation playing - visible=${this.dragonAnimation.visible}, zIndex=${this.dragonAnimation.zIndex}, width=${this.dragonAnimation.width}, height=${this.dragonAnimation.height}`);
             } else {
@@ -615,7 +615,7 @@ export class SlingoReel extends Container {
     if (this.currentSymbol) {
       const text = this.currentSymbol.children.find(
         (child) => child instanceof BitmapText,
-      ) as PIXI.BitmapText | undefined;
+      ) as BitmapText | undefined;
       if (text) {
         const textTween = { alpha: text.alpha };
         this.tweenService
@@ -766,7 +766,7 @@ export class SlingoReel extends Container {
         finalSymbol.visible = true; // Ensure symbol is visible
         finalSymbol.alpha = 1; // Ensure fully opaque
         activeReel.addChild(finalSymbol);
-        
+
         // Debug: Log symbol creation
         console.log(`SlingoReel ${this.index}: Final symbol created - type=${this.targetResult.type}, visible=${finalSymbol.visible}, alpha=${finalSymbol.alpha}, children=${finalSymbol.children.length}`);
 

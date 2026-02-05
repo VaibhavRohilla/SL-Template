@@ -31,6 +31,8 @@ export const slotConfig: SlotConfig = {
   gameId: 'dragon-blingos',
   gameName: 'Dragon Blingos',
   version: '1.0.0',
+  evaluationMode: 'lines',
+  reelMechanic: 'classic',
 
   // 5x3 standard layout
   layout: {
@@ -152,6 +154,7 @@ export const slotConfig: SlotConfig = {
 
   // Target RTP (informational only)
   targetRtp: 96.5,
+
 };
 
 export default slotConfig;

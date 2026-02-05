@@ -16,11 +16,10 @@ import {
   BaseScene,
   type ILoadingScene,
   type SceneContext,
-  PIXI,
 } from 'slot-frontend-engine';
 
-const { Container, Graphics, Sprite, Text, TextStyle } = PIXI;
-import { referenceVisualConfig, colors } from '../config/themeConfig.js';
+import { referenceVisualConfig, colors } from '../game/BrandConfig.js';
+import { Sprite, Container, Graphics, TextStyle, Text } from 'pixi.js';
 
 /**
  * Custom Loading Scene with reference project visual parity
@@ -33,28 +32,28 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
   private readonly visualConfig = referenceVisualConfig;
 
   // Split door background
-  private bgLeft: PIXI.Sprite | null = null;
-  private bgRight: PIXI.Sprite | null = null;
+  private bgLeft: Sprite | null = null;
+  private bgRight: Sprite | null = null;
 
   // Logo
-  private logo: PIXI.Sprite | null = null;
+  private logo: Sprite | null = null;
   private logoBaseScale = 1;
 
   // Graphics-based progress bar (no text to avoid canvas fallback bugs)
-  private loaderContainer: PIXI.Container | null = null;
-   progressBarBg: PIXI.Graphics | null = null;
-   progressBarFill: PIXI.Graphics | null = null;
-   readonly progressBarWidth = 400;
-   readonly progressBarHeight = 8;
+  private loaderContainer: Container | null = null;
+  progressBarBg: Graphics | null = null;
+  progressBarFill: Graphics | null = null;
+  readonly progressBarWidth = 400;
+  readonly progressBarHeight = 8;
 
   // State
   private currentProgress = 0;
   private targetProgress = 0;
   private animationTime = 0;
-  private loaderBg: PIXI.Sprite | null = null;
-  private labelWhite: PIXI.Text | null = null;
-  private labelPink: PIXI.Text | null = null;
-  private labelMask: PIXI.Graphics | null = null;
+  private loaderBg: Sprite | null = null;
+  private labelWhite: Text | null = null;
+  private labelPink: Text | null = null;
+  private labelMask: Graphics | null = null;
 
   constructor(ctx: SceneContext) {
     super();
@@ -93,13 +92,13 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
    */
   private hideCssSpinner(): void {
     if (typeof document === 'undefined') return;
-    
+
     const spinners = document.getElementsByClassName('wrapper');
     for (let i = 0; i < spinners.length; i++) {
       const el = spinners[i] as HTMLElement;
       el.style.display = 'none';
     }
-    
+
     // Also add class to body
     document.body.classList.add('game-started');
   }
@@ -146,7 +145,7 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
    */
   private createLogo(width: number, height: number): void {
     const logoTexture = this.ctx.resolveTexture(this.visualConfig.logo.assetKey);
-    
+
     if (logoTexture) {
       this.logo = new Sprite(logoTexture);
       this.logo.anchor.set(0.5);
@@ -286,7 +285,7 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
     this.bgRight = null;
     this.logo?.destroy();
     this.logo = null;
-    
+
     // Destroy loader components
     this.loaderBg?.destroy();
     this.loaderBg = null;

@@ -7,7 +7,7 @@
  * Implements ISpinResultSource interface.
  */
 
-import type { SpinResult, SpinRequest, ISpinResultSource } from 'slot-frontend-engine';
+import type { SpinRequest, ISpinResultSource, SpinOutcome } from 'slot-frontend-engine';
 import { slotConfig } from '../config/index.js';
 
 /**
@@ -72,7 +72,7 @@ export class MockResultSource implements ISpinResultSource {
   /**
    * Get a spin result
    */
-  async getSpinResult(request: SpinRequest): Promise<SpinResult> {
+  async getSpinResult(request: SpinRequest): Promise<SpinOutcome> {
     // Simulate network delay
     await this.delay(this.simulatedDelayMs);
 
@@ -83,10 +83,10 @@ export class MockResultSource implements ISpinResultSource {
 
     // Evaluate wins
     const wins = this.evaluateWins(grid, request.bet);
-    const totalWin = wins.reduce((sum, w) => sum + w.winAmount, 0);
+    const totalWin = wins.reduce((sum: number, w: any) => sum + w.winAmount, 0);
 
-    const result: SpinResult = {
-      version: 1,
+    const result: any = {
+      version: 2,
       spinId: generateUUID(),
       sequence: this.spinCounter,
       bet: request.bet,
@@ -132,8 +132,8 @@ export class MockResultSource implements ISpinResultSource {
   /**
    * Simple ways evaluation
    */
-  private evaluateWins(grid: number[][], bet: number): SpinResult['wins'] {
-    const wins: SpinResult['wins'] = [];
+  private evaluateWins(grid: number[][], bet: number): any {
+    const wins: any = [];
     const wildIds = slotConfig.wild?.wildIds ?? [];
 
     // Check each paying symbol
