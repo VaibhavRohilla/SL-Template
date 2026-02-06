@@ -4,7 +4,7 @@
  * Visual theme settings (Colors, Fonts, Assets).
  */
 
-import type { BackgroundConfig, SlotFrameConfig, BootConfig } from 'slot-frontend-engine';
+import type { BackgroundConfig, SlotFrameConfig, BootConfig } from '@fnx/sl-engine';
 
 /**
  * Color palette - Template Example (Gold/Red)

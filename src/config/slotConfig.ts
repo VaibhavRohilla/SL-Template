@@ -4,7 +4,7 @@
  * Defines the game's symbols, paytable, reels, and layout.
  */
 
-import type { SlotConfig } from 'slot-frontend-engine';
+import type { SlotConfig } from '@fnx/sl-engine';
 
 /**
  * Symbol IDs - Dragon Theme

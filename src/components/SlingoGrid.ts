@@ -8,7 +8,7 @@
  * Uses actual game symbols: BAR, DRAGON, EIGHT, FAN, LOTUS, PIG, YINYANG
  */
 
-import { type ITweenService } from 'slot-frontend-engine';
+import { type ITweenService } from '@fnx/sl-engine';
 
 import {
   GRID_COLS,

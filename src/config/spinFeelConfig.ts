@@ -4,7 +4,7 @@
  * Controls the feel and timing of the slot reel animations.
  */
 
-import { premiumPreset, type SpinFeelConfig } from 'slot-frontend-engine';
+import { premiumPreset, type SpinFeelConfig } from '@fnx/sl-engine';
 
 /**
  * Spin feel configuration for Dragon Blingos.

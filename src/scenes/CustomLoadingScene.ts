@@ -16,7 +16,7 @@ import {
   BaseScene,
   type ILoadingScene,
   type SceneContext,
-} from 'slot-frontend-engine';
+} from '@fnx/sl-engine';
 
 import { referenceVisualConfig, colors } from '../game/BrandConfig.js';
 import { Sprite, Container, Graphics, TextStyle, Text } from 'pixi.js';

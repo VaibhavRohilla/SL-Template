@@ -12,7 +12,7 @@
  */
 
 import { Container, Graphics, Sprite, AnimatedSprite, BitmapText, Text, TextStyle, BlurFilter, type Texture } from 'pixi.js';
-import { type ITweenService } from 'slot-frontend-engine';
+import { type ITweenService } from '@fnx/sl-engine';
 
 import type { TextureResolver } from './SlingoGrid.js';
 
@@ -1099,6 +1099,7 @@ export class SlingoSpinner extends Container {
       this.onAllReelsStopped?.();
     }
   }
+
 
   /**
    * Reset spinner to initial state

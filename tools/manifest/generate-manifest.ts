@@ -223,12 +223,10 @@ function loadAudioSpriteData(spritePath: string): { sprite: Record<string, [numb
  * Generate TypeScript definitions from manifest with automatic suggestions
  */
 function generateAssetTypes(manifest: Manifest): string {
-  // Load suggestions if available (auto-generated)
-  let suggestions: any = null;
   try {
     const suggestionsPath = path.join(ProjectConfig.rootDir, 'tools', 'asset-suggestions.json');
     if (fs.existsSync(suggestionsPath)) {
-      suggestions = JSON.parse(fs.readFileSync(suggestionsPath, 'utf-8'));
+      JSON.parse(fs.readFileSync(suggestionsPath, 'utf-8'));
     }
   } catch {
     // Ignore if suggestions file doesn't exist yet

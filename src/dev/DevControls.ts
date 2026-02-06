@@ -5,7 +5,7 @@
  * This should ONLY be imported in development environments.
  */
 
-import { Game } from 'slot-frontend-engine';
+import { Game } from '@fnx/sl-engine';
 
 export class DevControls {
     private game: Game;

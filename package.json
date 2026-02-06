@@ -17,10 +17,12 @@
     "assets:audio": "tsx tools/cli.ts audio",
     "assets:manifest": "tsx tools/cli.ts manifest",
     "assets:check": "tsx tools/cli.ts check",
-    "clean": "node scripts/clean.js"
+    "clean": "node scripts/clean.js",
+    "sdk:install": "pnpm install file:vendor/fnx-sl-engine-1.5.1.tgz",
+    "sdk:update": "pnpm dlx rimraf node_modules/@fnx/sl-engine && pnpm install --no-frozen-lockfile && pnpm list @fnx/sl-engine"
   },
   "dependencies": {
-    "slot-frontend-engine": "file:../SlotFEngine/fnx-sl-engine-1.0.0.tgz",
+    "@fnx/sl-engine": "file:vendor/fnx-sl-engine-1.5.2.tgz",
     "@esotericsoftware/spine-pixi-v8": "^4.2.74",
     "@tweenjs/tween.js": "^25.0.0",
     "howler": "^2.2.4",

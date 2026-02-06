@@ -5,7 +5,8 @@
  * This is the production entry point.
  */
 
-import { Game, type GameOptions } from 'slot-frontend-engine';
+import { Game, type GameOptions } from '@fnx/sl-engine';
+import { GameBootstrap } from '../app/GameBootstrap';
 import { slotConfig } from './GameConfig.js';
 import { spinFeelConfig } from './SpinFeel.js';
 import { bootConfig, backgroundConfig, frameConfig, dimensions } from './BrandConfig.js';
@@ -50,6 +51,10 @@ export async function bootstrap(): Promise<void> {
         // Log level
         logLevel: 'info',
     };
+
+    // Initialize GameBootstrap (SDK services)
+    const sdk = GameBootstrap.get();
+    await sdk.initialize();
 
     // Create and start game
     const game = new Game(gameOptions);

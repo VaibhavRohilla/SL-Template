@@ -4,7 +4,7 @@
  * Export scene factories for engine customization.
  */
 
-import type { SceneContext, ILoadingScene, IStartScene, IScene, SceneFactories } from 'slot-frontend-engine';
+import type { SceneContext, ILoadingScene, IStartScene, IScene, SceneFactories } from '@fnx/sl-engine';
 import { CustomLoadingScene } from './CustomLoadingScene.js';
 import { CustomStartScene } from './CustomStartScene.js';
 import { CustomGameScene } from './CustomGameScene.js';

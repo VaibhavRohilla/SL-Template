@@ -5,7 +5,7 @@
  * This is the primary extension point for game math and mechanics.
  */
 
-import type { SlotConfig } from 'slot-frontend-engine';
+import type { SlotConfig } from '@fnx/sl-engine';
 
 /**
  * Symbol IDs - Template Example (Dragon Theme)

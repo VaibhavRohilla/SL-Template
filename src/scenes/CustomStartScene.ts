@@ -18,7 +18,7 @@ import {
   type IStartScene,
   type SceneContext,
   type TweenHandle,
-} from 'slot-frontend-engine';
+} from '@fnx/sl-engine';
 
 import { referenceVisualConfig, colors } from '../game/BrandConfig.js';
 import { Sprite, Container, Graphics, TextStyle, Text } from 'pixi.js';

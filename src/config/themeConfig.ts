@@ -4,7 +4,7 @@
  * Visual theme settings for the Dragon-themed slot game.
  */
 
-import type { BackgroundConfig, SlotFrameConfig, BootConfig } from 'slot-frontend-engine';
+import type { BackgroundConfig, SlotFrameConfig, BootConfig } from '@fnx/sl-engine';
 
 /**
  * Color palette - Dragon Theme (rich reds and golds)

@@ -18,7 +18,16 @@ import {
   type SceneContext,
   type IScene,
   type ITweenService,
-} from 'slot-frontend-engine';
+  SkipPolicy,
+  applySkipIfNeeded,
+  type ISkippableExecution,
+  OutcomeReplayRunner,
+  GamePhase,
+  shouldApplySkip,
+  type FixturePack
+} from '@fnx/sl-engine';
+import { GameBootstrap } from '../app/GameBootstrap.js';
+import { TemplateConfig } from '../app/TemplateConfig.js';
 
 import {
   DESIGN_W,
@@ -60,7 +69,7 @@ interface ILogger {
 /**
  * CustomGameScene implementing Slingo-style layout
  */
-export class CustomGameScene implements IScene {
+export class CustomGameScene implements IScene, ISkippableExecution {
   public readonly id = 'custom-game';
   public readonly container: Container;
 
@@ -152,12 +161,40 @@ export class CustomGameScene implements IScene {
     // Initialize game state
     this.initializeGameState();
 
+    // 3.5 Recovery on startup
+    await this.checkRecovery();
+
     // Play reveal animation
     await this.playRevealAnimation();
 
     if (this._state === SceneState.MOUNTING) {
       this._state = SceneState.ACTIVE;
       this.logger.info('CustomGameScene: Mounted');
+    }
+  }
+
+  /**
+   * Check for recovery state and hydrate if needed
+   */
+  private async checkRecovery(): Promise<void> {
+    this.logger.info('[Scene] Checking for recovery state...');
+
+    // Mocked server state for demonstration
+    // In production, this would be fetched from the backend
+    const mockRecoveryState: any = null;
+
+    if (mockRecoveryState) {
+      this.logger.info('[Scene] Found existing round! Hydrating...');
+      // Show "Restoring..." overlay if needed
+
+      const bootstrap = GameBootstrap.get();
+      await bootstrap.hydrate(mockRecoveryState);
+
+      // Render settled state immediately
+      this.isSpinning = false;
+      this.shell.setSpinningFn(false);
+      // Update visual state based on hydrated results
+      // this.grid.markMatches(...);
     }
   }
 
@@ -367,24 +404,50 @@ export class CustomGameScene implements IScene {
     );
   }
 
-  /**
-   * Handle Bet Change
-   */
   private handleBetChange(delta: number): void {
-    if (this.isSpinning) return;
+    const bootstrap = GameBootstrap.get();
+    const gate = bootstrap.getGate();
+    const policy = bootstrap.getPolicy();
 
-    this.currentStake += delta;
-    if (this.currentStake < 1) this.currentStake = 1.0;
+    if (!gate.canChangeBet()) return;
 
-    this.gameUI.setBet(this.currentStake);
-    this.shell.updateFromGameUI(this.gameUI);
+    const newStake = this.currentStake + delta;
+    const validation = policy.validateBet(newStake);
+
+    if (validation.ok) {
+      this.currentStake = newStake;
+      this.gameUI.setBet(this.currentStake);
+      this.shell.updateFromGameUI(this.gameUI);
+    } else {
+      this.logger.warn(`Bet change blocked: ${validation.error.code}`);
+    }
   }
 
   /**
    * Handle Spin Click
    */
   private handleSpinClick(): void {
-    if (this.isSpinning) return;
+    const bootstrap = GameBootstrap.get();
+    const gate = bootstrap.getGate();
+
+    // If already spinning, the button acts as STOP/TURBO
+    if (this.isSpinning) {
+      if (gate.canStop() || gate.canQuickSpin()) {
+        const skip = bootstrap.getSkip();
+        if (gate.canStop()) {
+          skip.request(SkipPolicy.SETTLE_NOW, 'ui:stop');
+        } else if (gate.canQuickSpin()) {
+          skip.request(SkipPolicy.FAST_FORWARD, 'ui:turbo');
+        }
+      }
+      return;
+    }
+
+    // Check if we can spin
+    if (!gate.canSpin()) {
+      this.logger.warn('Action not allowed: SPIN');
+      return;
+    }
 
     if (!this.gameUI.canAffordBet(this.currentStake)) {
       this.logger.warn('Not enough balance!');
@@ -399,25 +462,118 @@ export class CustomGameScene implements IScene {
   }
 
   /**
-   * Start a spin
+   * Start a spin (SDK integrated)
    */
-  private startSpin(): void {
+  private async startSpin(): Promise<void> {
+    const bootstrap = GameBootstrap.getInstance();
+    const phase = bootstrap.getPhase();
+
     this.isSpinning = true;
     this.shell.setSpinningFn(true);
+    phase.transition(GamePhase.SPINNING, 'user:spin_start');
 
     // Play spin sound
     this.audioBus.play('ReelSpinLoop', { loop: true, channel: 'sfx' });
 
-    // Start spinner
+    // Start spinner visual
     this.spinner.startSpin();
 
-    // Generate random results (mock)
-    const results: SpinnerReelResult[] = this.generateSpinResults();
+    // 1. Get Outcomes (SDK Fixture or Backend)
+    let outcome;
+    if (TemplateConfig.useFixtures) {
+      // Mock fixture pack for now, in real game this comes from a JSON
+      const mockFixtures: FixturePack = {
+        meta: { gameId: 'slingo-template', packId: 'slingo-template', schemaVersion: '1.0.0' },
+        entries: [{
+          kind: 'NORMALIZED',
+          name: 'win_num',
+          ctx: { gameId: 'slingo-template' },
+          outcome: {
+            type: 'CASCADE',
+            gameId: 'slingo-template',
+            schemaVersion: '1.0.0',
+            roundId: 'mock-round-1',
+            spinId: 'mock-1',
+            bet: { amount: this.currentStake },
+            totalWin: 0,
+            steps: [{
+              index: 0,
+              gridBefore: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]],
+              wins: [],
+              removedPositions: [],
+              gridAfter: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]]
+            }]
+          }
+        }]
+      };
+      const runner = new OutcomeReplayRunner(bootstrap.getAdapters());
+      runner.load(mockFixtures);
+      const replay = await runner.replayEntry('win_num');
+      outcome = replay.outcome;
+    } else {
+      // Call actual backend here
+      // outcome = await backend.spin(this.currentStake);
+    }
 
-    // Stop with results after delay
-    setTimeout(() => {
-      this.spinner.stopWithResults(results, 150);
-    }, 1000);
+    // Safety check for minSpinDuration (Phase 3.4)
+    const startTime = performance.now();
+
+    // Map outcome to spinner results
+    const results: SpinnerReelResult[] = outcome ? this.mapOutcomeToSpinner(outcome) : this.generateSpinResults();
+
+    // Simulate delay or wait for outcomes
+    await new Promise(r => setTimeout(r, 1000));
+
+    // Ensure min duration is met (Presentation only)
+    const elapsed = performance.now() - startTime;
+    const minDuration = bootstrap.getPolicy().getPolicy().minSpinDurationMs;
+    if (elapsed < minDuration) {
+      await new Promise(r => setTimeout(r, minDuration - elapsed));
+    }
+
+    // Check for skip/turbo
+    await applySkipIfNeeded({
+      controller: bootstrap.getSkip(),
+      phase: phase.getPhase(),
+      execution: this
+    });
+
+    // Stop reels
+    this.spinner.stopWithResults(results, 150);
+
+    // Wait for all stopped
+    // handleAllReelsStopped will be called by component callback
+  }
+
+  /**
+   * Map SDK outcome to template spinner results
+   */
+  private mapOutcomeToSpinner(_outcome: any): SpinnerReelResult[] {
+    // Simplistic mapping for now
+    return [
+      { type: 'number', value: 10 },
+      { type: 'number', value: 20 },
+      { type: 'number', value: 30 },
+      { type: 'number', value: 40 },
+      { type: 'number', value: 50 },
+    ];
+  }
+
+  // ============================================================================
+  // ISkippableExecution implementation
+  // ============================================================================
+
+  public shouldApplySkip(_policy: SkipPolicy): boolean {
+    const bootstrap = GameBootstrap.getInstance();
+    return shouldApplySkip(bootstrap.getPhase().getPhase());
+  }
+
+  public applySkip(policy: SkipPolicy): void {
+    this.logger.info(`[Scene] Applying skip: ${policy}`);
+
+    if (policy === SkipPolicy.SETTLE_NOW) {
+      this.spinner.forceStopAll();
+    }
   }
 
   /**
@@ -467,6 +623,8 @@ export class CustomGameScene implements IScene {
   private handleAllReelsStopped(): void {
     this.audioBus.stop('ReelSpinLoop');
     this.isSpinning = false;
+    const bootstrap = GameBootstrap.get();
+    bootstrap.getPhase().transition(GamePhase.SETTLED, 'spin:complete');
     this.shell.setSpinningFn(false);
 
     // Process wins (mock)
