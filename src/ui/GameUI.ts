@@ -160,7 +160,7 @@ export class GameUI implements ISlotUI, IWinFormatter {
     // 2. Check policy
     const validation = this.policy.validateBet(bet);
     if (!validation.ok) {
-      console.warn(`[GameUI] Bet invalid: ${validation.error?.code}`);
+      console.warn(`[GameUI] Bet invalid: ${validation.error.code}`);
       return false;
     }
 

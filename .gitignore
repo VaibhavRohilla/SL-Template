@@ -8,6 +8,7 @@ yarn.lock
 dist/
 *.tgz
 
+vendor/
 # IDE
 .idea/
 .vscode/

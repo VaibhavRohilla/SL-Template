@@ -8,7 +8,8 @@ export const TemplateConfig = {
     DEV_MODE: false,
 
     /** Use fixtures instead of real backend outcomes */
-    useFixtures: false,
+    useFixtures: true,
+    fixturePath: 'assets/fixtures/reference_p0.json',
 
     /** Base URL for the casino backend */
     backendUrl: 'https://api.casino.com/v1',
