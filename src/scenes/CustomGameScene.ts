@@ -4,7 +4,7 @@
  * Implements the game screen layout:
  * - 5x5 number grid
  * - 1-row horizontal spinner
- * - Shell UI (Top Bar, Bottom Panel)
+ * - Reference UI (Parity)
  */
 
 import {
@@ -29,10 +29,11 @@ import {
 
 import { SlingoGrid, type TextureResolver } from '../components/SlingoGrid.js';
 import { SlingoSpinner, type SpinnerReelResult } from '../components/SlingoSpinner.js';
-import { SlotUIShell } from '../ui/Shell.js';
+import { ReferenceUIRoot } from '../ui/reference/ReferenceUIRoot.js';
+import { slotConfig } from '../config/slotConfig.js';
 import { GameUI, type GameUIConfig } from '../ui/GameUI.js';
 import { OverlayManager } from '../ui/overlays/OverlayManager.js';
-import { Container, Graphics, Texture } from 'pixi.js';
+import { Container, Graphics } from 'pixi.js';
 
 import { StickyWildStore } from '../game/persistence/StickyWildStore.js';
 import { PersistentStoreManager } from '../game/persistence/PersistentStoreManager.js';
@@ -40,6 +41,7 @@ import { PersistentStoreManager } from '../game/persistence/PersistentStoreManag
 export class CustomGameScene implements IScene {
   public readonly id = 'game';
   public readonly container: Container;
+  private readonly ctx: SceneContext;
 
   private _state: SceneState = SceneState.MOUNTING;
   private readonly tweenService: ITweenService;
@@ -48,13 +50,13 @@ export class CustomGameScene implements IScene {
   // Components
   private grid: SlingoGrid | undefined;
   private spinner: SlingoSpinner | undefined;
-  private shell: SlotUIShell | undefined;
+  private uiRoot: ReferenceUIRoot | undefined;
   private gameUI: GameUI | undefined;
   private overlayManager: OverlayManager | undefined;
 
   // Persistence
   private stickyStore = new StickyWildStore();
-  private readonly STICKY_WILD_ID = 9; // Placeholder ID for visual debugging
+  private readonly STICKY_WILD_ID = 90; // Matches SymbolId.WILD (Piggy Theme)
 
   // Layout container for scaling
   private gameLayer: Container;
@@ -64,6 +66,7 @@ export class CustomGameScene implements IScene {
   private currentStepIndex: number = 0;
 
   constructor(context: SceneContext) {
+    this.ctx = context;
     this.container = new Container();
     this.container.label = 'CustomGameScene';
 
@@ -141,6 +144,7 @@ export class CustomGameScene implements IScene {
       (height - DESIGN_H * scale) / 2
     );
 
+    this.uiRoot?.resize(width, height);
     this.overlayManager?.resize(width, height);
   }
 
@@ -154,7 +158,16 @@ export class CustomGameScene implements IScene {
   }
 
   private createGrid(): void {
-    const resolver: TextureResolver = (_key) => Texture.WHITE;
+    const resolver: TextureResolver = (idOrKey: string) => {
+      // Try resolving as a numeric ID (symbol)
+      const id = parseInt(idOrKey);
+      if (!isNaN(id)) {
+        const symbol = slotConfig.symbols.find(s => s.id === id);
+        if (symbol) return this.ctx.resolveTexture(symbol.spriteKey as string) as any;
+      }
+      // Fallback to direct key resolution
+      return this.ctx.resolveTexture(idOrKey as string) as any;
+    };
 
     this.grid = new SlingoGrid(resolver, this.tweenService);
     this.grid.x = GAME_TABLE_X;
@@ -164,7 +177,14 @@ export class CustomGameScene implements IScene {
   }
 
   private createSpinner(): void {
-    const resolver: TextureResolver = (_key) => Texture.WHITE;
+    const resolver: TextureResolver = (idOrKey: string) => {
+      const id = parseInt(idOrKey);
+      if (!isNaN(id)) {
+        const symbol = slotConfig.symbols.find(s => s.id === id);
+        if (symbol) return this.ctx.resolveTexture(symbol.spriteKey as string) as any;
+      }
+      return this.ctx.resolveTexture(idOrKey as string) as any;
+    };
 
     this.spinner = new SlingoSpinner(resolver, this.tweenService);
     this.spinner.x = GAME_TABLE_X;
@@ -174,9 +194,10 @@ export class CustomGameScene implements IScene {
   }
 
   private createUI(): void {
-    const resolver: TextureResolver = (_key) => Texture.WHITE;
-    this.shell = new SlotUIShell(resolver, DESIGN_W, DESIGN_H);
-    this.container.addChild(this.shell);
+    const resolver: any = (key: string) => this.ctx.resolveTexture(key);
+
+    this.uiRoot = new ReferenceUIRoot(resolver);
+    this.container.addChild(this.uiRoot);
 
     const uiConfig: Partial<GameUIConfig> = {
       initialBalance: 1000,
@@ -184,16 +205,22 @@ export class CustomGameScene implements IScene {
     };
     this.gameUI = new GameUI(uiConfig);
 
-    this.shell.updateFromGameUI(this.gameUI);
+    this.uiRoot.updateFromGameUI(this.gameUI);
 
-    const spinBtn = document.getElementById('spin-button');
-    if (spinBtn) {
-      spinBtn.addEventListener('click', () => {
-        this.startSpin();
-      });
-    }
+    this.uiRoot.spinButton.onClick = () => this.startSpin();
 
-    this.shell.onSpin = () => this.startSpin();
+    this.uiRoot.betPanel.onBetChange = (delta) => {
+      const currentBet = this.gameUI!.getCurrentBet();
+      const newBet = Math.max(1, currentBet + delta);
+      this.gameUI!.setBet(newBet);
+      this.uiRoot!.updateFromGameUI(this.gameUI!);
+    };
+
+
+
+    this.uiRoot.autoSpinButton.onClick = () => {
+      console.log('[UI] Autoplay not implemented in this phase');
+    };
   }
 
   private createOverlays(): void {
@@ -211,7 +238,7 @@ export class CustomGameScene implements IScene {
 
     const bet = this.gameUI?.getCurrentBet() || 10;
     this.gameUI?.onSpinStart(bet);
-    this.shell?.setSpinningFn(true);
+    this.uiRoot?.setSpinningState(true);
 
     try {
       this.spinner?.startSpin();
@@ -236,7 +263,7 @@ export class CustomGameScene implements IScene {
       this.logger.warn('Spin failed', e);
       this.isSpinning = false;
       this.gameUI?.onSpinComplete({ error: e });
-      this.shell?.setSpinningFn(false);
+      this.uiRoot?.setSpinningState(false);
       this.spinner?.forceStopAll();
     }
   }
@@ -294,9 +321,9 @@ export class CustomGameScene implements IScene {
       await OutcomeStepRunner.run(outcome, handlers, policy);
     } finally {
       // Final UI Ensure
-      this.shell?.updateFromGameUI(this.gameUI!);
+      this.uiRoot?.updateFromGameUI(this.gameUI!);
       this.isSpinning = false;
-      this.shell?.setSpinningFn(false);
+      this.uiRoot?.setSpinningState(false);
     }
   }
 }

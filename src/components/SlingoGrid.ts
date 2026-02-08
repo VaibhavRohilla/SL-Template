@@ -1,5 +1,5 @@
 /**
- * SlingoGrid - 5×5 Symbol Grid Component
+ * SlingoGrid - 5x4 Symbol Grid Component
  *
  * Implements the Slingo-style bingo grid with symbol sprites
  * that can be marked as matched when the spinner lands on them.
@@ -19,6 +19,7 @@ import {
   SYMBOL_GAP_V,
 } from '../layout/DesignLayout.js';
 import { AnimatedSprite, BitmapText, Container, Sprite, Texture } from 'pixi.js';
+import { UI_ASSETS } from '../ui/reference/AssetMap.js';
 
 // Reel speed from config (matching reference)
 const REEL_SPEED = 0.2;
@@ -91,7 +92,7 @@ export class SlingoCell extends Container {
     this.randomDoubleSpeed = Math.random() * 200;
 
     // ===== CELL BACKGROUND (cell.png) =====
-    const cellTexture = this.resolveTexture('GameTable/Common/cell');
+    const cellTexture = this.resolveTexture(UI_ASSETS.COMMON.CELL);
     this.gameSymbolBackground = new Sprite(cellTexture ?? undefined);
     this.gameSymbolBackground.anchor.set(0.5);
     this.gameSymbolBackground.x = SYMBOL_W / 2;
@@ -99,7 +100,7 @@ export class SlingoCell extends Container {
     this.addChild(this.gameSymbolBackground);
 
     // ===== MATCHED BACKGROUND (red_cell.png) =====
-    const redCellTexture = this.resolveTexture('GameTable/Common/red_cell');
+    const redCellTexture = this.resolveTexture(UI_ASSETS.COMMON.CELL_RED);
     if (redCellTexture) {
       this.gameSymbolMatchedBackground = new Sprite(redCellTexture);
       this.gameSymbolMatchedBackground.anchor.set(0.5);
@@ -110,7 +111,7 @@ export class SlingoCell extends Container {
     }
 
     // ===== GREEN STAR (selectable/choosed state) =====
-    const greenStarTexture = this.resolveTexture('GameTable/Common/green_star');
+    const greenStarTexture = this.resolveTexture(UI_ASSETS.COMMON.STAR_GREEN);
     if (greenStarTexture) {
       this.gameSymbolChoosed = new Sprite(greenStarTexture);
       this.gameSymbolChoosed.anchor.set(0.5);
@@ -135,7 +136,7 @@ export class SlingoCell extends Container {
     }
 
     // ===== YELLOW STAR (matched state) =====
-    const yellowStarTexture = this.resolveTexture('GameTable/Common/yellow_star');
+    const yellowStarTexture = this.resolveTexture(UI_ASSETS.COMMON.STAR_YELLOW);
     if (yellowStarTexture) {
       this.gameSymbolMatchedEffect = new Sprite(yellowStarTexture);
       this.gameSymbolMatchedEffect.anchor.set(0.5);
@@ -163,7 +164,7 @@ export class SlingoCell extends Container {
     // Matching reference: 'GameTable/Table/dragon_appear/appear_' + i
     const textureArray: Texture[] = [];
     for (let i = 1; i <= 16; i++) {
-      const tex = this.resolveTexture(`GameTable/Table/dragon_appear/appear_${i}`);
+      const tex = this.resolveTexture(`${UI_ASSETS.EFFECTS.DRAGON_APPEAR}${i}`);
       if (tex) {
         textureArray.push(tex);
       } else {

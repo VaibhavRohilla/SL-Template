@@ -157,6 +157,12 @@ export class GameBootstrap {
         }
 
         this.initialized = true;
+
+        // Phase 3: Manifest Validation Gate
+        if (TemplateConfig.DEV_MODE) {
+            const { AssetValidator } = await import('../ui/reference/AssetValidator.js');
+            AssetValidator.validate();
+        }
     }
 
     /**

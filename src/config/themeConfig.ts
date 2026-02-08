@@ -20,7 +20,7 @@ export const colors = {
   accentLight: 0xe74c3c,
 
   // Background colors
-  bgDark: 0x1a0a0a,
+  bgDark: 0xFFFFFF,
   bgMedium: 0x2d1515,
   bgLight: 0x4a2020,
 
@@ -51,7 +51,7 @@ export const backgroundConfig: BackgroundConfig = {
  */
 export const frameConfig: SlotFrameConfig = {
   enabled: false, // Disable for now, game uses custom UI
-  imageKey: 'frame_slot',
+  imageKey: 'Locker',
   anchor: 'center',
   scaleMode: 'fit',
   offset: [0, 0],
@@ -81,16 +81,16 @@ export const bootConfig: Partial<BootConfig> = {
     },
     logo: {
       type: 'image',
-      value: 'logo_game',
+      value: 'Logo',
       yPositionPct: 0.462,
-      maxWidthPct: 0.5,
+      maxWidthPct: 0.0,
     },
     loader: {
-      type: 'bar',
+      type: 'circle',
     },
     labels: {
-      showPercent: false,
-      showStatus: false,
+      showPercent: true,
+      showStatus: true,
       textColor: colors.textGold,
       fontFamily: 'Gang',
       percentFontSize: 18,
@@ -106,21 +106,21 @@ export const bootConfig: Partial<BootConfig> = {
     },
     logo: {
       type: 'image',
-      value: 'logo_game',
+      value: 'Logo',
       yPositionPct: 0.462,
-      maxWidthPct: 0.5,
+      maxWidthPct: 1,
     },
     ctaText: 'CLICK TO START',
-    ctaTextColor: 0xfb0058, // Pink to match reference
+    ctaTextColor: 0xfcf243, // Pink to match reference
     ctaFontFamily: 'Gang',
     ctaFontSize: 35,
     ctaPulseAnimation: true,
-    requireTap: true, // ALWAYS true in production (audio unlock)
+    requireTap: false, // ALWAYS true in production (audio unlock)
   },
 
   // Transition timing
-  transitionDurationMs: 500,
-  skipStartScreen: false,
+  transitionDurationMs: -1,
+  skipStartScreen: true,
 };
 
 /**
@@ -135,32 +135,32 @@ export const referenceVisualConfig = {
   },
   // Logo positioning (reference: height/2 - 41px at 1080 height)
   logo: {
-    assetKey: 'logo_game',
+    assetKey: 'Logo',
     yOffset: -41, // Pixels from center
   },
   // Text reveal loader
   loader: {
     text: 'LOADING...',
-    fontFamily: 'Gang',
+    fontFamily: 'fonts/MotleyForces',
     fontSize: 35,
     textColor: 0xffffff,
-    fillColor: 0xfb0058, // Pink accent
+    fillColor: 0xfcf243, // Pink accent
     yOffset: 433, // Pixels below center
   },
   // Start screen CTA
   cta: {
     text: 'CLICK TO START',
-    fontFamily: 'Gang',
+    fontFamily: 'fonts/MotleyForces',
     fontSize: 35,
     textColor: 0xffffff,
-    fillColor: 0xfb0058,
+    fillColor: 0xfcf243,
     yOffset: 433,
   },
   // Door animation
   doorAnimation: {
     durationMs: 2000,
     easing: 'power1.in' as const,
-    doorSound: 'door_open',
+    doorSound: 'audio/MassiveDoorOpen',
     logoScaleTo: 1.2,
     doorScaleTo: 1.2,
   },

@@ -18,7 +18,7 @@ import {
   type SceneContext,
 } from '@fnx/sl-engine';
 
-import { referenceVisualConfig, colors } from '../game/BrandConfig.js';
+import { referenceVisualConfig } from '../game/BrandConfig.js';
 import { Sprite, Container, Graphics, TextStyle, Text } from 'pixi.js';
 
 /**
@@ -107,36 +107,16 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
    * Create split-door background (reference style)
    */
   private createSplitBackground(width: number, height: number): void {
-    const leftTexture = this.ctx.resolveTexture(this.visualConfig.doors.leftImage);
-    const rightTexture = this.ctx.resolveTexture(this.visualConfig.doors.rightImage);
+    const BG = this.ctx.resolveTexture(this.visualConfig.Locker.assetKey);
 
     // Left door
-    if (leftTexture) {
-      this.bgLeft = new Sprite(leftTexture);
-      this.bgLeft.width = width / 2;
+    if (BG) {
+      this.bgLeft = new Sprite(BG);
+      this.bgLeft.width = width;
       this.bgLeft.height = height;
       this.bgLeft.x = 0;
       this.bgLeft.y = 0;
       this.container.addChild(this.bgLeft);
-    }
-
-    // Right door
-    if (rightTexture) {
-      this.bgRight = new Sprite(rightTexture);
-      this.bgRight.width = width / 2;
-      this.bgRight.height = height;
-      this.bgRight.x = width / 2;
-      this.bgRight.y = 0;
-      this.container.addChild(this.bgRight);
-    }
-
-    // Fallback if no textures
-    if (!this.bgLeft && !this.bgRight) {
-      this.ctx.logger.warn('CustomLoadingScene: Door textures not found, using fallback');
-      const bg = new Graphics();
-      bg.rect(0, 0, width, height);
-      bg.fill({ color: colors.bgDark });
-      this.container.addChild(bg);
     }
   }
 
@@ -157,6 +137,7 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
     } else {
       this.ctx.logger.warn('CustomLoadingScene: Logo texture not found');
     }
+
   }
 
   /**
@@ -173,10 +154,12 @@ export class CustomLoadingScene extends BaseScene implements ILoadingScene {
     this.container.addChild(this.loaderContainer);
 
     // Optional background sprite (loading.png)
-    const bgTexture = this.ctx.resolveTexture('loading');
+    const bgTexture = this.ctx.resolveTexture('Loading_Bar');
     if (bgTexture) {
       this.loaderBg = new Sprite(bgTexture);
       this.loaderBg.anchor.set(0.5);
+      this.loaderBg.y = -170
+      this.loaderBg.width = this.loaderBg.width * 1.5
       this.loaderContainer.addChild(this.loaderBg);
     }
 

@@ -7,9 +7,9 @@
 
 import { Game, type GameOptions } from '@fnx/sl-engine';
 import { GameBootstrap } from '../app/GameBootstrap';
-import { slotConfig } from './GameConfig.js';
+import { slotConfig } from '../config/slotConfig.js';
 import { spinFeelConfig } from './SpinFeel.js';
-import { bootConfig, backgroundConfig, frameConfig, dimensions } from './BrandConfig.js';
+import { bootConfig as BOOTCONFIG, backgroundConfig, frameConfig, dimensions } from './BrandConfig.js';
 import { GameUI } from '../ui/index.js';
 import { sceneFactories } from '../scenes/index.js';
 
@@ -17,7 +17,6 @@ export async function bootstrap(): Promise<void> {
     console.log('🚀 Booting Template Slot...');
 
     // Create game UI handler
-    // TODO: Replace with new Phase 2 UI Shell later
     const gameUI = new GameUI({
         initialBalance: 1000.0,
         currencySymbol: '$',
@@ -33,9 +32,9 @@ export async function bootstrap(): Promise<void> {
         backgroundColor: 0x000000,
 
         // Core Configs
-        slotConfig,
-        spinFeelConfig,
-        bootConfig,
+        slotConfig: slotConfig,
+        spinFeelConfig: spinFeelConfig,
+        bootConfig: BOOTCONFIG,
 
         // View layers
         background: backgroundConfig,
@@ -49,7 +48,7 @@ export async function bootstrap(): Promise<void> {
         scenes: sceneFactories,
 
         // Log level
-        logLevel: 'info',
+        logLevel: 'debug'
     };
 
     // Initialize GameBootstrap (SDK services)

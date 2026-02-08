@@ -1,0 +1,2235 @@
+{
+  "generated": "2026-02-06T14:37:57.231Z",
+  "assets": {
+    "LoadingScreenBg": {
+      "key": "LoadingScreenBg",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/LoadingScreenBg.png",
+      "category": "LoadingScreenBg",
+      "tags": [],
+      "related": [
+        "LoadingScreenBg1",
+        "LoadingScreenBg2",
+        "LoadingScreenBg3",
+        "LoadingScreenBg4",
+        "LoadingScreenBg5"
+      ]
+    },
+    "LoadingScreenBg_Portrait": {
+      "key": "LoadingScreenBg_Portrait",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/LoadingScreenBg_Portrait.png",
+      "category": "LoadingScreenBg_Portrait",
+      "tags": [],
+      "related": [
+        "LoadingScreenBg_Portrait1",
+        "LoadingScreenBg_Portrait2",
+        "LoadingScreenBg_Portrait3",
+        "LoadingScreenBg_Portrait4",
+        "LoadingScreenBg_Portrait5"
+      ]
+    },
+    "Loading_Bar": {
+      "key": "Loading_Bar",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Loading_Bar.png",
+      "category": "Loading_Bar",
+      "tags": [],
+      "related": [
+        "Loading_Bar1",
+        "Loading_Bar2",
+        "Loading_Bar3",
+        "Loading_Bar4",
+        "Loading_Bar5"
+      ]
+    },
+    "Locker": {
+      "key": "Locker",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Locker.png",
+      "category": "Locker",
+      "tags": [],
+      "related": [
+        "Locker1",
+        "Locker2",
+        "Locker3",
+        "Locker4",
+        "Locker5"
+      ]
+    },
+    "Locker_Reflection": {
+      "key": "Locker_Reflection",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Locker_Reflection.png",
+      "category": "Locker_Reflection",
+      "tags": [],
+      "related": [
+        "Locker_Reflection1",
+        "Locker_Reflection2",
+        "Locker_Reflection3",
+        "Locker_Reflection4",
+        "Locker_Reflection5"
+      ]
+    },
+    "Logo": {
+      "key": "Logo",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Logo.png",
+      "category": "Logo",
+      "tags": [],
+      "related": [
+        "Logo1",
+        "Logo2",
+        "Logo3",
+        "Logo4",
+        "Logo5"
+      ]
+    },
+    "Logo_Portrait": {
+      "key": "Logo_Portrait",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Logo_Portrait.png",
+      "category": "Logo_Portrait",
+      "tags": [],
+      "related": [
+        "Logo_Portrait1",
+        "Logo_Portrait2",
+        "Logo_Portrait3",
+        "Logo_Portrait4",
+        "Logo_Portrait5"
+      ]
+    },
+    "Mockup_Loading_screen_Landscape": {
+      "key": "Mockup_Loading_screen_Landscape",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Mockup_Loading_screen_Landscape.png",
+      "category": "Mockup_Loading_screen_Landscape",
+      "tags": [],
+      "related": [
+        "Mockup_Loading_screen_Landscape1",
+        "Mockup_Loading_screen_Landscape2",
+        "Mockup_Loading_screen_Landscape3",
+        "Mockup_Loading_screen_Landscape4",
+        "Mockup_Loading_screen_Landscape5"
+      ]
+    },
+    "Mockup_Loading_screen_Portrait": {
+      "key": "Mockup_Loading_screen_Portrait",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/Mockup_Loading_screen_Portrait.png",
+      "category": "Mockup_Loading_screen_Portrait",
+      "tags": [],
+      "related": [
+        "Mockup_Loading_screen_Portrait1",
+        "Mockup_Loading_screen_Portrait2",
+        "Mockup_Loading_screen_Portrait3",
+        "Mockup_Loading_screen_Portrait4",
+        "Mockup_Loading_screen_Portrait5"
+      ]
+    },
+    "loading": {
+      "key": "loading",
+      "type": "texture",
+      "bundle": "boot",
+      "path": "boot/loading.png",
+      "category": "loading",
+      "tags": [],
+      "related": [
+        "loading1",
+        "loading2",
+        "loading3",
+        "loading4",
+        "loading5"
+      ]
+    },
+    "3_Post_intro": {
+      "key": "3_Post_intro",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/3_Post_intro.jpg",
+      "category": "3_Post_intro",
+      "tags": [],
+      "related": [
+        "3_Post_intro1",
+        "3_Post_intro2",
+        "3_Post_intro3",
+        "3_Post_intro4",
+        "3_Post_intro5"
+      ]
+    },
+    "AUTOSPIN": {
+      "key": "AUTOSPIN",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/AUTOSPIN.png",
+      "category": "AUTOSPIN",
+      "tags": [],
+      "related": [
+        "AUTOSPIN1",
+        "AUTOSPIN2",
+        "AUTOSPIN3",
+        "AUTOSPIN4",
+        "AUTOSPIN5"
+      ]
+    },
+    "AUTOSPIN_disabled": {
+      "key": "AUTOSPIN_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/AUTOSPIN_disabled.png",
+      "category": "AUTOSPIN_disabled",
+      "tags": [],
+      "related": [
+        "AUTOSPIN_disabled1",
+        "AUTOSPIN_disabled2",
+        "AUTOSPIN_disabled3",
+        "AUTOSPIN_disabled4",
+        "AUTOSPIN_disabled5"
+      ]
+    },
+    "AUTOSPIN_mouse-ver": {
+      "key": "AUTOSPIN_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/AUTOSPIN_mouse-ver.png",
+      "category": "AUTOSPIN_mouse-ver",
+      "tags": [],
+      "related": [
+        "AUTOSPIN_mouse-ver1",
+        "AUTOSPIN_mouse-ver2",
+        "AUTOSPIN_mouse-ver3",
+        "AUTOSPIN_mouse-ver4",
+        "AUTOSPIN_mouse-ver5"
+      ]
+    },
+    "AUTOSPIN_pressed": {
+      "key": "AUTOSPIN_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/AUTOSPIN_pressed.png",
+      "category": "AUTOSPIN_pressed",
+      "tags": [],
+      "related": [
+        "AUTOSPIN_pressed1",
+        "AUTOSPIN_pressed2",
+        "AUTOSPIN_pressed3",
+        "AUTOSPIN_pressed4",
+        "AUTOSPIN_pressed5"
+      ]
+    },
+    "BUY_FREE_SPINS": {
+      "key": "BUY_FREE_SPINS",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/BUY_FREE_SPINS.png",
+      "category": "BUY_FREE_SPINS",
+      "tags": [],
+      "related": [
+        "BUY_FREE_SPINS1",
+        "BUY_FREE_SPINS2",
+        "BUY_FREE_SPINS3",
+        "BUY_FREE_SPINS4",
+        "BUY_FREE_SPINS5"
+      ]
+    },
+    "Background": {
+      "key": "Background",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Background.png",
+      "category": "Background",
+      "tags": [],
+      "related": [
+        "Background1",
+        "Background2",
+        "Background3",
+        "Background4",
+        "Background5"
+      ]
+    },
+    "Background_portrait": {
+      "key": "Background_portrait",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Background_portrait.png",
+      "category": "Background_portrait",
+      "tags": [],
+      "related": [
+        "Background_portrait1",
+        "Background_portrait2",
+        "Background_portrait3",
+        "Background_portrait4",
+        "Background_portrait5"
+      ]
+    },
+    "Band": {
+      "key": "Band",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Band.png",
+      "category": "Band",
+      "tags": [],
+      "related": [
+        "Band1",
+        "Band2",
+        "Band3",
+        "Band4",
+        "Band5"
+      ]
+    },
+    "FAST_PLAY": {
+      "key": "FAST_PLAY",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/FAST_PLAY.png",
+      "category": "FAST_PLAY",
+      "tags": [],
+      "related": [
+        "FAST_PLAY1",
+        "FAST_PLAY2",
+        "FAST_PLAY3",
+        "FAST_PLAY4",
+        "FAST_PLAY5"
+      ]
+    },
+    "FAST_PLAY_disabled": {
+      "key": "FAST_PLAY_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/FAST_PLAY_disabled.png",
+      "category": "FAST_PLAY_disabled",
+      "tags": [],
+      "related": [
+        "FAST_PLAY_disabled1",
+        "FAST_PLAY_disabled2",
+        "FAST_PLAY_disabled3",
+        "FAST_PLAY_disabled4",
+        "FAST_PLAY_disabled5"
+      ]
+    },
+    "FAST_PLAY_mouse-ver": {
+      "key": "FAST_PLAY_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/FAST_PLAY_mouse-ver.png",
+      "category": "FAST_PLAY_mouse-ver",
+      "tags": [],
+      "related": [
+        "FAST_PLAY_mouse-ver1",
+        "FAST_PLAY_mouse-ver2",
+        "FAST_PLAY_mouse-ver3",
+        "FAST_PLAY_mouse-ver4",
+        "FAST_PLAY_mouse-ver5"
+      ]
+    },
+    "FAST_PLAY_pressed": {
+      "key": "FAST_PLAY_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/FAST_PLAY_pressed.png",
+      "category": "FAST_PLAY_pressed",
+      "tags": [],
+      "related": [
+        "FAST_PLAY_pressed1",
+        "FAST_PLAY_pressed2",
+        "FAST_PLAY_pressed3",
+        "FAST_PLAY_pressed4",
+        "FAST_PLAY_pressed5"
+      ]
+    },
+    "Foreground_left": {
+      "key": "Foreground_left",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Foreground_left.png",
+      "category": "Foreground_left",
+      "tags": [],
+      "related": [
+        "Foreground_left1",
+        "Foreground_left2",
+        "Foreground_left3",
+        "Foreground_left4",
+        "Foreground_left5"
+      ]
+    },
+    "Foreground_p_left": {
+      "key": "Foreground_p_left",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Foreground_p_left.png",
+      "category": "Foreground_p_left",
+      "tags": [],
+      "related": [
+        "Foreground_p_left1",
+        "Foreground_p_left2",
+        "Foreground_p_left3",
+        "Foreground_p_left4",
+        "Foreground_p_left5"
+      ]
+    },
+    "Foreground_p_right": {
+      "key": "Foreground_p_right",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Foreground_p_right.png",
+      "category": "Foreground_p_right",
+      "tags": [],
+      "related": [
+        "Foreground_p_right1",
+        "Foreground_p_right2",
+        "Foreground_p_right3",
+        "Foreground_p_right4",
+        "Foreground_p_right5"
+      ]
+    },
+    "Foreground_portrait": {
+      "key": "Foreground_portrait",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Foreground_portrait.png",
+      "category": "Foreground_portrait",
+      "tags": [],
+      "related": [
+        "Foreground_portrait1",
+        "Foreground_portrait2",
+        "Foreground_portrait3",
+        "Foreground_portrait4",
+        "Foreground_portrait5"
+      ]
+    },
+    "Foreground_right": {
+      "key": "Foreground_right",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Foreground_right.png",
+      "category": "Foreground_right",
+      "tags": [],
+      "related": [
+        "Foreground_right1",
+        "Foreground_right2",
+        "Foreground_right3",
+        "Foreground_right4",
+        "Foreground_right5"
+      ]
+    },
+    "Free_Spin_Board": {
+      "key": "Free_Spin_Board",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Free_Spin_Board.png",
+      "category": "Free_Spin_Board",
+      "tags": [
+        "spin"
+      ],
+      "related": [
+        "Free_Spin_Board1",
+        "Free_Spin_Board2",
+        "Free_Spin_Board3",
+        "Free_Spin_Board4",
+        "Free_Spin_Board5"
+      ]
+    },
+    "Home": {
+      "key": "Home",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Home.png",
+      "category": "Home",
+      "tags": [],
+      "related": [
+        "Home1",
+        "Home2",
+        "Home3",
+        "Home4",
+        "Home5"
+      ]
+    },
+    "Home_disabled": {
+      "key": "Home_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Home_disabled.png",
+      "category": "Home_disabled",
+      "tags": [],
+      "related": [
+        "Home_disabled1",
+        "Home_disabled2",
+        "Home_disabled3",
+        "Home_disabled4",
+        "Home_disabled5"
+      ]
+    },
+    "Home_mouse-ver": {
+      "key": "Home_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Home_mouse-ver.png",
+      "category": "Home_mouse-ver",
+      "tags": [],
+      "related": [
+        "Home_mouse-ver1",
+        "Home_mouse-ver2",
+        "Home_mouse-ver3",
+        "Home_mouse-ver4",
+        "Home_mouse-ver5"
+      ]
+    },
+    "Home_pressed": {
+      "key": "Home_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Home_pressed.png",
+      "category": "Home_pressed",
+      "tags": [],
+      "related": [
+        "Home_pressed1",
+        "Home_pressed2",
+        "Home_pressed3",
+        "Home_pressed4",
+        "Home_pressed5"
+      ]
+    },
+    "I": {
+      "key": "I",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/I.png",
+      "category": "I",
+      "tags": [],
+      "related": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5"
+      ]
+    },
+    "I_disabled": {
+      "key": "I_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/I_disabled.png",
+      "category": "I_disabled",
+      "tags": [],
+      "related": [
+        "I_disabled1",
+        "I_disabled2",
+        "I_disabled3",
+        "I_disabled4",
+        "I_disabled5"
+      ]
+    },
+    "I_mouse-ver": {
+      "key": "I_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/I_mouse-ver.png",
+      "category": "I_mouse-ver",
+      "tags": [],
+      "related": [
+        "I_mouse-ver1",
+        "I_mouse-ver2",
+        "I_mouse-ver3",
+        "I_mouse-ver4",
+        "I_mouse-ver5"
+      ]
+    },
+    "I_pressed": {
+      "key": "I_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/I_pressed.png",
+      "category": "I_pressed",
+      "tags": [],
+      "related": [
+        "I_pressed1",
+        "I_pressed2",
+        "I_pressed3",
+        "I_pressed4",
+        "I_pressed5"
+      ]
+    },
+    "Left_arrow": {
+      "key": "Left_arrow",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Left_arrow.png",
+      "category": "Left_arrow",
+      "tags": [],
+      "related": [
+        "Left_arrow1",
+        "Left_arrow2",
+        "Left_arrow3",
+        "Left_arrow4",
+        "Left_arrow5"
+      ]
+    },
+    "Left_arrow_disabled": {
+      "key": "Left_arrow_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Left_arrow_disabled.png",
+      "category": "Left_arrow_disabled",
+      "tags": [],
+      "related": [
+        "Left_arrow_disabled1",
+        "Left_arrow_disabled2",
+        "Left_arrow_disabled3",
+        "Left_arrow_disabled4",
+        "Left_arrow_disabled5"
+      ]
+    },
+    "Left_arrow_mouse-ver": {
+      "key": "Left_arrow_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Left_arrow_mouse-ver.png",
+      "category": "Left_arrow_mouse-ver",
+      "tags": [],
+      "related": [
+        "Left_arrow_mouse-ver1",
+        "Left_arrow_mouse-ver2",
+        "Left_arrow_mouse-ver3",
+        "Left_arrow_mouse-ver4",
+        "Left_arrow_mouse-ver5"
+      ]
+    },
+    "Left_arrow_pressed": {
+      "key": "Left_arrow_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Left_arrow_pressed.png",
+      "category": "Left_arrow_pressed",
+      "tags": [],
+      "related": [
+        "Left_arrow_pressed1",
+        "Left_arrow_pressed2",
+        "Left_arrow_pressed3",
+        "Left_arrow_pressed4",
+        "Left_arrow_pressed5"
+      ]
+    },
+    "Midground": {
+      "key": "Midground",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Midground.png",
+      "category": "Midground",
+      "tags": [],
+      "related": [
+        "Midground1",
+        "Midground2",
+        "Midground3",
+        "Midground4",
+        "Midground5"
+      ]
+    },
+    "Midground_left": {
+      "key": "Midground_left",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Midground_left.png",
+      "category": "Midground_left",
+      "tags": [],
+      "related": [
+        "Midground_left1",
+        "Midground_left2",
+        "Midground_left3",
+        "Midground_left4",
+        "Midground_left5"
+      ]
+    },
+    "Midground_right": {
+      "key": "Midground_right",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Midground_right.png",
+      "category": "Midground_right",
+      "tags": [],
+      "related": [
+        "Midground_right1",
+        "Midground_right2",
+        "Midground_right3",
+        "Midground_right4",
+        "Midground_right5"
+      ]
+    },
+    "Mockup_Landscape": {
+      "key": "Mockup_Landscape",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Mockup_Landscape.png",
+      "category": "Mockup_Landscape",
+      "tags": [],
+      "related": [
+        "Mockup_Landscape1",
+        "Mockup_Landscape2",
+        "Mockup_Landscape3",
+        "Mockup_Landscape4",
+        "Mockup_Landscape5"
+      ]
+    },
+    "Mockup_Portait": {
+      "key": "Mockup_Portait",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Mockup_Portait.png",
+      "category": "Mockup_Portait",
+      "tags": [],
+      "related": [
+        "Mockup_Portait1",
+        "Mockup_Portait2",
+        "Mockup_Portait3",
+        "Mockup_Portait4",
+        "Mockup_Portait5"
+      ]
+    },
+    "Reel": {
+      "key": "Reel",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Reel.png",
+      "category": "Reel",
+      "tags": [],
+      "related": [
+        "Reel1",
+        "Reel2",
+        "Reel3",
+        "Reel4",
+        "Reel5"
+      ]
+    },
+    "Right_arrow": {
+      "key": "Right_arrow",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Right_arrow.png",
+      "category": "Right_arrow",
+      "tags": [],
+      "related": [
+        "Right_arrow1",
+        "Right_arrow2",
+        "Right_arrow3",
+        "Right_arrow4",
+        "Right_arrow5"
+      ]
+    },
+    "Right_arrow_disabled": {
+      "key": "Right_arrow_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Right_arrow_disabled.png",
+      "category": "Right_arrow_disabled",
+      "tags": [],
+      "related": [
+        "Right_arrow_disabled1",
+        "Right_arrow_disabled2",
+        "Right_arrow_disabled3",
+        "Right_arrow_disabled4",
+        "Right_arrow_disabled5"
+      ]
+    },
+    "Right_arrow_mouse-ver": {
+      "key": "Right_arrow_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Right_arrow_mouse-ver.png",
+      "category": "Right_arrow_mouse-ver",
+      "tags": [],
+      "related": [
+        "Right_arrow_mouse-ver1",
+        "Right_arrow_mouse-ver2",
+        "Right_arrow_mouse-ver3",
+        "Right_arrow_mouse-ver4",
+        "Right_arrow_mouse-ver5"
+      ]
+    },
+    "Right_arrow_pressed": {
+      "key": "Right_arrow_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/Right_arrow_pressed.png",
+      "category": "Right_arrow_pressed",
+      "tags": [],
+      "related": [
+        "Right_arrow_pressed1",
+        "Right_arrow_pressed2",
+        "Right_arrow_pressed3",
+        "Right_arrow_pressed4",
+        "Right_arrow_pressed5"
+      ]
+    },
+    "SOUND_OFF": {
+      "key": "SOUND_OFF",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_OFF.png",
+      "category": "SOUND_OFF",
+      "tags": [],
+      "related": [
+        "SOUND_OFF1",
+        "SOUND_OFF2",
+        "SOUND_OFF3",
+        "SOUND_OFF4",
+        "SOUND_OFF5"
+      ]
+    },
+    "SOUND_OFF_disabled": {
+      "key": "SOUND_OFF_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_OFF_disabled.png",
+      "category": "SOUND_OFF_disabled",
+      "tags": [],
+      "related": [
+        "SOUND_OFF_disabled1",
+        "SOUND_OFF_disabled2",
+        "SOUND_OFF_disabled3",
+        "SOUND_OFF_disabled4",
+        "SOUND_OFF_disabled5"
+      ]
+    },
+    "SOUND_OFF_mouse-ver": {
+      "key": "SOUND_OFF_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_OFF_mouse-ver.png",
+      "category": "SOUND_OFF_mouse-ver",
+      "tags": [],
+      "related": [
+        "SOUND_OFF_mouse-ver1",
+        "SOUND_OFF_mouse-ver2",
+        "SOUND_OFF_mouse-ver3",
+        "SOUND_OFF_mouse-ver4",
+        "SOUND_OFF_mouse-ver5"
+      ]
+    },
+    "SOUND_OFF_pressed": {
+      "key": "SOUND_OFF_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_OFF_pressed.png",
+      "category": "SOUND_OFF_pressed",
+      "tags": [],
+      "related": [
+        "SOUND_OFF_pressed1",
+        "SOUND_OFF_pressed2",
+        "SOUND_OFF_pressed3",
+        "SOUND_OFF_pressed4",
+        "SOUND_OFF_pressed5"
+      ]
+    },
+    "SOUND_ON": {
+      "key": "SOUND_ON",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_ON.png",
+      "category": "SOUND_ON",
+      "tags": [],
+      "related": [
+        "SOUND_ON1",
+        "SOUND_ON2",
+        "SOUND_ON3",
+        "SOUND_ON4",
+        "SOUND_ON5"
+      ]
+    },
+    "SOUND_ON_disabled": {
+      "key": "SOUND_ON_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_ON_disabled.png",
+      "category": "SOUND_ON_disabled",
+      "tags": [],
+      "related": [
+        "SOUND_ON_disabled1",
+        "SOUND_ON_disabled2",
+        "SOUND_ON_disabled3",
+        "SOUND_ON_disabled4",
+        "SOUND_ON_disabled5"
+      ]
+    },
+    "SOUND_ON_mouse-ver": {
+      "key": "SOUND_ON_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_ON_mouse-ver.png",
+      "category": "SOUND_ON_mouse-ver",
+      "tags": [],
+      "related": [
+        "SOUND_ON_mouse-ver1",
+        "SOUND_ON_mouse-ver2",
+        "SOUND_ON_mouse-ver3",
+        "SOUND_ON_mouse-ver4",
+        "SOUND_ON_mouse-ver5"
+      ]
+    },
+    "SOUND_ON_pressed": {
+      "key": "SOUND_ON_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SOUND_ON_pressed.png",
+      "category": "SOUND_ON_pressed",
+      "tags": [],
+      "related": [
+        "SOUND_ON_pressed1",
+        "SOUND_ON_pressed2",
+        "SOUND_ON_pressed3",
+        "SOUND_ON_pressed4",
+        "SOUND_ON_pressed5"
+      ]
+    },
+    "SPIN": {
+      "key": "SPIN",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SPIN.png",
+      "category": "SPIN",
+      "tags": [],
+      "related": [
+        "SPIN1",
+        "SPIN2",
+        "SPIN3",
+        "SPIN4",
+        "SPIN5"
+      ]
+    },
+    "SPIN_disabled": {
+      "key": "SPIN_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SPIN_disabled.png",
+      "category": "SPIN_disabled",
+      "tags": [],
+      "related": [
+        "SPIN_disabled1",
+        "SPIN_disabled2",
+        "SPIN_disabled3",
+        "SPIN_disabled4",
+        "SPIN_disabled5"
+      ]
+    },
+    "SPIN_mouse-ver": {
+      "key": "SPIN_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SPIN_mouse-ver.png",
+      "category": "SPIN_mouse-ver",
+      "tags": [],
+      "related": [
+        "SPIN_mouse-ver1",
+        "SPIN_mouse-ver2",
+        "SPIN_mouse-ver3",
+        "SPIN_mouse-ver4",
+        "SPIN_mouse-ver5"
+      ]
+    },
+    "SPIN_pressed": {
+      "key": "SPIN_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/SPIN_pressed.png",
+      "category": "SPIN_pressed",
+      "tags": [],
+      "related": [
+        "SPIN_pressed1",
+        "SPIN_pressed2",
+        "SPIN_pressed3",
+        "SPIN_pressed4",
+        "SPIN_pressed5"
+      ]
+    },
+    "STOP": {
+      "key": "STOP",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/STOP.png",
+      "category": "STOP",
+      "tags": [],
+      "related": [
+        "STOP1",
+        "STOP2",
+        "STOP3",
+        "STOP4",
+        "STOP5"
+      ]
+    },
+    "STOP_disabled": {
+      "key": "STOP_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/STOP_disabled.png",
+      "category": "STOP_disabled",
+      "tags": [],
+      "related": [
+        "STOP_disabled1",
+        "STOP_disabled2",
+        "STOP_disabled3",
+        "STOP_disabled4",
+        "STOP_disabled5"
+      ]
+    },
+    "STOP_mouse-ver": {
+      "key": "STOP_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/STOP_mouse-ver.png",
+      "category": "STOP_mouse-ver",
+      "tags": [],
+      "related": [
+        "STOP_mouse-ver1",
+        "STOP_mouse-ver2",
+        "STOP_mouse-ver3",
+        "STOP_mouse-ver4",
+        "STOP_mouse-ver5"
+      ]
+    },
+    "STOP_pressed": {
+      "key": "STOP_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/STOP_pressed.png",
+      "category": "STOP_pressed",
+      "tags": [],
+      "related": [
+        "STOP_pressed1",
+        "STOP_pressed2",
+        "STOP_pressed3",
+        "STOP_pressed4",
+        "STOP_pressed5"
+      ]
+    },
+    "TURBO_OFF": {
+      "key": "TURBO_OFF",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_OFF.png",
+      "category": "TURBO_OFF",
+      "tags": [],
+      "related": [
+        "TURBO_OFF1",
+        "TURBO_OFF2",
+        "TURBO_OFF3",
+        "TURBO_OFF4",
+        "TURBO_OFF5"
+      ]
+    },
+    "TURBO_OFF_disabled": {
+      "key": "TURBO_OFF_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_OFF_disabled.png",
+      "category": "TURBO_OFF_disabled",
+      "tags": [],
+      "related": [
+        "TURBO_OFF_disabled1",
+        "TURBO_OFF_disabled2",
+        "TURBO_OFF_disabled3",
+        "TURBO_OFF_disabled4",
+        "TURBO_OFF_disabled5"
+      ]
+    },
+    "TURBO_OFF_mouse-ver": {
+      "key": "TURBO_OFF_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_OFF_mouse-ver.png",
+      "category": "TURBO_OFF_mouse-ver",
+      "tags": [],
+      "related": [
+        "TURBO_OFF_mouse-ver1",
+        "TURBO_OFF_mouse-ver2",
+        "TURBO_OFF_mouse-ver3",
+        "TURBO_OFF_mouse-ver4",
+        "TURBO_OFF_mouse-ver5"
+      ]
+    },
+    "TURBO_OFF_pressed": {
+      "key": "TURBO_OFF_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_OFF_pressed.png",
+      "category": "TURBO_OFF_pressed",
+      "tags": [],
+      "related": [
+        "TURBO_OFF_pressed1",
+        "TURBO_OFF_pressed2",
+        "TURBO_OFF_pressed3",
+        "TURBO_OFF_pressed4",
+        "TURBO_OFF_pressed5"
+      ]
+    },
+    "TURBO_ON": {
+      "key": "TURBO_ON",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_ON.png",
+      "category": "TURBO_ON",
+      "tags": [],
+      "related": [
+        "TURBO_ON1",
+        "TURBO_ON2",
+        "TURBO_ON3",
+        "TURBO_ON4",
+        "TURBO_ON5"
+      ]
+    },
+    "TURBO_ON_disabled": {
+      "key": "TURBO_ON_disabled",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_ON_disabled.png",
+      "category": "TURBO_ON_disabled",
+      "tags": [],
+      "related": [
+        "TURBO_ON_disabled1",
+        "TURBO_ON_disabled2",
+        "TURBO_ON_disabled3",
+        "TURBO_ON_disabled4",
+        "TURBO_ON_disabled5"
+      ]
+    },
+    "TURBO_ON_mouse-ver": {
+      "key": "TURBO_ON_mouse-ver",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_ON_mouse-ver.png",
+      "category": "TURBO_ON_mouse-ver",
+      "tags": [],
+      "related": [
+        "TURBO_ON_mouse-ver1",
+        "TURBO_ON_mouse-ver2",
+        "TURBO_ON_mouse-ver3",
+        "TURBO_ON_mouse-ver4",
+        "TURBO_ON_mouse-ver5"
+      ]
+    },
+    "TURBO_ON_pressed": {
+      "key": "TURBO_ON_pressed",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/TURBO_ON_pressed.png",
+      "category": "TURBO_ON_pressed",
+      "tags": [],
+      "related": [
+        "TURBO_ON_pressed1",
+        "TURBO_ON_pressed2",
+        "TURBO_ON_pressed3",
+        "TURBO_ON_pressed4",
+        "TURBO_ON_pressed5"
+      ]
+    },
+    "balance": {
+      "key": "balance",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/balance.png",
+      "category": "balance",
+      "tags": [],
+      "related": [
+        "balance1",
+        "balance2",
+        "balance3",
+        "balance4",
+        "balance5"
+      ]
+    },
+    "bet": {
+      "key": "bet",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/bet.png",
+      "category": "bet",
+      "tags": [],
+      "related": [
+        "bet1",
+        "bet2",
+        "bet3",
+        "bet4",
+        "bet5"
+      ]
+    },
+    "fonts/MotleyForces": {
+      "key": "fonts/MotleyForces",
+      "type": "font",
+      "bundle": "main",
+      "path": "main/fonts/MotleyForces.ttf",
+      "category": "fonts",
+      "tags": [],
+      "related": [
+        "fonts/MotleyForces1",
+        "fonts/MotleyForces2",
+        "fonts/MotleyForces3",
+        "fonts/MotleyForces4",
+        "fonts/MotleyForces5"
+      ]
+    },
+    "post_intro_assets_1x": {
+      "key": "post_intro_assets_1x",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/post_intro_assets@1x.json",
+      "category": "post_intro_assets_1x",
+      "tags": [],
+      "related": [
+        "post_intro_assets_1x1",
+        "post_intro_assets_1x2",
+        "post_intro_assets_1x3",
+        "post_intro_assets_1x4",
+        "post_intro_assets_1x5"
+      ]
+    },
+    "symbols/10": {
+      "key": "symbols/10",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/10.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/1",
+        "symbols/2",
+        "symbols/3",
+        "symbols/4",
+        "symbols/5"
+      ]
+    },
+    "symbols/9": {
+      "key": "symbols/9",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/9.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/1",
+        "symbols/2",
+        "symbols/3",
+        "symbols/4",
+        "symbols/5"
+      ]
+    },
+    "symbols/A": {
+      "key": "symbols/A",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/A.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/A1",
+        "symbols/A2",
+        "symbols/A3",
+        "symbols/A4",
+        "symbols/A5"
+      ]
+    },
+    "symbols/Bronze_Piggy": {
+      "key": "symbols/Bronze_Piggy",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/Bronze_Piggy.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Bronze_Piggy1",
+        "symbols/Bronze_Piggy2",
+        "symbols/Bronze_Piggy3",
+        "symbols/Bronze_Piggy4",
+        "symbols/Bronze_Piggy5"
+      ]
+    },
+    "symbols/Gold_Piggy/gold_piggy": {
+      "key": "symbols/Gold_Piggy/gold_piggy",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/Gold_Piggy/gold_piggy.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Gold_Piggy/gold_piggy1",
+        "symbols/Gold_Piggy/gold_piggy2",
+        "symbols/Gold_Piggy/gold_piggy3",
+        "symbols/Gold_Piggy/gold_piggy4",
+        "symbols/Gold_Piggy/gold_piggy5"
+      ]
+    },
+    "symbols/Gold_Piggy": {
+      "key": "symbols/Gold_Piggy",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/Gold_Piggy.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Gold_Piggy1",
+        "symbols/Gold_Piggy2",
+        "symbols/Gold_Piggy3",
+        "symbols/Gold_Piggy4",
+        "symbols/Gold_Piggy5"
+      ]
+    },
+    "symbols/J": {
+      "key": "symbols/J",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/J.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/J1",
+        "symbols/J2",
+        "symbols/J3",
+        "symbols/J4",
+        "symbols/J5"
+      ]
+    },
+    "symbols/K": {
+      "key": "symbols/K",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/K.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/K1",
+        "symbols/K2",
+        "symbols/K3",
+        "symbols/K4",
+        "symbols/K5"
+      ]
+    },
+    "symbols/Q": {
+      "key": "symbols/Q",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/Q.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Q1",
+        "symbols/Q2",
+        "symbols/Q3",
+        "symbols/Q4",
+        "symbols/Q5"
+      ]
+    },
+    "symbols/Rose_Gold_Piggy/rose_gold_piggy": {
+      "key": "symbols/Rose_Gold_Piggy/rose_gold_piggy",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/Rose_Gold_Piggy/rose_gold_piggy.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Rose_Gold_Piggy/rose_gold_piggy1",
+        "symbols/Rose_Gold_Piggy/rose_gold_piggy2",
+        "symbols/Rose_Gold_Piggy/rose_gold_piggy3",
+        "symbols/Rose_Gold_Piggy/rose_gold_piggy4",
+        "symbols/Rose_Gold_Piggy/rose_gold_piggy5"
+      ]
+    },
+    "symbols/Rose_Gold_Piggy": {
+      "key": "symbols/Rose_Gold_Piggy",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/Rose_Gold_Piggy.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Rose_Gold_Piggy1",
+        "symbols/Rose_Gold_Piggy2",
+        "symbols/Rose_Gold_Piggy3",
+        "symbols/Rose_Gold_Piggy4",
+        "symbols/Rose_Gold_Piggy5"
+      ]
+    },
+    "symbols/SCATTER": {
+      "key": "symbols/SCATTER",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/SCATTER.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/SCATTER1",
+        "symbols/SCATTER2",
+        "symbols/SCATTER3",
+        "symbols/SCATTER4",
+        "symbols/SCATTER5"
+      ]
+    },
+    "symbols/Scatter/scatter": {
+      "key": "symbols/Scatter/scatter",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/Scatter/scatter.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Scatter/scatter1",
+        "symbols/Scatter/scatter2",
+        "symbols/Scatter/scatter3",
+        "symbols/Scatter/scatter4",
+        "symbols/Scatter/scatter5"
+      ]
+    },
+    "symbols/Silver_Piggy/silver_piggy": {
+      "key": "symbols/Silver_Piggy/silver_piggy",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/Silver_Piggy/silver_piggy.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Silver_Piggy/silver_piggy1",
+        "symbols/Silver_Piggy/silver_piggy2",
+        "symbols/Silver_Piggy/silver_piggy3",
+        "symbols/Silver_Piggy/silver_piggy4",
+        "symbols/Silver_Piggy/silver_piggy5"
+      ]
+    },
+    "symbols/Silver_Piggy": {
+      "key": "symbols/Silver_Piggy",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/Silver_Piggy.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Silver_Piggy1",
+        "symbols/Silver_Piggy2",
+        "symbols/Silver_Piggy3",
+        "symbols/Silver_Piggy4",
+        "symbols/Silver_Piggy5"
+      ]
+    },
+    "symbols/WILD": {
+      "key": "symbols/WILD",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/WILD.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/WILD1",
+        "symbols/WILD2",
+        "symbols/WILD3",
+        "symbols/WILD4",
+        "symbols/WILD5"
+      ]
+    },
+    "symbols/Wild/wild": {
+      "key": "symbols/Wild/wild",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/Wild/wild.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/Wild/wild1",
+        "symbols/Wild/wild2",
+        "symbols/Wild/wild3",
+        "symbols/Wild/wild4",
+        "symbols/Wild/wild5"
+      ]
+    },
+    "symbols/bronze_piggy_anim/bronze_piggy": {
+      "key": "symbols/bronze_piggy_anim/bronze_piggy",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/bronze_piggy_anim/bronze_piggy.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/bronze_piggy_anim/bronze_piggy1",
+        "symbols/bronze_piggy_anim/bronze_piggy2",
+        "symbols/bronze_piggy_anim/bronze_piggy3",
+        "symbols/bronze_piggy_anim/bronze_piggy4",
+        "symbols/bronze_piggy_anim/bronze_piggy5"
+      ]
+    },
+    "symbols/high_payout_1": {
+      "key": "symbols/high_payout_1",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/high_payout_1.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/high_payout_2",
+        "symbols/high_payout_3",
+        "symbols/high_payout_4",
+        "symbols/high_payout_5",
+        "symbols/high_payout_6"
+      ]
+    },
+    "symbols/high_payout_1_1x": {
+      "key": "symbols/high_payout_1_1x",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/symbols/high_payout_1@1x.png",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/high_payout_1_1x1",
+        "symbols/high_payout_1_1x2",
+        "symbols/high_payout_1_1x3",
+        "symbols/high_payout_1_1x4",
+        "symbols/high_payout_1_1x5"
+      ]
+    },
+    "symbols/royals_anim/royels_akqj109": {
+      "key": "symbols/royals_anim/royels_akqj109",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/symbols/royals_anim/royels_akqj109.json",
+      "category": "symbols",
+      "tags": [],
+      "related": [
+        "symbols/royals_anim/royels_akqj1",
+        "symbols/royals_anim/royels_akqj2",
+        "symbols/royals_anim/royels_akqj3",
+        "symbols/royals_anim/royels_akqj4",
+        "symbols/royals_anim/royels_akqj5"
+      ]
+    },
+    "uiPanels_0__1x": {
+      "key": "uiPanels_0__1x",
+      "type": "json",
+      "bundle": "main",
+      "path": "main/uiPanels_0_@1x.json",
+      "category": "uiPanels_0__1x",
+      "tags": [
+        "ui"
+      ],
+      "related": [
+        "uiPanels_0__1x1",
+        "uiPanels_0__1x2",
+        "uiPanels_0__1x3",
+        "uiPanels_0__1x4",
+        "uiPanels_0__1x5"
+      ]
+    },
+    "win": {
+      "key": "win",
+      "type": "texture",
+      "bundle": "main",
+      "path": "main/win.png",
+      "category": "win",
+      "tags": [],
+      "related": [
+        "win1",
+        "win2",
+        "win3",
+        "win4",
+        "win5"
+      ]
+    },
+    "sprites/sfx_sprite": {
+      "key": "sprites/sfx_sprite",
+      "type": "json",
+      "bundle": "main",
+      "path": "audio/sprites/sfx_sprite.json",
+      "category": "sprites",
+      "tags": [],
+      "related": [
+        "sprites/sfx_sprite1",
+        "sprites/sfx_sprite2",
+        "sprites/sfx_sprite3",
+        "sprites/sfx_sprite4",
+        "sprites/sfx_sprite5"
+      ]
+    }
+  },
+  "categories": {
+    "LoadingScreenBg": [
+      "LoadingScreenBg"
+    ],
+    "LoadingScreenBg_Portrait": [
+      "LoadingScreenBg_Portrait"
+    ],
+    "Loading_Bar": [
+      "Loading_Bar"
+    ],
+    "Locker": [
+      "Locker"
+    ],
+    "Locker_Reflection": [
+      "Locker_Reflection"
+    ],
+    "Logo": [
+      "Logo"
+    ],
+    "Logo_Portrait": [
+      "Logo_Portrait"
+    ],
+    "Mockup_Loading_screen_Landscape": [
+      "Mockup_Loading_screen_Landscape"
+    ],
+    "Mockup_Loading_screen_Portrait": [
+      "Mockup_Loading_screen_Portrait"
+    ],
+    "loading": [
+      "loading"
+    ],
+    "3_Post_intro": [
+      "3_Post_intro"
+    ],
+    "AUTOSPIN": [
+      "AUTOSPIN"
+    ],
+    "AUTOSPIN_disabled": [
+      "AUTOSPIN_disabled"
+    ],
+    "AUTOSPIN_mouse-ver": [
+      "AUTOSPIN_mouse-ver"
+    ],
+    "AUTOSPIN_pressed": [
+      "AUTOSPIN_pressed"
+    ],
+    "BUY_FREE_SPINS": [
+      "BUY_FREE_SPINS"
+    ],
+    "Background": [
+      "Background"
+    ],
+    "Background_portrait": [
+      "Background_portrait"
+    ],
+    "Band": [
+      "Band"
+    ],
+    "FAST_PLAY": [
+      "FAST_PLAY"
+    ],
+    "FAST_PLAY_disabled": [
+      "FAST_PLAY_disabled"
+    ],
+    "FAST_PLAY_mouse-ver": [
+      "FAST_PLAY_mouse-ver"
+    ],
+    "FAST_PLAY_pressed": [
+      "FAST_PLAY_pressed"
+    ],
+    "Foreground_left": [
+      "Foreground_left"
+    ],
+    "Foreground_p_left": [
+      "Foreground_p_left"
+    ],
+    "Foreground_p_right": [
+      "Foreground_p_right"
+    ],
+    "Foreground_portrait": [
+      "Foreground_portrait"
+    ],
+    "Foreground_right": [
+      "Foreground_right"
+    ],
+    "Free_Spin_Board": [
+      "Free_Spin_Board"
+    ],
+    "Home": [
+      "Home"
+    ],
+    "Home_disabled": [
+      "Home_disabled"
+    ],
+    "Home_mouse-ver": [
+      "Home_mouse-ver"
+    ],
+    "Home_pressed": [
+      "Home_pressed"
+    ],
+    "I": [
+      "I"
+    ],
+    "I_disabled": [
+      "I_disabled"
+    ],
+    "I_mouse-ver": [
+      "I_mouse-ver"
+    ],
+    "I_pressed": [
+      "I_pressed"
+    ],
+    "Left_arrow": [
+      "Left_arrow"
+    ],
+    "Left_arrow_disabled": [
+      "Left_arrow_disabled"
+    ],
+    "Left_arrow_mouse-ver": [
+      "Left_arrow_mouse-ver"
+    ],
+    "Left_arrow_pressed": [
+      "Left_arrow_pressed"
+    ],
+    "Midground": [
+      "Midground"
+    ],
+    "Midground_left": [
+      "Midground_left"
+    ],
+    "Midground_right": [
+      "Midground_right"
+    ],
+    "Mockup_Landscape": [
+      "Mockup_Landscape"
+    ],
+    "Mockup_Portait": [
+      "Mockup_Portait"
+    ],
+    "Reel": [
+      "Reel"
+    ],
+    "Right_arrow": [
+      "Right_arrow"
+    ],
+    "Right_arrow_disabled": [
+      "Right_arrow_disabled"
+    ],
+    "Right_arrow_mouse-ver": [
+      "Right_arrow_mouse-ver"
+    ],
+    "Right_arrow_pressed": [
+      "Right_arrow_pressed"
+    ],
+    "SOUND_OFF": [
+      "SOUND_OFF"
+    ],
+    "SOUND_OFF_disabled": [
+      "SOUND_OFF_disabled"
+    ],
+    "SOUND_OFF_mouse-ver": [
+      "SOUND_OFF_mouse-ver"
+    ],
+    "SOUND_OFF_pressed": [
+      "SOUND_OFF_pressed"
+    ],
+    "SOUND_ON": [
+      "SOUND_ON"
+    ],
+    "SOUND_ON_disabled": [
+      "SOUND_ON_disabled"
+    ],
+    "SOUND_ON_mouse-ver": [
+      "SOUND_ON_mouse-ver"
+    ],
+    "SOUND_ON_pressed": [
+      "SOUND_ON_pressed"
+    ],
+    "SPIN": [
+      "SPIN"
+    ],
+    "SPIN_disabled": [
+      "SPIN_disabled"
+    ],
+    "SPIN_mouse-ver": [
+      "SPIN_mouse-ver"
+    ],
+    "SPIN_pressed": [
+      "SPIN_pressed"
+    ],
+    "STOP": [
+      "STOP"
+    ],
+    "STOP_disabled": [
+      "STOP_disabled"
+    ],
+    "STOP_mouse-ver": [
+      "STOP_mouse-ver"
+    ],
+    "STOP_pressed": [
+      "STOP_pressed"
+    ],
+    "TURBO_OFF": [
+      "TURBO_OFF"
+    ],
+    "TURBO_OFF_disabled": [
+      "TURBO_OFF_disabled"
+    ],
+    "TURBO_OFF_mouse-ver": [
+      "TURBO_OFF_mouse-ver"
+    ],
+    "TURBO_OFF_pressed": [
+      "TURBO_OFF_pressed"
+    ],
+    "TURBO_ON": [
+      "TURBO_ON"
+    ],
+    "TURBO_ON_disabled": [
+      "TURBO_ON_disabled"
+    ],
+    "TURBO_ON_mouse-ver": [
+      "TURBO_ON_mouse-ver"
+    ],
+    "TURBO_ON_pressed": [
+      "TURBO_ON_pressed"
+    ],
+    "balance": [
+      "balance"
+    ],
+    "bet": [
+      "bet"
+    ],
+    "fonts": [
+      "fonts/MotleyForces"
+    ],
+    "post_intro_assets_1x": [
+      "post_intro_assets_1x"
+    ],
+    "symbols": [
+      "symbols/10",
+      "symbols/9",
+      "symbols/A",
+      "symbols/Bronze_Piggy",
+      "symbols/Gold_Piggy/gold_piggy",
+      "symbols/Gold_Piggy",
+      "symbols/J",
+      "symbols/K",
+      "symbols/Q",
+      "symbols/Rose_Gold_Piggy/rose_gold_piggy",
+      "symbols/Rose_Gold_Piggy",
+      "symbols/SCATTER",
+      "symbols/Scatter/scatter",
+      "symbols/Silver_Piggy/silver_piggy",
+      "symbols/Silver_Piggy",
+      "symbols/WILD",
+      "symbols/Wild/wild",
+      "symbols/bronze_piggy_anim/bronze_piggy",
+      "symbols/high_payout_1",
+      "symbols/high_payout_1_1x",
+      "symbols/royals_anim/royels_akqj109"
+    ],
+    "uiPanels_0__1x": [
+      "uiPanels_0__1x"
+    ],
+    "win": [
+      "win"
+    ],
+    "sprites": [
+      "sprites/sfx_sprite"
+    ]
+  },
+  "commonPatterns": {
+    "LoadingScreenBg": [
+      "LoadingScreenBg"
+    ],
+    "LoadingScreenBg_Portrait": [
+      "LoadingScreenBg_Portrait"
+    ],
+    "Loading_Bar": [
+      "Loading_Bar"
+    ],
+    "Locker": [
+      "Locker"
+    ],
+    "Locker_Reflection": [
+      "Locker_Reflection"
+    ],
+    "Logo": [
+      "Logo"
+    ],
+    "Logo_Portrait": [
+      "Logo_Portrait"
+    ],
+    "Mockup_Loading_screen_Landscape": [
+      "Mockup_Loading_screen_Landscape"
+    ],
+    "Mockup_Loading_screen_Portrait": [
+      "Mockup_Loading_screen_Portrait"
+    ],
+    "loading": [
+      "loading"
+    ],
+    "3_Post_intro": [
+      "3_Post_intro"
+    ],
+    "AUTOSPIN": [
+      "AUTOSPIN"
+    ],
+    "AUTOSPIN_disabled": [
+      "AUTOSPIN_disabled"
+    ],
+    "AUTOSPIN_mouse-ver": [
+      "AUTOSPIN_mouse-ver"
+    ],
+    "AUTOSPIN_pressed": [
+      "AUTOSPIN_pressed"
+    ],
+    "BUY_FREE_SPINS": [
+      "BUY_FREE_SPINS"
+    ],
+    "Background": [
+      "Background"
+    ],
+    "Background_portrait": [
+      "Background_portrait"
+    ],
+    "Band": [
+      "Band"
+    ],
+    "FAST_PLAY": [
+      "FAST_PLAY"
+    ],
+    "FAST_PLAY_disabled": [
+      "FAST_PLAY_disabled"
+    ],
+    "FAST_PLAY_mouse-ver": [
+      "FAST_PLAY_mouse-ver"
+    ],
+    "FAST_PLAY_pressed": [
+      "FAST_PLAY_pressed"
+    ],
+    "Foreground_left": [
+      "Foreground_left"
+    ],
+    "Foreground_p_left": [
+      "Foreground_p_left"
+    ],
+    "Foreground_p_right": [
+      "Foreground_p_right"
+    ],
+    "Foreground_portrait": [
+      "Foreground_portrait"
+    ],
+    "Foreground_right": [
+      "Foreground_right"
+    ],
+    "Free_Spin_Board": [
+      "Free_Spin_Board"
+    ],
+    "Home": [
+      "Home"
+    ],
+    "Home_disabled": [
+      "Home_disabled"
+    ],
+    "Home_mouse-ver": [
+      "Home_mouse-ver"
+    ],
+    "Home_pressed": [
+      "Home_pressed"
+    ],
+    "I": [
+      "I"
+    ],
+    "I_disabled": [
+      "I_disabled"
+    ],
+    "I_mouse-ver": [
+      "I_mouse-ver"
+    ],
+    "I_pressed": [
+      "I_pressed"
+    ],
+    "Left_arrow": [
+      "Left_arrow"
+    ],
+    "Left_arrow_disabled": [
+      "Left_arrow_disabled"
+    ],
+    "Left_arrow_mouse-ver": [
+      "Left_arrow_mouse-ver"
+    ],
+    "Left_arrow_pressed": [
+      "Left_arrow_pressed"
+    ],
+    "Midground": [
+      "Midground"
+    ],
+    "Midground_left": [
+      "Midground_left"
+    ],
+    "Midground_right": [
+      "Midground_right"
+    ],
+    "Mockup_Landscape": [
+      "Mockup_Landscape"
+    ],
+    "Mockup_Portait": [
+      "Mockup_Portait"
+    ],
+    "Reel": [
+      "Reel"
+    ],
+    "Right_arrow": [
+      "Right_arrow"
+    ],
+    "Right_arrow_disabled": [
+      "Right_arrow_disabled"
+    ],
+    "Right_arrow_mouse-ver": [
+      "Right_arrow_mouse-ver"
+    ],
+    "Right_arrow_pressed": [
+      "Right_arrow_pressed"
+    ],
+    "SOUND_OFF": [
+      "SOUND_OFF"
+    ],
+    "SOUND_OFF_disabled": [
+      "SOUND_OFF_disabled"
+    ],
+    "SOUND_OFF_mouse-ver": [
+      "SOUND_OFF_mouse-ver"
+    ],
+    "SOUND_OFF_pressed": [
+      "SOUND_OFF_pressed"
+    ],
+    "SOUND_ON": [
+      "SOUND_ON"
+    ],
+    "SOUND_ON_disabled": [
+      "SOUND_ON_disabled"
+    ],
+    "SOUND_ON_mouse-ver": [
+      "SOUND_ON_mouse-ver"
+    ],
+    "SOUND_ON_pressed": [
+      "SOUND_ON_pressed"
+    ],
+    "SPIN": [
+      "SPIN"
+    ],
+    "SPIN_disabled": [
+      "SPIN_disabled"
+    ],
+    "SPIN_mouse-ver": [
+      "SPIN_mouse-ver"
+    ],
+    "SPIN_pressed": [
+      "SPIN_pressed"
+    ],
+    "STOP": [
+      "STOP"
+    ],
+    "STOP_disabled": [
+      "STOP_disabled"
+    ],
+    "STOP_mouse-ver": [
+      "STOP_mouse-ver"
+    ],
+    "STOP_pressed": [
+      "STOP_pressed"
+    ],
+    "TURBO_OFF": [
+      "TURBO_OFF"
+    ],
+    "TURBO_OFF_disabled": [
+      "TURBO_OFF_disabled"
+    ],
+    "TURBO_OFF_mouse-ver": [
+      "TURBO_OFF_mouse-ver"
+    ],
+    "TURBO_OFF_pressed": [
+      "TURBO_OFF_pressed"
+    ],
+    "TURBO_ON": [
+      "TURBO_ON"
+    ],
+    "TURBO_ON_disabled": [
+      "TURBO_ON_disabled"
+    ],
+    "TURBO_ON_mouse-ver": [
+      "TURBO_ON_mouse-ver"
+    ],
+    "TURBO_ON_pressed": [
+      "TURBO_ON_pressed"
+    ],
+    "balance": [
+      "balance"
+    ],
+    "bet": [
+      "bet"
+    ],
+    "fonts/MotleyForces": [
+      "fonts/MotleyForces"
+    ],
+    "post_intro_assets_1x": [
+      "post_intro_assets_1x"
+    ],
+    "symbols/10": [
+      "symbols/10"
+    ],
+    "symbols/9": [
+      "symbols/9"
+    ],
+    "symbols/A": [
+      "symbols/A"
+    ],
+    "symbols/Bronze_Piggy": [
+      "symbols/Bronze_Piggy"
+    ],
+    "symbols/Gold_Piggy": [
+      "symbols/Gold_Piggy/gold_piggy",
+      "symbols/Gold_Piggy"
+    ],
+    "symbols/J": [
+      "symbols/J"
+    ],
+    "symbols/K": [
+      "symbols/K"
+    ],
+    "symbols/Q": [
+      "symbols/Q"
+    ],
+    "symbols/Rose_Gold_Piggy": [
+      "symbols/Rose_Gold_Piggy/rose_gold_piggy",
+      "symbols/Rose_Gold_Piggy"
+    ],
+    "symbols/SCATTER": [
+      "symbols/SCATTER"
+    ],
+    "symbols/Scatter": [
+      "symbols/Scatter/scatter"
+    ],
+    "symbols/Silver_Piggy": [
+      "symbols/Silver_Piggy/silver_piggy",
+      "symbols/Silver_Piggy"
+    ],
+    "symbols/WILD": [
+      "symbols/WILD"
+    ],
+    "symbols/Wild": [
+      "symbols/Wild/wild"
+    ],
+    "symbols/bronze_piggy_anim": [
+      "symbols/bronze_piggy_anim/bronze_piggy"
+    ],
+    "symbols/high_payout_1": [
+      "symbols/high_payout_1"
+    ],
+    "symbols/high_payout_1_1x": [
+      "symbols/high_payout_1_1x"
+    ],
+    "symbols/royals_anim": [
+      "symbols/royals_anim/royels_akqj109"
+    ],
+    "uiPanels_0__1x": [
+      "uiPanels_0__1x"
+    ],
+    "win": [
+      "win"
+    ],
+    "sprites/sfx_sprite": [
+      "sprites/sfx_sprite"
+    ]
+  },
+  "relatedAssets": {
+    "LoadingScreenBg": [],
+    "LoadingScreenBg_Portrait": [],
+    "Loading_Bar": [],
+    "Locker": [],
+    "Locker_Reflection": [],
+    "Logo": [],
+    "Logo_Portrait": [],
+    "Mockup_Loading_screen_Landscape": [],
+    "Mockup_Loading_screen_Portrait": [],
+    "loading": [],
+    "3_Post_intro": [],
+    "AUTOSPIN": [],
+    "AUTOSPIN_disabled": [],
+    "AUTOSPIN_mouse-ver": [],
+    "AUTOSPIN_pressed": [],
+    "BUY_FREE_SPINS": [],
+    "Background": [],
+    "Background_portrait": [],
+    "Band": [],
+    "FAST_PLAY": [],
+    "FAST_PLAY_disabled": [],
+    "FAST_PLAY_mouse-ver": [],
+    "FAST_PLAY_pressed": [],
+    "Foreground_left": [],
+    "Foreground_p_left": [],
+    "Foreground_p_right": [],
+    "Foreground_portrait": [],
+    "Foreground_right": [],
+    "Free_Spin_Board": [],
+    "Home": [],
+    "Home_disabled": [],
+    "Home_mouse-ver": [],
+    "Home_pressed": [],
+    "I": [],
+    "I_disabled": [],
+    "I_mouse-ver": [],
+    "I_pressed": [],
+    "Left_arrow": [],
+    "Left_arrow_disabled": [],
+    "Left_arrow_mouse-ver": [],
+    "Left_arrow_pressed": [],
+    "Midground": [],
+    "Midground_left": [],
+    "Midground_right": [],
+    "Mockup_Landscape": [],
+    "Mockup_Portait": [],
+    "Reel": [],
+    "Right_arrow": [],
+    "Right_arrow_disabled": [],
+    "Right_arrow_mouse-ver": [],
+    "Right_arrow_pressed": [],
+    "SOUND_OFF": [],
+    "SOUND_OFF_disabled": [],
+    "SOUND_OFF_mouse-ver": [],
+    "SOUND_OFF_pressed": [],
+    "SOUND_ON": [],
+    "SOUND_ON_disabled": [],
+    "SOUND_ON_mouse-ver": [],
+    "SOUND_ON_pressed": [],
+    "SPIN": [],
+    "SPIN_disabled": [],
+    "SPIN_mouse-ver": [],
+    "SPIN_pressed": [],
+    "STOP": [],
+    "STOP_disabled": [],
+    "STOP_mouse-ver": [],
+    "STOP_pressed": [],
+    "TURBO_OFF": [],
+    "TURBO_OFF_disabled": [],
+    "TURBO_OFF_mouse-ver": [],
+    "TURBO_OFF_pressed": [],
+    "TURBO_ON": [],
+    "TURBO_ON_disabled": [],
+    "TURBO_ON_mouse-ver": [],
+    "TURBO_ON_pressed": [],
+    "balance": [],
+    "bet": [],
+    "fonts/MotleyForces": [],
+    "post_intro_assets_1x": [],
+    "symbols/10": [],
+    "symbols/9": [],
+    "symbols/A": [],
+    "symbols/Bronze_Piggy": [],
+    "symbols/Gold_Piggy/gold_piggy": [],
+    "symbols/Gold_Piggy": [],
+    "symbols/J": [],
+    "symbols/K": [],
+    "symbols/Q": [],
+    "symbols/Rose_Gold_Piggy/rose_gold_piggy": [],
+    "symbols/Rose_Gold_Piggy": [],
+    "symbols/SCATTER": [],
+    "symbols/Scatter/scatter": [],
+    "symbols/Silver_Piggy/silver_piggy": [],
+    "symbols/Silver_Piggy": [],
+    "symbols/WILD": [],
+    "symbols/Wild/wild": [],
+    "symbols/bronze_piggy_anim/bronze_piggy": [],
+    "symbols/high_payout_1": [],
+    "symbols/high_payout_1_1x": [],
+    "symbols/royals_anim/royels_akqj109": [],
+    "uiPanels_0__1x": [],
+    "win": [],
+    "sprites/sfx_sprite": []
+  }
+}

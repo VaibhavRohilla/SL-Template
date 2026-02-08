@@ -37,7 +37,7 @@ export class CustomStartScene extends BaseScene implements IStartScene {
   private onStartCallback: (() => void) | null = null;
 
   // Split door background
-  private bgLeft: Sprite | null = null;
+  private bg: Sprite | null = null;
   private bgRight: Sprite | null = null;
 
   // Logo
@@ -113,38 +113,18 @@ export class CustomStartScene extends BaseScene implements IStartScene {
    * Create split-door background (reference style)
    */
   private createSplitBackground(width: number, height: number): void {
-    const leftTexture = this.ctx.resolveTexture(this.visualConfig.doors.leftImage);
-    const rightTexture = this.ctx.resolveTexture(this.visualConfig.doors.rightImage);
+    const bgTexture = this.ctx.resolveTexture(this.visualConfig.Locker.assetKey);
+    console.log("bgTexture", bgTexture);
 
     // Left door - anchored at center for animation
-    if (leftTexture) {
-      this.bgLeft = new Sprite(leftTexture);
-      this.bgLeft.anchor.set(0.5);
-      this.bgLeft.width = width / 2;
-      this.bgLeft.height = height;
-      this.bgLeft.x = width / 4; // Center of left half
-      this.bgLeft.y = height / 2;
-      this.container.addChild(this.bgLeft);
-    }
-
-    // Right door - anchored at center for animation
-    if (rightTexture) {
-      this.bgRight = new Sprite(rightTexture);
-      this.bgRight.anchor.set(0.5);
-      this.bgRight.width = width / 2;
-      this.bgRight.height = height;
-      this.bgRight.x = width * 3 / 4; // Center of right half
-      this.bgRight.y = height / 2;
-      this.container.addChild(this.bgRight);
-    }
-
-    // Fallback if no textures
-    if (!this.bgLeft && !this.bgRight) {
-      this.ctx.logger.warn('CustomStartScene: Door textures not found, using fallback');
-      const bg = new Graphics();
-      bg.rect(0, 0, width, height);
-      bg.fill({ color: colors.bgDark });
-      this.container.addChild(bg);
+    if (bgTexture) {
+      this.bg = new Sprite(bgTexture);
+      this.bg.anchor.set(0.5);
+      this.bg.width = width;
+      this.bg.height = height;
+      this.bg.x = width / 2; // Center of left half
+      this.bg.y = height / 2;
+      this.container.addChild(this.bg);
     }
   }
 
@@ -229,8 +209,6 @@ export class CustomStartScene extends BaseScene implements IStartScene {
    * Setup interaction handlers
    */
   private setupInteraction(width: number, height: number): void {
-    // Create invisible hit area overlay (PIXI v8 compatible approach)
-    // Using a Graphics child instead of hitArea property to avoid isInteractive issues
     this.hitAreaOverlay = new Graphics();
     this.hitAreaOverlay.rect(0, 0, width, height);
     this.hitAreaOverlay.fill({ color: 0x000000, alpha: 0 }); // Invisible
@@ -350,12 +328,12 @@ export class CustomStartScene extends BaseScene implements IStartScene {
 
     // Animate left door: scale up + slide left
     // Reference: x = -576 at 1920 width (proportionally: -width * 0.3)
-    if (this.bgLeft) {
-      const startX = this.bgLeft.x;
-      const startScale = this.bgLeft.scale.x;
+    if (this.bg) {
+      const startX = this.bg.x;
+      const startScale = this.bg.scale.x;
       const targetX = -width * 0.3;  // Reference: -576 at 1920
       const targetScale = startScale * config.doorScaleTo;
-      const leftRef = this.bgLeft;
+      const leftRef = this.bg;
 
       const leftTween = { progress: 0 };
       const handle = this.ctx.tweenService.to(leftTween, { progress: 1 }, {
@@ -438,8 +416,8 @@ export class CustomStartScene extends BaseScene implements IStartScene {
     this.onStartCallback = null;
 
     // Destroy and clear references
-    this.bgLeft?.destroy();
-    this.bgLeft = null;
+    this.bg?.destroy();
+    this.bg = null;
     this.bgRight?.destroy();
     this.bgRight = null;
     this.logo?.destroy();

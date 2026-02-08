@@ -43,13 +43,26 @@
   "assetAliases": {},
   "assetGroups": {
     "textures": {
-      "common": ["cell", "red_cell", "green_star", "yellow_star"],
-      "gameTable": ["GameTable"],
-      "bonus": ["bonus"],
-      "ui": ["ui"]
+      "common": [
+        "cell",
+        "red_cell",
+        "green_star",
+        "yellow_star"
+      ],
+      "gameTable": [
+        "GameTable"
+      ],
+      "bonus": [
+        "bonus"
+      ],
+      "ui": [
+        "ui"
+      ]
     },
     "audio": {
-      "sfx": ["sfx_sprite"],
+      "sfx": [
+        "sfx_sprite"
+      ],
       "music": []
     }
   }

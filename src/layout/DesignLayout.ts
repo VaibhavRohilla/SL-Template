@@ -40,8 +40,8 @@ export const SYMBOL_GAP_V = 8;
 /** Number of columns in the grid */
 export const GRID_COLS = 5;
 
-/** Number of rows in the grid */
-export const GRID_ROWS = 5;
+/** Number of rows in the grid (Matching Reference) */
+export const GRID_ROWS = 4;
 
 /** Total grid width: (140 + 9) * 5 - 9 = 736 */
 export const GRID_W = (SYMBOL_W + SYMBOL_GAP_H) * GRID_COLS - SYMBOL_GAP_H;

@@ -11,7 +11,8 @@
  * Reference: blingo_front/ui/GameScreen/GameTable/GameSpinSymbol.ts
  */
 
-import { Container, Graphics, Sprite, AnimatedSprite, BitmapText, Text, TextStyle, BlurFilter, type Texture } from 'pixi.js';
+import { Container, Graphics, Sprite, AnimatedSprite, BitmapText, Text, TextStyle, BlurFilter, Texture } from 'pixi.js';
+import { slotConfig } from '../config/slotConfig.js';
 import { type ITweenService } from '@fnx/sl-engine';
 
 import type { TextureResolver } from './SlingoGrid.js';
@@ -45,19 +46,24 @@ export interface SpinnerReelResult {
  * Symbol texture keys for different types
  */
 const SYMBOL_TEXTURES: Record<string, string> = {
-  devil: 'BAR',
-  dragon: 'DRAGON',
-  coin: 'EIGHT',
-  free_spin: 'FAN',
-  joker: 'YINYANG',
-  super_joker: 'PIG',
-  sym_0: 'BAR',
-  sym_1: 'DRAGON',
-  sym_2: 'EIGHT',
-  sym_3: 'FAN',
-  sym_4: 'LOTUS',
-  sym_5: 'PIG',
-  sym_6: 'YINYANG',
+  devil: 'symbols/SCATTER', // Placeholder mapping
+  dragon: 'symbols/WILD',
+  coin: 'symbols/Gold_Piggy',
+  free_spin: 'symbols/SCATTER',
+  joker: 'symbols/Rose_Gold_Piggy',
+  super_joker: 'symbols/Gold_Piggy',
+  sym_41: 'symbols/A',
+  sym_42: 'symbols/K',
+  sym_43: 'symbols/Q',
+  sym_44: 'symbols/J',
+  sym_45: 'symbols/10',
+  sym_46: 'symbols/9',
+  sym_51: 'symbols/Rose_Gold_Piggy',
+  sym_52: 'symbols/Gold_Piggy',
+  sym_53: 'symbols/Silver_Piggy',
+  sym_54: 'symbols/Bronze_Piggy',
+  sym_90: 'symbols/WILD',
+  sym_91: 'symbols/SCATTER',
 };
 
 /**
@@ -304,23 +310,17 @@ export class SlingoReel extends Container {
       text.visible = true;
       text.alpha = 1;
       container.addChild(text);
-    } else if (result.type === 'dragon') {
-      // Dragon symbol - image sprite (matching reference type='image' for 'D')
-      const texture = this.resolveTexture('GameTable/Spin/D');
+    } else if (result.type === 'dragon' || result.value === 90) {
+      // Dragon (Wild) symbol
+      const symbol = slotConfig.symbols.find(s => s.id === (result.value ?? 90));
+      const spriteKey = symbol?.spriteKey || 'symbols/WILD';
+      const texture = this.resolveTexture(spriteKey);
       if (texture) {
         const sprite = new Sprite(texture);
-        sprite.anchor.set(0, 0); // Use top-left anchor for positioning (matching reference)
-        // Position matching reference: x = width/2 - sprite.width/2, y = height/2 - sprite.height/2
-        const bgCenterX = SYMBOL_W / 2;
-        const bgCenterY = SYMBOL_H / 2;
-        sprite.x = bgCenterX - sprite.width / 2;
-        sprite.y = bgCenterY - sprite.height / 2;
-        sprite.visible = true;
-        sprite.alpha = 1;
+        sprite.anchor.set(0.5);
+        sprite.x = SYMBOL_W / 2;
+        sprite.y = SYMBOL_H / 2;
         container.addChild(sprite);
-        console.log(`SlingoReel ${this.index}: Dragon symbol created - texture=${texture ? 'loaded' : 'missing'}, x=${sprite.x}, y=${sprite.y}, width=${sprite.width}, height=${sprite.height}`);
-      } else {
-        console.warn(`SlingoReel ${this.index}: Dragon texture 'GameTable/Spin/D' not found`);
       }
     } else {
       // Special symbols - animated sprite (matching reference type='animation' for FS, PG, J, RJ, SJ)

@@ -1,0 +1,377 @@
+high_payout_1@1x.png
+size:808,808
+filter:Linear,Linear
+scale:0.25
+BG 02
+bounds:2,365,104,225
+Blade
+bounds:69,34,102,48
+rotate:90
+Blade blood
+bounds:108,249,81,25
+rotate:90
+Blood splash
+bounds:592,713,85,73
+Body
+bounds:490,714,100,72
+CUT NeckHp cut neck
+bounds:743,193,25,25
+Dress extra cloth
+bounds:640,649,43,62
+EYE Ball L
+bounds:538,123,3,3
+EYE Ball L copyHp cut neck
+bounds:656,104,3,3
+EYE Ball R
+bounds:679,714,4,4
+EYE Ball R copyHp cut neck
+bounds:541,472,4,3
+rotate:90
+EYE brow L
+bounds:140,592,8,3
+EYE brow R
+bounds:506,79,11,4
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00001
+bounds:352,625,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00002
+bounds:374,618,75,20
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00003
+bounds:486,632,75,20
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00004
+bounds:563,631,75,20
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00005
+bounds:784,731,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00006
+bounds:128,515,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00007
+bounds:128,438,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00008
+bounds:330,520,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00009
+bounds:330,443,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00010
+bounds:524,555,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00011
+bounds:524,478,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00012
+bounds:352,442,75,20
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00013
+bounds:606,494,75,20
+rotate:90
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00014
+bounds:546,472,75,20
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00015
+bounds:464,456,75,20
+Elements - Energy 021 Ray Right noCT noRSZ 2/Elements - Energy 021 Ray Right noCT noRSZ 2_00016
+bounds:685,638,75,20
+Face
+bounds:620,109,39,51
+FaceHp cut neck
+bounds:195,2,36,52
+Frame middle
+bounds:140,597,103,210
+rotate:90
+Gilden Want copy 2
+bounds:2,28,65,108
+Group 26
+bounds:140,702,104,225
+rotate:90
+Group 261
+bounds:2,138,104,225
+HairL
+bounds:2,14,12,28
+rotate:90
+King Louis XVI
+bounds:108,332,86,14
+rotate:90
+Neck
+bounds:533,26,25,25
+Top Dress
+bounds:367,717,121,89
+White L
+bounds:680,572,5,3
+rotate:90
+White L copyHp cut neck
+bounds:736,397,6,3
+White R
+bounds:623,485,7,3
+rotate:90
+White R copyHp cut neck
+bounds:530,310,8,4
+blood stainHp cut neck
+bounds:704,193,37,25
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00000
+bounds:108,172,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00001
+bounds:434,640,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00002
+bounds:412,541,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00003
+bounds:412,464,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00004
+bounds:541,420,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00005
+bounds:119,95,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00006
+bounds:150,391,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00007
+bounds:227,391,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00008
+bounds:124,339,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00009
+bounds:201,339,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00010
+bounds:171,108,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00011
+bounds:220,185,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00012
+bounds:223,108,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00013
+bounds:255,262,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00014
+bounds:272,185,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00015
+bounds:275,108,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00016
+bounds:278,339,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00017
+bounds:307,262,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00018
+bounds:324,185,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00019
+bounds:327,108,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00020
+bounds:376,390,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00021
+bounds:171,56,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00022
+bounds:248,56,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00023
+bounds:233,4,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00024
+bounds:325,56,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00025
+bounds:310,4,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00026
+bounds:530,368,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00027
+bounds:453,344,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00028
+bounds:376,338,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00029
+bounds:530,316,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00030
+bounds:453,292,50,75
+rotate:90
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00031
+bounds:436,215,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00032
+bounds:488,215,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00033
+bounds:439,138,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00034
+bounds:491,138,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00035
+bounds:540,239,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00036
+bounds:543,162,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00037
+bounds:592,239,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00038
+bounds:595,162,50,75
+blood/Elements - Liquid 027 Down noCT noRSZ 2_00039
+bounds:543,110,50,75
+rotate:90
+closed eye 01
+bounds:698,454,10,5
+closed eye 01Hp cut neck
+bounds:519,79,9,4
+closed eye 02
+bounds:124,332,6,5
+closed eye 02Hp cut neck
+bounds:124,332,6,5
+cotten1
+bounds:142,2,30,51
+rotate:90
+cotten2
+bounds:506,85,30,51
+extra hair
+bounds:69,2,71,30
+extra hairHp cut neck
+bounds:402,62,60,45
+rotate:90
+extra hand
+bounds:387,2,48,30
+rotate:90
+eye brow LHp cut neck
+bounds:538,128,8,3
+rotate:90
+eye brow RHp cut neck
+bounds:367,704,11,5
+rotate:90
+fream lower part
+bounds:679,720,101,18
+fream top part
+bounds:679,740,103,66
+fx/fx_00000
+bounds:449,79,55,57
+fx/fx_00001
+bounds:538,53,55,57
+rotate:90
+fx/fx_00002
+bounds:597,52,55,57
+rotate:90
+fx/fx_00003
+bounds:419,3,55,57
+fx/fx_00004
+bounds:623,572,55,57
+fx/fx_00005
+bounds:628,513,55,57
+fx/fx_00006
+bounds:680,579,55,57
+fx/fx_00007
+bounds:685,520,55,57
+fx/fx_00008
+bounds:737,579,55,57
+fx/fx_00009
+bounds:742,520,55,57
+fx/fx_00010
+bounds:628,454,55,57
+fx/fx_00011
+bounds:685,461,55,57
+fx/fx_00012
+bounds:742,461,55,57
+fx/fx_00013
+bounds:618,397,55,57
+rotate:90
+fx/fx_00014
+bounds:607,338,55,57
+fx/fx_00015
+bounds:476,20,55,57
+fx/fx_00016
+bounds:664,338,55,57
+fx/fx_00017
+bounds:677,397,55,57
+rotate:90
+fx/fx_00018
+bounds:736,402,55,57
+fx/fx_00019
+bounds:644,279,55,57
+fx/fx_00020
+bounds:647,182,55,57
+fx/fx_00021
+bounds:661,123,55,57
+fx/fx_00022
+bounds:701,279,55,57
+fx/fx_00023
+bounds:721,338,55,57
+fx/fx_00024
+bounds:704,220,55,57
+fx/fx_00025
+bounds:661,64,55,57
+fx/fx_00026
+bounds:718,134,55,57
+fx/fx_00027
+bounds:718,75,55,57
+fx/fx_00028
+bounds:718,16,55,57
+hair
+bounds:119,34,42,59
+hair  RHp cut neck
+bounds:644,241,36,41
+rotate:90
+hair LHp cut neck
+bounds:436,310,15,26
+hand R
+bounds:304,391,49,70
+rotate:90
+light
+bounds:2,592,136,214
+lip
+bounds:352,618,11,5
+lipHp cut neck
+bounds:685,454,11,5
+piller
+bounds:108,420,18,170
+piller2
+bounds:490,788,18,170
+rotate:90
+shine
+bounds:449,70,7,25
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00001
+bounds:374,640,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00002
+bounds:486,654,58,75
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00003
+bounds:563,653,58,75
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00004
+bounds:685,660,58,75
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00005
+bounds:150,520,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00006
+bounds:210,520,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00007
+bounds:270,520,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00008
+bounds:150,443,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00009
+bounds:210,443,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00010
+bounds:270,443,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00011
+bounds:352,541,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00012
+bounds:464,555,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00013
+bounds:352,464,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00014
+bounds:464,478,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00015
+bounds:546,571,58,75
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00016
+bounds:546,494,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00017
+bounds:135,262,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00018
+bounds:195,262,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00019
+bounds:160,185,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00020
+bounds:453,396,58,75
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00021
+bounds:359,278,58,75
+rotate:90
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00022
+bounds:376,201,58,75
+sparks/Elements - Sparks 003 Shot Hit Right noCT noRSZ 2_00023
+bounds:379,124,58,75

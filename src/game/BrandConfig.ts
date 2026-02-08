@@ -5,24 +5,25 @@
  */
 
 import type { BackgroundConfig, SlotFrameConfig, BootConfig } from '@fnx/sl-engine';
+import { UI_ASSETS } from '../ui/reference/AssetMap.js';
 
 /**
  * Color palette - Template Example (Gold/Red)
  */
 export const colors = {
     // Primary colors
-    primary: 0xd4af37, // Gold
-    primaryLight: 0xf4d03f,
-    primaryDark: 0xa67c00,
+    primary: 0x0d0500, // Gold
+    primaryLight: 0x0d0500,
+    primaryDark: 0x0d0500,
 
     // Accent
     accent: 0xc41e3a, // Dragon red
     accentLight: 0xe74c3c,
 
     // Background colors
-    bgDark: 0x1a0a0a,
-    bgMedium: 0x2d1515,
-    bgLight: 0x4a2020,
+    bgDark: 0x000000,
+    bgMedium: 0x000000,
+    bgLight: 0x000000,
 
     // Text colors
     textPrimary: 0xffffff,
@@ -50,8 +51,8 @@ export const backgroundConfig: BackgroundConfig = {
  * Slot frame overlay configuration
  */
 export const frameConfig: SlotFrameConfig = {
-    enabled: false, // Default disabled, enabling requires 'frame_slot' asset
-    imageKey: 'frame_slot',
+    enabled: true,
+    imageKey: UI_ASSETS.SCENE.FRAME,
     anchor: 'center',
     scaleMode: 'fit',
     offset: [0, 0],
@@ -77,7 +78,7 @@ export const bootConfig: Partial<BootConfig> = {
         },
         logo: {
             type: 'image',
-            value: 'logo_game',
+            value: UI_ASSETS.LOADING.LOGO,
             yPositionPct: 0.462,
             maxWidthPct: 0.5,
         },
@@ -88,7 +89,7 @@ export const bootConfig: Partial<BootConfig> = {
             showPercent: false,
             showStatus: false,
             textColor: colors.textGold,
-            fontFamily: 'Gang', // Ensure this font is in fonts.css/manifest
+            fontFamily: UI_ASSETS.FONTS.MAIN,
             percentFontSize: 18,
             statusFontSize: 14,
         },
@@ -102,13 +103,13 @@ export const bootConfig: Partial<BootConfig> = {
         },
         logo: {
             type: 'image',
-            value: 'logo_game',
+            value: UI_ASSETS.LOADING.LOGO,
             yPositionPct: 0.462,
             maxWidthPct: 0.5,
         },
         ctaText: 'CLICK TO START',
         ctaTextColor: 0xfb0058,
-        ctaFontFamily: 'Gang',
+        ctaFontFamily: UI_ASSETS.FONTS.MAIN,
         ctaFontSize: 35,
         ctaPulseAnimation: true,
         requireTap: true,
@@ -139,38 +140,37 @@ export const dimensions = {
  */
 export const referenceVisualConfig = {
     // Split-door background asset keys (must match manifest.json boot bundle)
-    doors: {
-        leftImage: 'bg_left',
-        rightImage: 'bg_right',
+    Locker: {
+        assetKey: UI_ASSETS.LOADING.BACKGROUND,
     },
     // Logo positioning (reference: height/2 - 41px at 1080 height)
     logo: {
-        assetKey: 'logo_game',
+        assetKey: UI_ASSETS.LOADING.LOGO,
         yOffset: -41, // Pixels from center
     },
     // Text reveal loader
     loader: {
         text: 'LOADING...',
-        fontFamily: 'Gang',
+        fontFamily: UI_ASSETS.FONTS.MAIN,
         fontSize: 35,
         textColor: 0xffffff,
-        fillColor: 0xfb0058, // Pink accent
+        fillColor: 0xfeee36, // Pink accent
         yOffset: 433, // Pixels below center
     },
     // Start screen CTA
     cta: {
         text: 'CLICK TO START',
-        fontFamily: 'Gang',
+        fontFamily: UI_ASSETS.FONTS.MAIN,
         fontSize: 35,
         textColor: 0xffffff,
-        fillColor: 0xfb0058,
+        fillColor: 0xfeee36,
         yOffset: 433,
     },
     // Door animation
     doorAnimation: {
         durationMs: 2000,
         easing: 'power1.in' as const,
-        doorSound: 'door_open',
+        doorSound: UI_ASSETS.AUDIO.CLICK,
         logoScaleTo: 1.2,
         doorScaleTo: 1.2,
     },

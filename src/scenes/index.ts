@@ -36,7 +36,7 @@ export function createGameScene(ctx: SceneContext): IScene {
 export const sceneFactories: SceneFactories = {
   loading: createLoadingScene,
   start: createStartScene,
-  game: createGameScene, // Use CustomGameScene for reference parity
+  game: createGameScene,
 };
 
 export { CustomLoadingScene } from './CustomLoadingScene.js';
