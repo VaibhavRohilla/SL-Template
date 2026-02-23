@@ -49,7 +49,7 @@ export const frameConfig = {
   imageKey: UI_ASSETS.SCENE.FRAME,
   layer: 'game' as const,
   anchor: 'center' as const,
-  scaleMode: 'fit' as const,
+  scaleMode: 'fill' as const,
   offset: [0, 0] as [number, number],
   scale: 1,
   zIndex: 100,
@@ -106,10 +106,10 @@ export const bootConfig: Partial<BootConfig> = {
 export const dimensions = {
   width: 1920,
   height: 1080,
-  symbolWidth: 200,
-  symbolHeight: 200,
-  symbolGap: 60,
-  reelGap: 100,
+  symbolWidth: 180,
+  symbolHeight: 180,
+  symbolGap: 10,
+  reelGap: 50,
 } as const;
 
 export default {

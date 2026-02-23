@@ -17,25 +17,27 @@ export const spinFeelConfig: SpinFeelConfigWithStopOrder = {
     ...premiumPreset,
     presetName: 'template-premium',
 
-    // Symbol dimensions (match layout)
-    symbolHeightPx: 140,
-    symbolGapPx: 4,
+    // Scroll-math units: these drive scroll speed, cycle-height, and stop planning
+    // in ReelMechanicClassic — they are intentionally independent of the layout
+    // cell size in BrandConfig.dimensions (symbolHeight=200, symbolGap=60).
+    symbolHeightPx: 10,
+    symbolGapPx: 3,
 
     // Spin speed – readable symbols while spinning (px/sec)
     spinSpeedPxPerSec: 2200,
 
-    // Staggered reel stops (ms delay before each reel is allowed to stop)
-    stopDelayMs: [0, 0, 0, 0, 480],
+    // Per-reel stagger: ms delay before that reel is allowed to stop. [0,0,0,0,0] = no stagger.
+    stopDelayMs: [0, 0, 0, 0, 0],
 
     // Optional: reel stop order (default left-to-right). e.g. [4,3,2,1,0] = right-to-left
-    reelStopOrder: [0, 1, 2, 3, 4],
+    reelStopOrder: [4,3,2,1,0],
 
     // Minimum spin time so reels don’t stop too abruptly
-    minSpinMs: 600,
+    minSpinMs: 300,
     maxSpinMs: 10000,
 
-    // Stop deceleration – duration and easing for smooth slide-in
-    stopDecelMs: 280,
+    // Stop deceleration – duration (ms) per reel to slide to stop. Lower = snappier.
+    stopDecelMs: 50,
     stopEase: 'cubicOut',
 
     // Bounce after stop (overshoot then settle)

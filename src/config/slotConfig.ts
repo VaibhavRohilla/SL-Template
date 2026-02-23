@@ -50,15 +50,15 @@ export const slotConfig: SlotConfig = {
   reels: {
     strips: [
       // Reel 1
-      [45, 52, 41, 54, 91, 91,  51, 43, 44, 52, 53, 45,  51, 52, 46, 53, 54, 41, 51, 52, 91, 91, 53, 54,  51, 52, 53, 54,  41, 42, 43, 44, 52, 46, 51, 42, 43, 54, 45, 46, 41, 42, 51, 44, 45, 46,  42, 43, 44, 45,  41, 42, 43,  45, 46, 54, 42, 43, 44, 45, 45],
+      [45, 52, 41, 54, 91, 91, 51, 43, 44, 52, 53, 45, 51, 52, 46, 53, 54, 41, 51, 52, 91, 91, 53, 54, 51, 52, 53, 54, 41, 42, 43, 44, 52, 46, 51, 42, 43, 54, 45, 46, 41, 42, 51, 44, 45, 46, 42, 43, 44, 45, 41, 42, 43, 45, 46, 54, 42, 43, 44, 45, 45],
       // Reel 2
-      [51, 52, 53, 54, 91, 91,  51, 52, 53, 51,  51, 52, 53, 54,  51, 52, 91, 91, 53, 43,  43, 54, 53, 54, 42, 41, 43, 51, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 43, 43, 44, 45, 46, 41, 42, 43, 44, 45, 43, 41, 42, 43, 44, 45, 46, 46, 54, 44, 45, 46, 44, 45, 46, 45],
+      [51, 52, 53, 54, 91, 91, 51, 52, 53, 51, 51, 52, 53, 54, 51, 52, 91, 91, 53, 43, 43, 54, 53, 54, 42, 41, 43, 51, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 43, 43, 44, 45, 46, 41, 42, 43, 44, 45, 43, 41, 42, 43, 44, 45, 46, 46, 54, 44, 45, 46, 44, 45, 46, 45],
       // Reel 3
-      [51, 52, 53, 54, 91, 91,  51, 52, 53, 54,  51, 52, 51, 54,  51, 52, 91, 91, 53, 54,  51, 52, 53, 54,  41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 41, 46, 41, 42, 43, 44, 45, 53, 41, 53,  41, 43, 46, 45, 46, 45],
+      [51, 52, 53, 54, 91, 91, 51, 52, 53, 54, 51, 52, 51, 54, 51, 52, 91, 91, 53, 54, 51, 52, 53, 54, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 41, 46, 41, 42, 43, 44, 45, 53, 41, 53, 41, 43, 46, 45, 46, 45],
       // Reel 4
-      [51, 52, 53, 54, 91, 91,  51, 52, 53, 54,  51, 52, 51, 54,  51, 52, 91, 91, 53, 54,  51, 52, 53, 54,  41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 41, 46, 41, 42, 43, 44, 45, 53, 41, 53,  41, 43, 46, 45, 46, 45],
+      [51, 52, 53, 54, 91, 91, 51, 52, 53, 54, 51, 52, 51, 54, 51, 52, 91, 91, 53, 54, 51, 52, 53, 54, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 41, 46, 41, 42, 43, 44, 45, 53, 41, 53, 41, 43, 46, 45, 46, 45],
       // Reel 5
-      [51, 52, 53, 54, 91, 91,  51, 52, 53, 54,  51, 52, 51, 54,  51, 52, 91, 91, 53, 54,  51, 52, 53, 54,  41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 41, 46, 41, 42, 43, 44, 45, 53, 41, 53,  41, 43, 46, 45, 46, 45],
+      [51, 52, 53, 54, 91, 91, 51, 52, 53, 54, 51, 52, 51, 54, 51, 52, 91, 91, 53, 54, 51, 52, 53, 54, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 41, 46, 41, 42, 43, 44, 45, 53, 41, 53, 41, 43, 46, 45, 46, 45],
     ],
   },
 
@@ -67,6 +67,7 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.NINE,
       name: 'Nine',
+      scaleMode: 'fit',
       displayType: 'sprite',
       spriteKey: 'symbols/9',
       isHighValue: false,
@@ -74,12 +75,15 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.TEN,
       name: 'Ten',
+      scaleMode: 'fit',
+
       displayType: 'sprite',
       spriteKey: 'symbols/10',
       isHighValue: false,
     },
     {
       id: SymbolId.JACK,
+      scaleMode: 'fit',
       name: 'Jack',
       displayType: 'sprite',
       spriteKey: 'symbols/J',
@@ -87,6 +91,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.QUEEN,
+      scaleMode: 'fit',
       name: 'Queen',
       displayType: 'sprite',
       spriteKey: 'symbols/Q',
@@ -94,6 +99,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.KING,
+      scaleMode: 'fit',
       name: 'King',
       displayType: 'sprite',
       spriteKey: 'symbols/K',
@@ -101,6 +107,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.ACE,
+      scaleMode: 'fit',
       name: 'Ace',
       displayType: 'sprite',
       spriteKey: 'symbols/A',
@@ -108,6 +115,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.BRONZE_PIGGY,
+      scaleMode: 'fit',
       name: 'Bronze Piggy',
       displayType: 'sprite',
       spriteKey: 'symbols/Bronze_Piggy',
@@ -116,6 +124,7 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.SILVER_PIGGY,
       name: 'Silver Piggy',
+      scaleMode: 'fit',
       displayType: 'sprite',
       spriteKey: 'symbols/Silver_Piggy',
       isHighValue: true,
@@ -123,12 +132,15 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.GOLD_PIGGY,
       name: 'Gold Piggy',
+      scaleMode: 'fit',
+
       displayType: 'sprite',
       spriteKey: 'symbols/Gold_Piggy',
       isHighValue: true,
     },
     {
       id: SymbolId.ROSE_GOLD_PIGGY,
+      scaleMode: 'fit',
       name: 'Rose Gold Piggy',
       displayType: 'sprite',
       spriteKey: 'symbols/Rose_Gold_Piggy',
@@ -137,12 +149,14 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.WILD,
       name: 'Wild',
+      scaleMode: 'fit',
       displayType: 'sprite',
       spriteKey: 'symbols/WILD',
       isHighValue: true,
     },
     {
       id: SymbolId.SCATTER,
+      scaleMode: 'fit',
       name: 'Scatter',
       displayType: 'sprite',
       spriteKey: 'symbols/SCATTER',
