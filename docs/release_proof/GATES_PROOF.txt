@@ -1,0 +1,98 @@
+=== TREE (src scripts docs) ===
+.github/workflows/ci.yml
+docs/release_proof/GATES_PROOF.txt
+docs/release_proof/GATES_PROOF_BEFORE.txt
+docs/template/ASSET_PIPELINE.md
+docs/template/BRANDING_GUIDE.md
+docs/template/SDK_ONLY_TEMPLATE.md
+docs/template/TEMPLATE_QUICKSTART.md
+docs/template_audit_2026/T0_EXEC_SUMMARY.md
+docs/template_audit_2026/T10_RELEASE_VERDICT.md
+docs/template_audit_2026/T11_FIX_PLAN.md
+docs/template_audit_2026/T1_GATES_AND_ENV.md
+docs/template_audit_2026/T2_BOOT_AND_SCENES.md
+docs/template_audit_2026/T3_BACKEND_INTEGRATION_AND_NORMALIZATION.md
+docs/template_audit_2026/T4_RECOVERY_AND_RECONNECT.md
+docs/template_audit_2026/T5_SPIN_STOP_TURBO_SEMANTICS.md
+docs/template_audit_2026/T6_ASSETS_AND_MANIFEST_TRUTH.md
+docs/template_audit_2026/T7_CONFIG_TRUTH_AND_DUPLICATES.md
+docs/template_audit_2026/T8_PUBLIC_API_USAGE.md
+docs/template_audit_2026/T9_DEAD_SURFACES_AND_LEGACY.md
+docs/template_rewrite/GATES_AFTER.txt
+docs/template_rewrite/GATES_BEFORE.txt
+docs/ui_parity/ASSET_PIPELINE_LOCK.md
+docs/ui_parity/REFERENCE_ASSETS_SPEC.md
+docs/ui_parity/REFERENCE_UI_SPEC.md
+docs/ui_parity/TEMPLATE_UI_INVENTORY.md
+docs/ui_parity/UI_REMOVAL_PLAN.md
+scripts/build.js
+scripts/clean.js
+scripts/dev.js
+scripts/preview.js
+src/Asset.d.ts
+src/assets/fixtures/reference_p0.json
+src/assets/fixtures/reference_p1_sequence.json
+src/bootstrap/bootstrap.ts
+src/brand/BrandConfig.ts
+src/brand/SpinFeel.ts
+src/config/index.ts
+src/config/slotConfig.ts
+src/index.html
+src/main.ts
+src/scenes/CustomLoadingScene.ts
+src/scenes/CustomStartScene.ts
+src/scenes/index.ts
+src/ui/GameUI.ts
+src/ui/index.ts
+src/ui/reference/AssetMap.ts
+
+=== TYPECHECK ===
+
+> slot-game-template@1.0.0 typecheck /home/fnxden/Work/SL-Template
+> tsc --noEmit
+
+
+=== LINT ===
+
+> slot-game-template@1.0.0 lint /home/fnxden/Work/SL-Template
+> eslint src --ext .ts
+
+
+/home/fnxden/Work/SL-Template/src/Asset.d.ts
+  127:38  warning  'spriteKey' is defined but never used  @typescript-eslint/no-unused-vars
+  127:70  warning  'clipKey' is defined but never used    @typescript-eslint/no-unused-vars
+
+/home/fnxden/Work/SL-Template/src/scenes/CustomLoadingScene.ts
+  224:33  warning  '_status' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 3 problems (0 errors, 3 warnings)
+
+
+=== TEST ===
+
+> slot-game-template@1.0.0 test /home/fnxden/Work/SL-Template
+> vitest --passWithNoTests --run
+
+
+ RUN  v2.1.9 /home/fnxden/Work/SL-Template
+
+include: src/**/*.test.ts, tools/**/*.test.ts
+exclude:  **/node_modules/**, **/dist/**, **/cypress/**, **/.{idea,git,cache,output,temp}/**, **/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*
+No test files found, exiting with code 0
+
+
+=== BUILD ===
+
+> slot-game-template@1.0.0 build /home/fnxden/Work/SL-Template
+> node scripts/build.js
+
+🏗️  Building for production...
+
+
+  dist/main.js      1.0mb ⚠️
+  dist/main.js.map  4.8mb
+
+⚡ Done in 215ms
+📦 main.js: 1044.5 KB
+
+✅ Build complete: dist/

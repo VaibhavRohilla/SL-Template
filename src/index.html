@@ -152,14 +152,29 @@
 </head>
 
 <body>
-  <!-- Pre-Pixi loading spinner -->
-  <div class="wrapper">
-    <div class="loader"></div>
-  </div>
 
   <!-- Game canvas container -->
   <div id="game-container">
     <canvas id="game-canvas"></canvas>
+
+    <!-- In-game UI: balance, bet, win, spin (GameUI binds to these IDs) -->
+    <div id="game-ui" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; pointer-events: none; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 24px; box-sizing: border-box;">
+      <div style="pointer-events: auto; display: flex; align-items: center; gap: 24px; background: rgba(0,0,0,0.6); padding: 12px 20px; border-radius: 8px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="color: #ffd700;">Balance:</span>
+          <span id="balance-value" style="color: #fff; font-weight: bold;">$0.00</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="color: #ffd700;">Bet:</span>
+          <span id="bet-value" style="color: #fff; font-weight: bold;">$1.00</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="color: #4ade80;">Win:</span>
+          <span id="win-value" style="color: #fff; font-weight: bold;">$0.00</span>
+        </div>
+        <button id="spin-button" type="button" style="pointer-events: auto; margin-left: 16px; padding: 12px 32px; font-size: 18px; font-weight: bold; background: #fb0058; color: #fff; border: none; border-radius: 8px; cursor: pointer;">SPIN</button>
+      </div>
+    </div>
   </div>
 
   <!-- Portrait mode warning (CSS fallback) -->

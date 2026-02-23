@@ -10,8 +10,7 @@
  * - Use proper currency formatting libraries
  */
 
-import type { ISlotUI, IWinFormatter, ActionGate, PolicyEnforcer } from '@fnx/sl-engine';
-import { GameBootstrap } from '../app/GameBootstrap.js';
+import type { ISlotUI, IWinFormatter } from '@fnx/sl-engine';
 
 export interface GameUIConfig {
   /** Initial balance for demo/dev mode */
@@ -39,10 +38,8 @@ export class GameUI implements ISlotUI, IWinFormatter {
   private balance: number;
   private currentBet: number;
   private lastWin: number = 0;
+  private isSpinning: boolean = false;
   private readonly config: GameUIConfig;
-
-  private gate: ActionGate;
-  private policy: PolicyEnforcer;
 
   // DOM elements (optional - for HTML UI overlay)
   private balanceElement: HTMLElement | null = null;
@@ -60,11 +57,6 @@ export class GameUI implements ISlotUI, IWinFormatter {
     this.balance = this.config.initialBalance;
     this.currentBet = 1.0; // Default bet
 
-    // Get SDK services from bootstrap
-    const bootstrap = GameBootstrap.get();
-    this.gate = bootstrap.getGate();
-    this.policy = bootstrap.getPolicy();
-
     // Try to find DOM elements
     this.balanceElement = document.getElementById('balance-value');
     this.betElement = document.getElementById('bet-value');
@@ -76,13 +68,12 @@ export class GameUI implements ISlotUI, IWinFormatter {
   }
 
   /**
-   * Update all UI button states based on ActionGate
+   * Update all UI button states
    */
   public updateButtonStates(): void {
     if (this.spinButton) {
-      this.spinButton.disabled = !this.gate.canSpin();
+      this.spinButton.disabled = this.isSpinning;
     }
-    // Add other buttons (autoplay, turbo, stop) here
   }
 
   // ============================================================================
@@ -111,6 +102,7 @@ export class GameUI implements ISlotUI, IWinFormatter {
    * Called when a spin starts
    */
   onSpinStart(bet: number): void {
+    this.isSpinning = true;
     this.lastWin = 0;
     this.updateWinDisplay(0);
     this.updateButtonStates();
@@ -120,7 +112,9 @@ export class GameUI implements ISlotUI, IWinFormatter {
   /**
    * Called when a spin completes
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSpinComplete(result: any): void {
+    this.isSpinning = false;
     this.updateButtonStates();
     console.log(`[GameUI] Spin complete: ${result.spinId}, win: ${this.formatCurrency(result.totalWin)}`);
   }
@@ -151,20 +145,10 @@ export class GameUI implements ISlotUI, IWinFormatter {
   }
 
   /**
-   * Check if player can afford bet and if bet is valid per policy
+   * Check if player can afford bet
    */
   canAffordBet(bet: number): boolean {
-    // 1. Check balance
-    if (this.balance < bet) return false;
-
-    // 2. Check policy
-    const validation = this.policy.validateBet(bet);
-    if (!validation.ok) {
-      console.warn(`[GameUI] Bet invalid: ${validation.error.code}`);
-      return false;
-    }
-
-    return true;
+    return this.balance >= bet;
   }
 
   /**

@@ -10,8 +10,9 @@
     "build": "node scripts/build.js",
     "preview": "node scripts/preview.js",
     "typecheck": "tsc --noEmit",
-    "test": "vitest",
-    "test:run": "vitest run",
+    "test": "vitest --passWithNoTests",
+    "test:run": "vitest run --passWithNoTests",
+    "lint": "eslint src --ext .ts",
     "assets": "tsx tools/cli.ts",
     "assets:build": "tsx tools/cli.ts build",
     "assets:audio": "tsx tools/cli.ts audio",
@@ -31,7 +32,10 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
     "esbuild": "^0.24.2",
+    "eslint": "^8.57.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"

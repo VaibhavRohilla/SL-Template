@@ -4,7 +4,7 @@
  * Simple wrapper that calls bootstrap.
  */
 
-import { bootstrap } from './game/bootstrap.js';
+import { bootstrap } from './bootstrap/bootstrap.js';
 
 // Start when DOM is ready
 if (typeof document !== 'undefined') {

@@ -47,7 +47,7 @@ function main(): void {
 
   // Check 1: Engine dependency
   check('Engine Dependency', true, () => {
-    const pkgPath = path.join(ProjectConfig.rootDir, 'node_modules', 'slot-frontend-engine', 'package.json');
+    const pkgPath = path.join(ProjectConfig.rootDir, 'node_modules', '@fnx', 'sl-engine', 'package.json');
     if (fs.existsSync(pkgPath)) {
       const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
       return { passed: true, message: `slot-frontend-engine@${pkg.version}` };
@@ -112,6 +112,43 @@ function main(): void {
       return { passed: true, message: 'build-config.json found' };
     }
     return { passed: false, message: 'build-config.json not found (optional)' };
+  });
+
+  // Check 8: Asset keys (slotConfig + brand) referenced in manifest
+  check('Asset keys (slotConfig + brand)', false, () => {
+    if (!fs.existsSync(OutputConfig.manifestFullPath)) {
+      return { passed: false, message: 'Manifest missing; run pnpm assets:build first' };
+    }
+    try {
+      const out = execSync('pnpm exec tsx tools/asset-keys-validate.ts --json', {
+        encoding: 'utf-8',
+        cwd: ProjectConfig.rootDir,
+        stdio: ['ignore', 'pipe', 'pipe'],
+      });
+      const data = JSON.parse(out) as { passed: boolean; missing: string[] };
+      if (data.passed) {
+        return { passed: true, message: 'All referenced keys present in manifest' };
+      }
+      const list = (data.missing as string[]).slice(0, 15).join(', ');
+      const more = (data.missing as string[]).length > 15 ? ` ... +${(data.missing as string[]).length - 15} more` : '';
+      return { passed: false, message: `Missing keys: ${list}${more}. Run pnpm assets:build or add assets.` };
+    } catch (err: unknown) {
+      const e = err as { stdout?: string; stderr?: string; message?: string };
+      const out = e?.stdout ?? '';
+      if (out) {
+        try {
+          const data = JSON.parse(out) as { passed: boolean; missing: string[] };
+          if (!data.passed && Array.isArray(data.missing)) {
+            const list = data.missing.slice(0, 10).join(', ');
+            const more = data.missing.length > 10 ? ` ... +${data.missing.length - 10} more` : '';
+            return { passed: false, message: `Missing keys: ${list}${more}. Run pnpm assets:build or add assets.` };
+          }
+        } catch {
+          // ignore parse error
+        }
+      }
+      return { passed: false, message: `Validator failed: ${e?.stderr ?? e?.message ?? String(err)}` };
+    }
   });
 
   // Print results
