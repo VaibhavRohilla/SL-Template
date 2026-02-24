@@ -108,12 +108,12 @@ export class DemoResultSource implements ISpinResultSource {
   }
 
   async getSpinResult(request: SpinRequest): Promise<SpinOutcome> {
-    const isFirstSpin = this.spinCount === 0;
-    this.spinCount += 1;
+    // const isFirstSpin = this.spinCount === 0;
+    // this.spinCount += 1;
 
-    if (isFirstSpin) {
-      return getDemoLineWinOutcome(request.bet);
-    }
+    // if (isFirstSpin) {
+    //   return getDemoLineWinOutcome(request.bet);
+    // }
     return this.mock.getSpinResult(request);
   }
 }

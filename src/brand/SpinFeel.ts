@@ -5,43 +5,43 @@
  * Tuned for visible symbols during spin and smooth, satisfying stops.
  */
 
-import { premiumPreset, type SpinFeelConfig } from '@fnx/sl-engine';
+import {  type SpinFeelConfig } from '@fnx/sl-engine';
 
 /**
  * Spin feel configuration
  */
 export const spinFeelConfig: SpinFeelConfig = {
-    ...premiumPreset,
     presetName: 'template-premium',
-
-    // Scroll-math units: independent of the layout cell size in BrandConfig.dimensions.
-    symbolHeightPx: 10,
-    symbolGapPx: 3,
-
-    spinSpeedPxPerSec: 5100,
-
-    stopDelayMs: [0, 0, 0, 0, 0],
-    reelStopOrder: [0, 1, 2, 3, 4],
-
-    minSpinMs: 400,
+    spinSpeedPxPerSec: 3400,
+    maxScrollPerFrame: 0.95,
+    startDelayMs: 0,
+    reelStopOrder: [4, 0, 3, 1, 2],
+    // Delay (ms) before each reel is requested to stop. Smaller step = reels stop closer together.
+    // [0, 80, 160, 240, 320] = 80 ms between each reel (was 140 ms for a tighter cascade).
+    stopDelayMs: [0, 120, 240, 360, 480] ,
+    minSpinMs: 800,
     maxSpinMs: 10000,
-    startDelayMs: 100,
-
-    stopTravelSymbolsMin: 3,
-    stopTravelSymbolsMax: 6,
-
-    snap: {
-        thresholdPx: 0,
-        durationMs: 0,
-    },
-
+    spinEase: 'linear',
     stopMotion: {
-        style: 'smooth',
-        durationMs: 510,
-        ease: 'backOutStrong',
-        overshootStrength: 0,
+        style: 'spring',
+        durationMs: 480,
+        overshootStrength: 1.4,
     },
-
+    snap: {
+        thresholdPx: 3,
+        durationMs: 35,
+    },
+    turbo: {
+        timeScale: 1.2,
+        skipWinAnimations: false,
+        stopDelayMs: 60,
+    },
+    anticipation: {
+        enabled: true,
+        triggerReelOffset: 1,
+        slowdownFactor: 1,
+        delayMs: 1,
+    },
     audioCues: {
         spinStart: 'ReelStart',
         spinLoop: 'ReelSpinLoop',
@@ -53,4 +53,10 @@ export const spinFeelConfig: SpinFeelConfig = {
         winBig: 'dragon_2',
         winMega: 'MassiveDoorOpen',
     },
+    stopTravelSymbolsMin: 2,
+    stopTravelSymbolsMax: 4,
+    symbolHeightPx: 100,
+    symbolGapPx: 0,
 };
+
+
