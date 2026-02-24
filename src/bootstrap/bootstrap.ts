@@ -10,6 +10,51 @@ import { slotConfig } from '../config/slotConfig.js';
 import { spinFeelConfig } from '../brand/SpinFeel.js';
 import { bootConfig as BOOTCONFIG, backgroundConfig, frameConfig, dimensions } from '../brand/BrandConfig.js';
 import { GameUI } from '../ui/index.js';
+import { DemoResultSource } from '../demo/demoResultSource.js';
+
+const SKIP_ANIMATIONS_STORAGE_KEY = 'slot_skip_animations';
+const TURBO_STORAGE_KEY_LEGACY = 'slot_turbo_mode'; // backward compat: read if new key missing
+const TURBO_FAST_STORAGE_KEY = 'slot_turbo_fast';
+
+function getSkipAnimations(): boolean {
+  try {
+    const v = localStorage.getItem(SKIP_ANIMATIONS_STORAGE_KEY);
+    if (v !== null) return v === 'true';
+    return localStorage.getItem(TURBO_STORAGE_KEY_LEGACY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+function setSkipAnimations(value: boolean): void {
+  try {
+    localStorage.setItem(SKIP_ANIMATIONS_STORAGE_KEY, value ? 'true' : 'false');
+    if (typeof console !== 'undefined') {
+      console.log('[SKIP_ANIMATIONS] set to', value);
+    }
+  } catch {
+    // ignore
+  }
+}
+
+function getTurboFast(): boolean {
+  try {
+    return localStorage.getItem(TURBO_FAST_STORAGE_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+function setTurboFast(value: boolean): void {
+  try {
+    localStorage.setItem(TURBO_FAST_STORAGE_KEY, value ? 'true' : 'false');
+    if (typeof console !== 'undefined') {
+      console.log('[TURBO_FAST] set to', value);
+    }
+  } catch {
+    // ignore
+  }
+}
 
 export async function bootstrap(): Promise<void> {
   console.log('🚀 Booting Template Slot...');
@@ -21,13 +66,14 @@ export async function bootstrap(): Promise<void> {
     decimals: 2,
   });
 
-  const gameOptions = {
+  const gameOptions: GameOptions = {
     canvas: 'game-canvas',
     width: dimensions.width,
     height: dimensions.height,
     backgroundColor: 0x000000,
     slotConfig,
     spinFeelConfig,
+    resultSource: new DemoResultSource(slotConfig),
     bootConfig: BOOTCONFIG,
     background: backgroundConfig,
     frame: frameConfig,
@@ -40,7 +86,7 @@ export async function bootstrap(): Promise<void> {
     gameUI,
     winFormatter: gameUI,
     logLevel: 'debug',
-  } as GameOptions;
+  };
 
   const game = new Game(gameOptions);
 
@@ -48,6 +94,8 @@ export async function bootstrap(): Promise<void> {
     await game.start();
     hidePrePixiLoader();
     wireSpinButton(game);
+    wireSkipAnimationsButton();
+    wireTurboFastButton();
     console.log('✅ Game started successfully');
   } catch (error) {
     console.error('❌ Failed to start game:', error);
@@ -55,17 +103,63 @@ export async function bootstrap(): Promise<void> {
 }
 
 /**
- * Wire the DOM spin button to trigger game.spin()
+ * Wire the DOM spin button to trigger game.spin(bet, skipAnimations).
+ * When Turbo Fast is ON, sets speed profile to 'turbo' before spin (animated but faster).
  */
 function wireSpinButton(game: Game): void {
   const spinBtn = document.getElementById('spin-button');
   if (spinBtn && typeof spinBtn.addEventListener === 'function') {
     spinBtn.addEventListener('click', () => {
       if (game.isRunning()) {
-        game.spin();
+        const skipAnimations = getSkipAnimations();
+        if (skipAnimations && typeof console !== 'undefined') {
+          console.log('[SKIP] enabled → Turbo speed profile ignored for this spin');
+        }
+        const turboFast = getTurboFast();
+        const gameWithProfile = game as Game & { setSpeedProfile?(profile: 'normal' | 'turbo'): void };
+        if (typeof gameWithProfile.setSpeedProfile === 'function') {
+          gameWithProfile.setSpeedProfile(turboFast ? 'turbo' : 'normal');
+        }
+        game.spin(undefined, skipAnimations);
       }
     });
   }
+}
+
+/**
+ * Wire the Skip Animations toggle: persist preference and update button label.
+ */
+function wireSkipAnimationsButton(): void {
+  const btn = document.getElementById('skip-animations-button');
+  if (!btn || typeof btn.addEventListener !== 'function') return;
+
+  const updateLabel = (): void => {
+    btn.textContent = getSkipAnimations() ? 'Skip Animations ON' : 'Skip Animations OFF';
+  };
+
+  updateLabel();
+  btn.addEventListener('click', () => {
+    setSkipAnimations(!getSkipAnimations());
+    updateLabel();
+  });
+}
+
+/**
+ * Wire the Turbo (fast) toggle: persist preference and update button label.
+ */
+function wireTurboFastButton(): void {
+  const btn = document.getElementById('turbo-fast-button');
+  if (!btn || typeof btn.addEventListener !== 'function') return;
+
+  const updateLabel = (): void => {
+    btn.textContent = getTurboFast() ? 'Turbo ON' : 'Turbo OFF';
+  };
+
+  updateLabel();
+  btn.addEventListener('click', () => {
+    setTurboFast(!getTurboFast());
+    updateLabel();
+  });
 }
 
 /**
