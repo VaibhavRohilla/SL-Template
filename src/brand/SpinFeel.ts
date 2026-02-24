@@ -30,28 +30,35 @@ export const spinFeelConfig: SpinFeelConfigWithStopOrder = {
     stopDelayMs: [0, 0, 0, 0, 0],
 
     // Optional: reel stop order (default left-to-right). e.g. [4,3,2,1,0] = right-to-left
-    reelStopOrder: [4,3,2,1,0],
+    reelStopOrder: [0, 1, 2, 3, 4],
 
     // Minimum spin time so reels don’t stop too abruptly
-    minSpinMs: 300,
+    minSpinMs: 400,
     maxSpinMs: 10000,
 
     // Stop deceleration – duration (ms) per reel to slide to stop. Lower = snappier.
-    stopDecelMs: 50,
+    stopDecelMs: 110,
     stopEase: 'cubicOut',
 
     // Bounce after stop (overshoot then settle)
     bounce: {
         enabled: true,
         amplitudePx: 10,
-        settleMs: 140,
+        settleMs: 40,
         oscillations: 1,
     },
     bounceEase: 'backOut',
 
+    // Stop travel bounds: clamp spinDistance to prevent stop-time explosion.
+    // Math: slotHeight=190px, speed=2200px/s → ~86ms/symbol.
+    // Reels stop sequentially; includes ~500ms timeline overhead per reel.
+    // 4 symbols ≈ 345ms scroll + 230ms anim + ~500ms overhead ≈ 1075ms/reel → 5×1075 ≈ 5375ms total.
+    stopTravelSymbolsMin: 1,
+    stopTravelSymbolsMax: 2,
+
     // Snap to grid at end
     snap: {
-        thresholdPx: 4,
+        thresholdPx: 1,
         durationMs: 40,
     },
 

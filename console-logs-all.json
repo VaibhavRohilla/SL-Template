@@ -1,0 +1,3605 @@
+[
+  {
+    "type": "log",
+    "text": "[DEV_REEL] reelDebug loaded, DEV_REEL_DEBUG=true",
+    "args": [
+      "[DEV_REEL] reelDebug loaded, DEV_REEL_DEBUG=true"
+    ],
+    "timestamp": 1771909869590
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] @fnx/sl-engine loaded (reel debug build)",
+    "args": [
+      "[DEV_REEL] @fnx/sl-engine loaded (reel debug build)"
+    ],
+    "timestamp": 1771909869591
+  },
+  {
+    "type": "log",
+    "text": "🚀 Booting Template Slot...",
+    "args": [
+      "🚀 Booting Template Slot..."
+    ],
+    "timestamp": 1771909869592
+  },
+  {
+    "type": "log",
+    "text": "🎰 Starting Slot Frontend Engine...",
+    "args": [
+      "🎰 Starting Slot Frontend Engine..."
+    ],
+    "timestamp": 1771909869600
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:09.797] [INFO] Loading manifest from: assets/manifest.json",
+    "args": [
+      "[SlotEngine] [05:11:09.797] [INFO] Loading manifest from: assets/manifest.json"
+    ],
+    "timestamp": 1771909869799
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.044] [INFO] Manifest loaded: 2 bundles, 103 assets",
+    "args": [
+      "[SlotEngine] [05:11:10.044] [INFO] Manifest loaded: 2 bundles, 103 assets"
+    ],
+    "timestamp": 1771909870044
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.049] [INFO] Game: Loading boot bundle: boot",
+    "args": [
+      "[SlotEngine] [05:11:10.049] [INFO] Game: Loading boot bundle: boot"
+    ],
+    "timestamp": 1771909870050
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolving bundle: boot",
+    "args": [
+      "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolving bundle: boot"
+    ],
+    "timestamp": 1771909870050
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: LoadingScreenBg -> assets/boot/LoadingScreenBg.png",
+    "args": [
+      "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: LoadingScreenBg -> assets/boot/LoadingScreenBg.png"
+    ],
+    "timestamp": 1771909870050
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: LoadingScreenBg_Portrait -> assets/boot/LoadingScreenBg_Portrait.png",
+    "args": [
+      "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: LoadingScreenBg_Portrait -> assets/boot/LoadingScreenBg_Portrait.png"
+    ],
+    "timestamp": 1771909870051
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: Loading_Bar -> assets/boot/Loading_Bar.png",
+    "args": [
+      "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: Loading_Bar -> assets/boot/Loading_Bar.png"
+    ],
+    "timestamp": 1771909870051
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: Locker -> assets/boot/Locker.png",
+    "args": [
+      "[SlotEngine] [05:11:10.050] [DEBUG] AssetResolver: Resolved asset: Locker -> assets/boot/Locker.png"
+    ],
+    "timestamp": 1771909870051
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Locker_Reflection -> assets/boot/Locker_Reflection.png",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Locker_Reflection -> assets/boot/Locker_Reflection.png"
+    ],
+    "timestamp": 1771909870051
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Logo -> assets/boot/Logo.png",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Logo -> assets/boot/Logo.png"
+    ],
+    "timestamp": 1771909870051
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Logo_Portrait -> assets/boot/Logo_Portrait.png",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Logo_Portrait -> assets/boot/Logo_Portrait.png"
+    ],
+    "timestamp": 1771909870052
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Mockup_Loading_screen_Landscape -> assets/boot/Mockup_Loading_screen_Landscape.png",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Mockup_Loading_screen_Landscape -> assets/boot/Mockup_Loading_screen_Landscape.png"
+    ],
+    "timestamp": 1771909870052
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Mockup_Loading_screen_Portrait -> assets/boot/Mockup_Loading_screen_Portrait.png",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: Mockup_Loading_screen_Portrait -> assets/boot/Mockup_Loading_screen_Portrait.png"
+    ],
+    "timestamp": 1771909870052
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: loading -> assets/boot/loading.png",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [DEBUG] AssetResolver: Resolved asset: loading -> assets/boot/loading.png"
+    ],
+    "timestamp": 1771909870052
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.051] [INFO] Loading bundle: boot (10 assets)",
+    "args": [
+      "[SlotEngine] [05:11:10.051] [INFO] Loading bundle: boot (10 assets)"
+    ],
+    "timestamp": 1771909870052
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.220] [INFO] Bundle loaded: boot",
+    "args": [
+      "[SlotEngine] [05:11:10.220] [INFO] Bundle loaded: boot"
+    ],
+    "timestamp": 1771909870220
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.220] [INFO] Game: Starting boot flow - Loading",
+    "args": [
+      "[SlotEngine] [05:11:10.220] [INFO] Game: Starting boot flow - Loading"
+    ],
+    "timestamp": 1771909870221
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.221] [INFO] SceneManager: Transitioning from none to loading",
+    "args": [
+      "[SlotEngine] [05:11:10.221] [INFO] SceneManager: Transitioning from none to loading"
+    ],
+    "timestamp": 1771909870221
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.221] [INFO] LoadingScene: Mounting",
+    "args": [
+      "[SlotEngine] [05:11:10.221] [INFO] LoadingScene: Mounting"
+    ],
+    "timestamp": 1771909870221
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.222] [INFO] LoadingScene: Mounted",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [INFO] LoadingScene: Mounted"
+    ],
+    "timestamp": 1771909870222
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.222] [INFO] SceneManager: Scene changed to loading",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [INFO] SceneManager: Scene changed to loading"
+    ],
+    "timestamp": 1771909870222
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolving bundle: main",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolving bundle: main"
+    ],
+    "timestamp": 1771909870222
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: 3_Post_intro -> assets/main/3_Post_intro.jpg",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: 3_Post_intro -> assets/main/3_Post_intro.jpg"
+    ],
+    "timestamp": 1771909870223
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN -> assets/main/AUTOSPIN.png",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN -> assets/main/AUTOSPIN.png"
+    ],
+    "timestamp": 1771909870223
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN_disabled -> assets/main/AUTOSPIN_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN_disabled -> assets/main/AUTOSPIN_disabled.png"
+    ],
+    "timestamp": 1771909870223
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN_mouse-ver -> assets/main/AUTOSPIN_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN_mouse-ver -> assets/main/AUTOSPIN_mouse-ver.png"
+    ],
+    "timestamp": 1771909870223
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN_pressed -> assets/main/AUTOSPIN_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: AUTOSPIN_pressed -> assets/main/AUTOSPIN_pressed.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: BUY_FREE_SPINS -> assets/main/BUY_FREE_SPINS.png",
+    "args": [
+      "[SlotEngine] [05:11:10.222] [DEBUG] AssetResolver: Resolved asset: BUY_FREE_SPINS -> assets/main/BUY_FREE_SPINS.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Background -> assets/main/Background.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Background -> assets/main/Background.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Background_portrait -> assets/main/Background_portrait.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Background_portrait -> assets/main/Background_portrait.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Band -> assets/main/Band.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Band -> assets/main/Band.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY -> assets/main/FAST_PLAY.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY -> assets/main/FAST_PLAY.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY_disabled -> assets/main/FAST_PLAY_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY_disabled -> assets/main/FAST_PLAY_disabled.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY_mouse-ver -> assets/main/FAST_PLAY_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY_mouse-ver -> assets/main/FAST_PLAY_mouse-ver.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY_pressed -> assets/main/FAST_PLAY_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: FAST_PLAY_pressed -> assets/main/FAST_PLAY_pressed.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_left -> assets/main/Foreground_left.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_left -> assets/main/Foreground_left.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_p_left -> assets/main/Foreground_p_left.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_p_left -> assets/main/Foreground_p_left.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_p_right -> assets/main/Foreground_p_right.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_p_right -> assets/main/Foreground_p_right.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_portrait -> assets/main/Foreground_portrait.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_portrait -> assets/main/Foreground_portrait.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_right -> assets/main/Foreground_right.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Foreground_right -> assets/main/Foreground_right.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Free_Spin_Board -> assets/main/Free_Spin_Board.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Free_Spin_Board -> assets/main/Free_Spin_Board.png"
+    ],
+    "timestamp": 1771909870224
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Home -> assets/main/Home.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Home -> assets/main/Home.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Home_disabled -> assets/main/Home_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Home_disabled -> assets/main/Home_disabled.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Home_mouse-ver -> assets/main/Home_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.223] [DEBUG] AssetResolver: Resolved asset: Home_mouse-ver -> assets/main/Home_mouse-ver.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Home_pressed -> assets/main/Home_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Home_pressed -> assets/main/Home_pressed.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I -> assets/main/I.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I -> assets/main/I.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I_disabled -> assets/main/I_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I_disabled -> assets/main/I_disabled.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I_mouse-ver -> assets/main/I_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I_mouse-ver -> assets/main/I_mouse-ver.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I_pressed -> assets/main/I_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: I_pressed -> assets/main/I_pressed.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow -> assets/main/Left_arrow.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow -> assets/main/Left_arrow.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow_disabled -> assets/main/Left_arrow_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow_disabled -> assets/main/Left_arrow_disabled.png"
+    ],
+    "timestamp": 1771909870225
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow_mouse-ver -> assets/main/Left_arrow_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow_mouse-ver -> assets/main/Left_arrow_mouse-ver.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow_pressed -> assets/main/Left_arrow_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Left_arrow_pressed -> assets/main/Left_arrow_pressed.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Midground -> assets/main/Midground.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Midground -> assets/main/Midground.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Midground_left -> assets/main/Midground_left.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Midground_left -> assets/main/Midground_left.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Midground_right -> assets/main/Midground_right.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Midground_right -> assets/main/Midground_right.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Mockup_Landscape -> assets/main/Mockup_Landscape.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Mockup_Landscape -> assets/main/Mockup_Landscape.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Mockup_Portait -> assets/main/Mockup_Portait.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Mockup_Portait -> assets/main/Mockup_Portait.png"
+    ],
+    "timestamp": 1771909870226
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Reel -> assets/main/Reel.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Reel -> assets/main/Reel.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Right_arrow -> assets/main/Right_arrow.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Right_arrow -> assets/main/Right_arrow.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Right_arrow_disabled -> assets/main/Right_arrow_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.224] [DEBUG] AssetResolver: Resolved asset: Right_arrow_disabled -> assets/main/Right_arrow_disabled.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: Right_arrow_mouse-ver -> assets/main/Right_arrow_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: Right_arrow_mouse-ver -> assets/main/Right_arrow_mouse-ver.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: Right_arrow_pressed -> assets/main/Right_arrow_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: Right_arrow_pressed -> assets/main/Right_arrow_pressed.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF -> assets/main/SOUND_OFF.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF -> assets/main/SOUND_OFF.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF_disabled -> assets/main/SOUND_OFF_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF_disabled -> assets/main/SOUND_OFF_disabled.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF_mouse-ver -> assets/main/SOUND_OFF_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF_mouse-ver -> assets/main/SOUND_OFF_mouse-ver.png"
+    ],
+    "timestamp": 1771909870227
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF_pressed -> assets/main/SOUND_OFF_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_OFF_pressed -> assets/main/SOUND_OFF_pressed.png"
+    ],
+    "timestamp": 1771909870228
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON -> assets/main/SOUND_ON.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON -> assets/main/SOUND_ON.png"
+    ],
+    "timestamp": 1771909870228
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON_disabled -> assets/main/SOUND_ON_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON_disabled -> assets/main/SOUND_ON_disabled.png"
+    ],
+    "timestamp": 1771909870228
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON_mouse-ver -> assets/main/SOUND_ON_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON_mouse-ver -> assets/main/SOUND_ON_mouse-ver.png"
+    ],
+    "timestamp": 1771909870228
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON_pressed -> assets/main/SOUND_ON_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SOUND_ON_pressed -> assets/main/SOUND_ON_pressed.png"
+    ],
+    "timestamp": 1771909870228
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN -> assets/main/SPIN.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN -> assets/main/SPIN.png"
+    ],
+    "timestamp": 1771909870228
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN_disabled -> assets/main/SPIN_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN_disabled -> assets/main/SPIN_disabled.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN_mouse-ver -> assets/main/SPIN_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN_mouse-ver -> assets/main/SPIN_mouse-ver.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN_pressed -> assets/main/SPIN_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: SPIN_pressed -> assets/main/SPIN_pressed.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP -> assets/main/STOP.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP -> assets/main/STOP.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP_disabled -> assets/main/STOP_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP_disabled -> assets/main/STOP_disabled.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP_mouse-ver -> assets/main/STOP_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP_mouse-ver -> assets/main/STOP_mouse-ver.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP_pressed -> assets/main/STOP_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: STOP_pressed -> assets/main/STOP_pressed.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF -> assets/main/TURBO_OFF.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF -> assets/main/TURBO_OFF.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF_disabled -> assets/main/TURBO_OFF_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF_disabled -> assets/main/TURBO_OFF_disabled.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF_mouse-ver -> assets/main/TURBO_OFF_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF_mouse-ver -> assets/main/TURBO_OFF_mouse-ver.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF_pressed -> assets/main/TURBO_OFF_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_OFF_pressed -> assets/main/TURBO_OFF_pressed.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_ON -> assets/main/TURBO_ON.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_ON -> assets/main/TURBO_ON.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_ON_disabled -> assets/main/TURBO_ON_disabled.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_ON_disabled -> assets/main/TURBO_ON_disabled.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_ON_mouse-ver -> assets/main/TURBO_ON_mouse-ver.png",
+    "args": [
+      "[SlotEngine] [05:11:10.225] [DEBUG] AssetResolver: Resolved asset: TURBO_ON_mouse-ver -> assets/main/TURBO_ON_mouse-ver.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: TURBO_ON_pressed -> assets/main/TURBO_ON_pressed.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: TURBO_ON_pressed -> assets/main/TURBO_ON_pressed.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: balance -> assets/main/balance.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: balance -> assets/main/balance.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: bet -> assets/main/bet.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: bet -> assets/main/bet.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: fonts/MotleyForces -> assets/main/fonts/MotleyForces.ttf",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: fonts/MotleyForces -> assets/main/fonts/MotleyForces.ttf"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: post_intro_assets_1x -> assets/main/post_intro_assets@1x.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: post_intro_assets_1x -> assets/main/post_intro_assets@1x.json"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/10 -> assets/main/symbols/10.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/10 -> assets/main/symbols/10.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/9 -> assets/main/symbols/9.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/9 -> assets/main/symbols/9.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/A -> assets/main/symbols/A.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/A -> assets/main/symbols/A.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Bronze_Piggy -> assets/main/symbols/Bronze_Piggy.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Bronze_Piggy -> assets/main/symbols/Bronze_Piggy.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Gold_Piggy/gold_piggy -> assets/main/symbols/Gold_Piggy/gold_piggy.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Gold_Piggy/gold_piggy -> assets/main/symbols/Gold_Piggy/gold_piggy.json"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Gold_Piggy -> assets/main/symbols/Gold_Piggy.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Gold_Piggy -> assets/main/symbols/Gold_Piggy.png"
+    ],
+    "timestamp": 1771909870229
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/J -> assets/main/symbols/J.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/J -> assets/main/symbols/J.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/K -> assets/main/symbols/K.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/K -> assets/main/symbols/K.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Q -> assets/main/symbols/Q.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Q -> assets/main/symbols/Q.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Rose_Gold_Piggy/rose_gold_piggy -> assets/main/symbols/Rose_Gold_Piggy/rose_gold_piggy.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Rose_Gold_Piggy/rose_gold_piggy -> assets/main/symbols/Rose_Gold_Piggy/rose_gold_piggy.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Rose_Gold_Piggy -> assets/main/symbols/Rose_Gold_Piggy.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Rose_Gold_Piggy -> assets/main/symbols/Rose_Gold_Piggy.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/SCATTER -> assets/main/symbols/SCATTER.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/SCATTER -> assets/main/symbols/SCATTER.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Scatter/scatter -> assets/main/symbols/Scatter/scatter.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Scatter/scatter -> assets/main/symbols/Scatter/scatter.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Silver_Piggy/silver_piggy -> assets/main/symbols/Silver_Piggy/silver_piggy.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Silver_Piggy/silver_piggy -> assets/main/symbols/Silver_Piggy/silver_piggy.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Silver_Piggy -> assets/main/symbols/Silver_Piggy.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Silver_Piggy -> assets/main/symbols/Silver_Piggy.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/WILD -> assets/main/symbols/WILD.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/WILD -> assets/main/symbols/WILD.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Wild/wild -> assets/main/symbols/Wild/wild.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/Wild/wild -> assets/main/symbols/Wild/wild.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/bronze_piggy_anim/bronze_piggy -> assets/main/symbols/bronze_piggy_anim/bronze_piggy.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/bronze_piggy_anim/bronze_piggy -> assets/main/symbols/bronze_piggy_anim/bronze_piggy.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/high_payout_1 -> assets/main/symbols/high_payout_1.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/high_payout_1 -> assets/main/symbols/high_payout_1.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/high_payout_1_1x -> assets/main/symbols/high_payout_1@1x.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/high_payout_1_1x -> assets/main/symbols/high_payout_1@1x.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/royals_anim/royels_akqj109 -> assets/main/symbols/royals_anim/royels_akqj109.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: symbols/royals_anim/royels_akqj109 -> assets/main/symbols/royals_anim/royels_akqj109.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: uiPanels_0__1x -> assets/main/uiPanels_0_@1x.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: uiPanels_0__1x -> assets/main/uiPanels_0_@1x.json"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: win -> assets/main/win.png",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: win -> assets/main/win.png"
+    ],
+    "timestamp": 1771909870230
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: sprites/sfx_sprite -> assets/audio/sprites/sfx_sprite.json",
+    "args": [
+      "[SlotEngine] [05:11:10.226] [DEBUG] AssetResolver: Resolved asset: sprites/sfx_sprite -> assets/audio/sprites/sfx_sprite.json"
+    ],
+    "timestamp": 1771909870231
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:10.227] [INFO] Loading bundle: main (93 assets)",
+    "args": [
+      "[SlotEngine] [05:11:10.227] [INFO] Loading bundle: main (93 assets)"
+    ],
+    "timestamp": 1771909870231
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.637] [INFO] Bundle loaded: main",
+    "args": [
+      "[SlotEngine] [05:11:11.637] [INFO] Bundle loaded: main"
+    ],
+    "timestamp": 1771909871637
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.637] [INFO] Game: Boot flow - Start Screen",
+    "args": [
+      "[SlotEngine] [05:11:11.637] [INFO] Game: Boot flow - Start Screen"
+    ],
+    "timestamp": 1771909871637
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.637] [INFO] SceneManager: Transitioning from loading to start",
+    "args": [
+      "[SlotEngine] [05:11:11.637] [INFO] SceneManager: Transitioning from loading to start"
+    ],
+    "timestamp": 1771909871638
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.885] [INFO] LoadingScene: Destroying",
+    "args": [
+      "[SlotEngine] [05:11:11.885] [INFO] LoadingScene: Destroying"
+    ],
+    "timestamp": 1771909871885
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.885] [INFO] LoadingScene: Destroyed",
+    "args": [
+      "[SlotEngine] [05:11:11.885] [INFO] LoadingScene: Destroyed"
+    ],
+    "timestamp": 1771909871886
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.886] [INFO] StartScene: Mounting",
+    "args": [
+      "[SlotEngine] [05:11:11.886] [INFO] StartScene: Mounting"
+    ],
+    "timestamp": 1771909871886
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:11.888] [INFO] StartScene: Mounted",
+    "args": [
+      "[SlotEngine] [05:11:11.888] [INFO] StartScene: Mounted"
+    ],
+    "timestamp": 1771909871889
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.149] [INFO] SceneManager: Scene changed to start",
+    "args": [
+      "[SlotEngine] [05:11:12.149] [INFO] SceneManager: Scene changed to start"
+    ],
+    "timestamp": 1771909872149
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.430] [INFO] StartScene: User interaction detected",
+    "args": [
+      "[SlotEngine] [05:11:12.430] [INFO] StartScene: User interaction detected"
+    ],
+    "timestamp": 1771909872430
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:12.491] [WARN] Audio unlock load error: Decoding audio data failed.",
+    "args": [
+      "[SlotEngine] [05:11:12.491] [WARN] Audio unlock load error:",
+      "Decoding audio data failed."
+    ],
+    "timestamp": 1771909872492
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.491] [INFO] Audio context unlocked",
+    "args": [
+      "[SlotEngine] [05:11:12.491] [INFO] Audio context unlocked"
+    ],
+    "timestamp": 1771909872492
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.491] [INFO] StartScene: Audio context unlocked",
+    "args": [
+      "[SlotEngine] [05:11:12.491] [INFO] StartScene: Audio context unlocked"
+    ],
+    "timestamp": 1771909872492
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.491] [INFO] Game: Boot flow - Game Scene",
+    "args": [
+      "[SlotEngine] [05:11:12.491] [INFO] Game: Boot flow - Game Scene"
+    ],
+    "timestamp": 1771909872492
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.491] [INFO] SceneManager: Transitioning from start to slot-game",
+    "args": [
+      "[SlotEngine] [05:11:12.491] [INFO] SceneManager: Transitioning from start to slot-game"
+    ],
+    "timestamp": 1771909872492
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.765] [INFO] StartScene: Destroying",
+    "args": [
+      "[SlotEngine] [05:11:12.765] [INFO] StartScene: Destroying"
+    ],
+    "timestamp": 1771909872766
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.766] [INFO] StartScene: Destroyed",
+    "args": [
+      "[SlotEngine] [05:11:12.766] [INFO] StartScene: Destroyed"
+    ],
+    "timestamp": 1771909872766
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.766] [INFO] SlotGameScene: Mounting",
+    "args": [
+      "[SlotEngine] [05:11:12.766] [INFO] SlotGameScene: Mounting"
+    ],
+    "timestamp": 1771909872766
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.766] [INFO] Initializing SlotScene",
+    "args": [
+      "[SlotEngine] [05:11:12.766] [INFO] Initializing SlotScene"
+    ],
+    "timestamp": 1771909872766
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:12.767] [DEBUG] BackgroundView initialized: image",
+    "args": [
+      "[SlotEngine] [05:11:12.767] [DEBUG] BackgroundView initialized: image"
+    ],
+    "timestamp": 1771909872767
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:12.767] [DEBUG] SlotFrameView initialized",
+    "args": [
+      "[SlotEngine] [05:11:12.767] [DEBUG] SlotFrameView initialized"
+    ],
+    "timestamp": 1771909872767
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:12.769] [DEBUG] [MechanicHost] Registered plugin: classic-mechanic",
+    "args": [
+      "[SlotEngine] [05:11:12.769] [DEBUG] [MechanicHost] Registered plugin: classic-mechanic"
+    ],
+    "timestamp": 1771909872770
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:12.770] [DEBUG] [SlotScene] Registered ClassicMechanicPlugin for reelMechanic: classic",
+    "args": [
+      "[SlotEngine] [05:11:12.770] [DEBUG] [SlotScene] Registered ClassicMechanicPlugin for reelMechanic: classic"
+    ],
+    "timestamp": 1771909872770
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.770] [INFO] Auto-enabled showPaylines for payline game",
+    "args": [
+      "[SlotEngine] [05:11:12.770] [INFO] Auto-enabled showPaylines for payline game"
+    ],
+    "timestamp": 1771909872770
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.770] [INFO] SlotScene initialized with layered architecture",
+    "args": [
+      "[SlotEngine] [05:11:12.770] [INFO] SlotScene initialized with layered architecture"
+    ],
+    "timestamp": 1771909872770
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.770] [INFO] SlotGameScene: Mounted",
+    "args": [
+      "[SlotEngine] [05:11:12.770] [INFO] SlotGameScene: Mounted"
+    ],
+    "timestamp": 1771909872770
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.991] [INFO] SceneManager: Scene changed to slot-game",
+    "args": [
+      "[SlotEngine] [05:11:12.991] [INFO] SceneManager: Scene changed to slot-game"
+    ],
+    "timestamp": 1771909872992
+  },
+  {
+    "type": "info",
+    "text": "[SlotEngine] [05:11:12.992] [INFO] Game: Started successfully",
+    "args": [
+      "[SlotEngine] [05:11:12.992] [INFO] Game: Started successfully"
+    ],
+    "timestamp": 1771909872992
+  },
+  {
+    "type": "log",
+    "text": "✅ Game started successfully",
+    "args": [
+      "✅ Game started successfully"
+    ],
+    "timestamp": 1771909872992
+  },
+  {
+    "type": "log",
+    "text": "[GameUI] Bet deducted: $1.00, new balance: $999.00",
+    "args": [
+      "[GameUI] Bet deducted: $1.00, new balance: $999.00"
+    ],
+    "timestamp": 1771909874053
+  },
+  {
+    "type": "log",
+    "text": "[GameUI] Spin started with bet: $1.00",
+    "args": [
+      "[GameUI] Spin started with bet: $1.00"
+    ],
+    "timestamp": 1771909874054
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:14.040] [WARN] Audio not found: ReelStart",
+    "args": [
+      "[SlotEngine] [05:11:14.040] [WARN] Audio not found: ReelStart"
+    ],
+    "timestamp": 1771909874055
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:14.040] [WARN] Audio not found: ReelSpinLoop",
+    "args": [
+      "[SlotEngine] [05:11:14.040] [WARN] Audio not found: ReelSpinLoop"
+    ],
+    "timestamp": 1771909874055
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:14.042] [DEBUG] [MechanicHost] Dispatching spinStart event to 1 plugin(s) (roundId=default, spinSeq=1)",
+    "args": [
+      "[SlotEngine] [05:11:14.042] [DEBUG] [MechanicHost] Dispatching spinStart event to 1 plugin(s) (roundId=default, spinSeq=1)"
+    ],
+    "timestamp": 1771909874056
+  },
+  {
+    "type": "warn",
+    "text": "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)",
+    "args": [
+      "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)"
+    ],
+    "timestamp": 1771909874056
+  },
+  {
+    "type": "warn",
+    "text": "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)",
+    "args": [
+      "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)"
+    ],
+    "timestamp": 1771909874056
+  },
+  {
+    "type": "warn",
+    "text": "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)",
+    "args": [
+      "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)"
+    ],
+    "timestamp": 1771909874057
+  },
+  {
+    "type": "warn",
+    "text": "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)",
+    "args": [
+      "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)"
+    ],
+    "timestamp": 1771909874057
+  },
+  {
+    "type": "warn",
+    "text": "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)",
+    "args": [
+      "[DEV_REEL] update: clamped distance 220.0px → 180.5px (slotHeight=190)"
+    ],
+    "timestamp": 1771909874058
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "SPIN_REQUESTED",
+        "nowMs": 4787.9,
+        "elapsedMs": 0.1,
+        "spinId": 0,
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909874058
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "SPIN_STARTED",
+        "nowMs": 4788.5,
+        "elapsedMs": 0.7,
+        "spinId": 0,
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909874058
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "RESULT_RECEIVED",
+        "nowMs": 4789.4,
+        "elapsedMs": 1.6,
+        "spinId": 0,
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909874058
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 1,
+        "yOffset": 78.93999999999961,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 173.9399999999996,
+        "topSymbolId": 54
+      }
+    ],
+    "timestamp": 1771909874086
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 2,
+        "yOffset": 35.23999999999961,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 130.2399999999996,
+        "topSymbolId": 91
+      }
+    ],
+    "timestamp": 1771909874154
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 2,
+        "yOffset": 181.9800000000012,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 276.9800000000012,
+        "topSymbolId": 91
+      }
+    ],
+    "timestamp": 1771909874221
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 0 (orderIndex=0)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 0 (orderIndex=0)"
+    ],
+    "timestamp": 1771909874238
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:14.237] [WARN] Audio not found: ReelStop_V1",
+    "args": [
+      "[SlotEngine] [05:11:14.237] [WARN] Audio not found: ReelStop_V1"
+    ],
+    "timestamp": 1771909874238
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "STOP_SEQUENCE_START",
+        "nowMs": 4985,
+        "elapsedMs": 197.2,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909874239
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 4985.6,
+        "elapsedMs": 197.8,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 0
+      }
+    ],
+    "timestamp": 1771909874240
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 0,
+        "symbols": [
+          45,
+          45,
+          45,
+          52
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909874240
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 3,
+        "targetSymbols": [
+          45,
+          45,
+          45,
+          52
+        ],
+        "targetPosition": 59,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909874240
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 3,
+        "yOffset": 138.72000000000082,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 233.72000000000082,
+        "topSymbolId": 91
+      }
+    ],
+    "timestamp": 1771909874287
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 4,
+        "yOffset": 95.23999999999961,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 190.2399999999996,
+        "topSymbolId": 51
+      }
+    ],
+    "timestamp": 1771909874356
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 5,
+        "yOffset": 52.199999999999996,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 147.2,
+        "topSymbolId": 43
+      }
+    ],
+    "timestamp": 1771909874423
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 6,
+        "yOffset": 8.720000000000795,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 103.72000000000082,
+        "topSymbolId": 44
+      }
+    ],
+    "timestamp": 1771909874488
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 6,
+        "yOffset": 155.46000000000038,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 250.46000000000038,
+        "topSymbolId": 44
+      }
+    ],
+    "timestamp": 1771909874557
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 7,
+        "yOffset": 141.46000000000035,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 236.46000000000035,
+        "topSymbolId": 52
+      }
+    ],
+    "timestamp": 1771909874660
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 8,
+        "yOffset": 156.93999999999954,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 251.93999999999954,
+        "topSymbolId": 53
+      }
+    ],
+    "timestamp": 1771909874729
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 9,
+        "yOffset": 143.1600000000003,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 238.1600000000003,
+        "topSymbolId": 45
+      }
+    ],
+    "timestamp": 1771909874806
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 10,
+        "yOffset": 99.68000000000112,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 194.6800000000011,
+        "topSymbolId": 51
+      }
+    ],
+    "timestamp": 1771909874873
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 11,
+        "yOffset": 56.19999999999992,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 151.19999999999993,
+        "topSymbolId": 52
+      }
+    ],
+    "timestamp": 1771909874939
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 12,
+        "yOffset": 13.16000000000028,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 108.16000000000031,
+        "topSymbolId": 46
+      }
+    ],
+    "timestamp": 1771909875006
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 12,
+        "yOffset": 159.8999999999999,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 254.8999999999999,
+        "topSymbolId": 46
+      }
+    ],
+    "timestamp": 1771909875073
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 13,
+        "yOffset": 116.4200000000007,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 211.4200000000007,
+        "topSymbolId": 53
+      }
+    ],
+    "timestamp": 1771909875139
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 14,
+        "yOffset": 73.16000000000028,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 168.1600000000003,
+        "topSymbolId": 54
+      }
+    ],
+    "timestamp": 1771909875206
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 15,
+        "yOffset": 29.89999999999987,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 124.89999999999986,
+        "topSymbolId": 41
+      }
+    ],
+    "timestamp": 1771909875273
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 15,
+        "yOffset": 176.63999999999945,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 271.6399999999994,
+        "topSymbolId": 41
+      }
+    ],
+    "timestamp": 1771909875340
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 16,
+        "yOffset": 133.16000000000025,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 228.16000000000025,
+        "topSymbolId": 51
+      }
+    ],
+    "timestamp": 1771909875418
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 0,
+        "finalSymbols": [
+          45,
+          45,
+          45,
+          52
+        ]
+      }
+    ],
+    "timestamp": 1771909875423
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 1 (orderIndex=1)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 1 (orderIndex=1)"
+    ],
+    "timestamp": 1771909875688
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:15.687] [WARN] Audio not found: ReelStop_V2",
+    "args": [
+      "[SlotEngine] [05:11:15.687] [WARN] Audio not found: ReelStop_V2"
+    ],
+    "timestamp": 1771909875688
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 6434.7,
+        "elapsedMs": 1646.9,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 0
+      }
+    ],
+    "timestamp": 1771909875689
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 6435.8,
+        "elapsedMs": 1648,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 1
+      }
+    ],
+    "timestamp": 1771909875689
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 1,
+        "symbols": [
+          43,
+          43,
+          54,
+          53
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909875689
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 20,
+        "targetSymbols": [
+          43,
+          43,
+          54,
+          53
+        ],
+        "targetPosition": 19,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909875689
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 1,
+        "finalSymbols": [
+          43,
+          43,
+          54,
+          53
+        ]
+      }
+    ],
+    "timestamp": 1771909876900
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 2 (orderIndex=2)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 2 (orderIndex=2)"
+    ],
+    "timestamp": 1771909877139
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:17.139] [WARN] Audio not found: ReelStop_V3",
+    "args": [
+      "[SlotEngine] [05:11:17.139] [WARN] Audio not found: ReelStop_V3"
+    ],
+    "timestamp": 1771909877140
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 7887,
+        "elapsedMs": 3099.2,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 1
+      }
+    ],
+    "timestamp": 1771909877141
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 7887.5,
+        "elapsedMs": 3099.7,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 2
+      }
+    ],
+    "timestamp": 1771909877141
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 2,
+        "symbols": [
+          41,
+          42,
+          43,
+          44
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909877141
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 36,
+        "targetSymbols": [
+          41,
+          42,
+          43,
+          44
+        ],
+        "targetPosition": 24,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909877141
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 2,
+        "finalSymbols": [
+          41,
+          42,
+          43,
+          44
+        ]
+      }
+    ],
+    "timestamp": 1771909878275
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 3 (orderIndex=3)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 3 (orderIndex=3)"
+    ],
+    "timestamp": 1771909878522
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:18.521] [WARN] Audio not found: ReelStop_V1",
+    "args": [
+      "[SlotEngine] [05:11:18.521] [WARN] Audio not found: ReelStop_V1"
+    ],
+    "timestamp": 1771909878522
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 9268.5,
+        "elapsedMs": 4480.7,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 2
+      }
+    ],
+    "timestamp": 1771909878523
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 9269.2,
+        "elapsedMs": 4481.4,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 3
+      }
+    ],
+    "timestamp": 1771909878523
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 3,
+        "symbols": [
+          43,
+          44,
+          45,
+          53
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909878523
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 52,
+        "targetSymbols": [
+          43,
+          44,
+          45,
+          53
+        ],
+        "targetPosition": 50,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909878523
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 3,
+        "finalSymbols": [
+          43,
+          44,
+          45,
+          53
+        ]
+      }
+    ],
+    "timestamp": 1771909879667
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 4 (orderIndex=4)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 4 (orderIndex=4)"
+    ],
+    "timestamp": 1771909879895
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:19.894] [WARN] Audio not found: ReelStop_V2",
+    "args": [
+      "[SlotEngine] [05:11:19.894] [WARN] Audio not found: ReelStop_V2"
+    ],
+    "timestamp": 1771909879895
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 10642.6,
+        "elapsedMs": 5854.8,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 3
+      }
+    ],
+    "timestamp": 1771909879896
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 10643,
+        "elapsedMs": 5855.2,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 4
+      }
+    ],
+    "timestamp": 1771909879896
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 4,
+        "symbols": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909879896
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 6,
+        "targetSymbols": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "targetPosition": 25,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909879896
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 4,
+        "finalSymbols": [
+          42,
+          43,
+          44,
+          45
+        ]
+      }
+    ],
+    "timestamp": 1771909881034
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:21.279] [DEBUG] [MechanicHost] No plugins support event type \"spinEnd\" (roundId=default, spinSeq=1)",
+    "args": [
+      "[SlotEngine] [05:11:21.279] [DEBUG] [MechanicHost] No plugins support event type \"spinEnd\" (roundId=default, spinSeq=1)"
+    ],
+    "timestamp": 1771909881280
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:21.280] [DEBUG] [MechanicHost] Dispatching stage event to 1 plugin(s) (roundId=default, spinSeq=1, stageIndex=0, stageType=base)",
+    "args": [
+      "[SlotEngine] [05:11:21.280] [DEBUG] [MechanicHost] Dispatching stage event to 1 plugin(s) (roundId=default, spinSeq=1, stageIndex=0, stageType=base)"
+    ],
+    "timestamp": 1771909881280
+  },
+  {
+    "type": "log",
+    "text": "[GameUI] Spin complete: 5812c4ff-d375-42e3-b8a0-3f794ec5dda5, win: $0.00",
+    "args": [
+      "[GameUI] Spin complete: 5812c4ff-d375-42e3-b8a0-3f794ec5dda5, win: $0.00"
+    ],
+    "timestamp": 1771909881281
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 12025,
+        "elapsedMs": 7237.2,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 4
+      }
+    ],
+    "timestamp": 1771909881282
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] landing order [object Object]",
+    "args": [
+      "[DEV_REEL] landing order",
+      {
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "landedOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "timestamp": 1771909881282
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "ALL_REELS_STOPPED",
+        "nowMs": 12026.3,
+        "elapsedMs": 7238.5,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909881282
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] outcome vs display OK [object Object]",
+    "args": [
+      "[DEV_REEL] outcome vs display OK",
+      {
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "reels": 5,
+        "rows": 4
+      }
+    ],
+    "timestamp": 1771909881282
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "SPIN_COMPLETE",
+        "nowMs": 12029.8,
+        "elapsedMs": 7242,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909881282
+  },
+  {
+    "type": "log",
+    "text": "[GameUI] Bet deducted: $1.00, new balance: $998.00",
+    "args": [
+      "[GameUI] Bet deducted: $1.00, new balance: $998.00"
+    ],
+    "timestamp": 1771909882512
+  },
+  {
+    "type": "log",
+    "text": "[GameUI] Spin started with bet: $1.00",
+    "args": [
+      "[GameUI] Spin started with bet: $1.00"
+    ],
+    "timestamp": 1771909882512
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:22.512] [WARN] Audio not found: ReelStart",
+    "args": [
+      "[SlotEngine] [05:11:22.512] [WARN] Audio not found: ReelStart"
+    ],
+    "timestamp": 1771909882514
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:22.512] [WARN] Audio not found: ReelSpinLoop",
+    "args": [
+      "[SlotEngine] [05:11:22.512] [WARN] Audio not found: ReelSpinLoop"
+    ],
+    "timestamp": 1771909882514
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:22.513] [DEBUG] [MechanicHost] Dispatching spinStart event to 1 plugin(s) (roundId=default, spinSeq=2)",
+    "args": [
+      "[SlotEngine] [05:11:22.513] [DEBUG] [MechanicHost] Dispatching spinStart event to 1 plugin(s) (roundId=default, spinSeq=2)"
+    ],
+    "timestamp": 1771909882514
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "SPIN_REQUESTED",
+        "nowMs": 13260.6,
+        "elapsedMs": 0,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909882514
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "SPIN_STARTED",
+        "nowMs": 13260.8,
+        "elapsedMs": 0.2,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909882514
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "RESULT_RECEIVED",
+        "nowMs": 13261.2,
+        "elapsedMs": 0.6,
+        "spinId": "5812c4ff-d375-42e3-b8a0-3f794ec5dda5",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909882514
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 17,
+        "yOffset": 117.2599999999984,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 212.2599999999984,
+        "topSymbolId": 45
+      }
+    ],
+    "timestamp": 1771909882588
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 18,
+        "yOffset": 132.7400000000016,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 227.7400000000016,
+        "topSymbolId": 45
+      }
+    ],
+    "timestamp": 1771909882710
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 0 (orderIndex=0)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 0 (orderIndex=0)"
+    ],
+    "timestamp": 1771909882808
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:22.807] [WARN] Audio not found: ReelStop_V1",
+    "args": [
+      "[SlotEngine] [05:11:22.807] [WARN] Audio not found: ReelStop_V1"
+    ],
+    "timestamp": 1771909882808
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "STOP_SEQUENCE_START",
+        "nowMs": 13554.8,
+        "elapsedMs": 294.2,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909882809
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 13555.2,
+        "elapsedMs": 294.6,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 0
+      }
+    ],
+    "timestamp": 1771909882809
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 0,
+        "symbols": [
+          43,
+          44,
+          45,
+          41
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909882809
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 20,
+        "targetSymbols": [
+          43,
+          44,
+          45,
+          41
+        ],
+        "targetPosition": 47,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909882809
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 20,
+        "yOffset": 75.47999999999918,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 170.47999999999917,
+        "topSymbolId": 52
+      }
+    ],
+    "timestamp": 1771909882809
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 21,
+        "yOffset": 32.44000000000156,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 127.44000000000153,
+        "topSymbolId": 54
+      }
+    ],
+    "timestamp": 1771909882897
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 22,
+        "yOffset": 106.22000000000077,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 201.22000000000077,
+        "topSymbolId": 51
+      }
+    ],
+    "timestamp": 1771909883008
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 24,
+        "yOffset": 19.479999999999137,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 114.47999999999911,
+        "topSymbolId": 53
+      }
+    ],
+    "timestamp": 1771909883146
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 25,
+        "yOffset": 93.69999999999993,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 188.69999999999993,
+        "topSymbolId": 54
+      }
+    ],
+    "timestamp": 1771909883263
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 27,
+        "yOffset": 6.959999999998331,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 101.95999999999833,
+        "topSymbolId": 42
+      }
+    ],
+    "timestamp": 1771909883400
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 28,
+        "yOffset": 139.69999999999993,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 234.69999999999993,
+        "topSymbolId": 43
+      }
+    ],
+    "timestamp": 1771909883543
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 30,
+        "yOffset": 82.65999999999832,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 177.65999999999832,
+        "topSymbolId": 52
+      }
+    ],
+    "timestamp": 1771909883722
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 32,
+        "yOffset": 54.65999999999832,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 149.65999999999832,
+        "topSymbolId": 51
+      }
+    ],
+    "timestamp": 1771909883862
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL_DIRECTION] [object Object]",
+    "args": [
+      "[DEV_REEL_DIRECTION]",
+      {
+        "reelIndex": 0,
+        "scrollPosition": 33,
+        "yOffset": 99.39999999999992,
+        "deltaSign": "+ (down)",
+        "topSymbolY": 194.39999999999992,
+        "topSymbolId": 42
+      }
+    ],
+    "timestamp": 1771909883958
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 0,
+        "finalSymbols": [
+          43,
+          44,
+          45,
+          41
+        ]
+      }
+    ],
+    "timestamp": 1771909884002
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 1 (orderIndex=1)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 1 (orderIndex=1)"
+    ],
+    "timestamp": 1771909884236
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:24.236] [WARN] Audio not found: ReelStop_V2",
+    "args": [
+      "[SlotEngine] [05:11:24.236] [WARN] Audio not found: ReelStop_V2"
+    ],
+    "timestamp": 1771909884237
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 14983.6,
+        "elapsedMs": 1723,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 0
+      }
+    ],
+    "timestamp": 1771909884238
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 14984.2,
+        "elapsedMs": 1723.6,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 1
+      }
+    ],
+    "timestamp": 1771909884238
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 1,
+        "symbols": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909884238
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 54,
+        "targetSymbols": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "targetPosition": 32,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909884238
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 1,
+        "finalSymbols": [
+          42,
+          43,
+          44,
+          45
+        ]
+      }
+    ],
+    "timestamp": 1771909885448
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 2 (orderIndex=2)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 2 (orderIndex=2)"
+    ],
+    "timestamp": 1771909885703
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:25.703] [WARN] Audio not found: ReelStop_V3",
+    "args": [
+      "[SlotEngine] [05:11:25.703] [WARN] Audio not found: ReelStop_V3"
+    ],
+    "timestamp": 1771909885704
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 16450.5,
+        "elapsedMs": 3189.9,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 1
+      }
+    ],
+    "timestamp": 1771909885705
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 16451.1,
+        "elapsedMs": 3190.5,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 2
+      }
+    ],
+    "timestamp": 1771909885705
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 2,
+        "symbols": [
+          45,
+          46,
+          41,
+          42
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909885705
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 25,
+        "targetSymbols": [
+          45,
+          46,
+          41,
+          42
+        ],
+        "targetPosition": 28,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909885705
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 2,
+        "finalSymbols": [
+          45,
+          46,
+          41,
+          42
+        ]
+      }
+    ],
+    "timestamp": 1771909886920
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 3 (orderIndex=3)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 3 (orderIndex=3)"
+    ],
+    "timestamp": 1771909887156
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:27.155] [WARN] Audio not found: ReelStop_V1",
+    "args": [
+      "[SlotEngine] [05:11:27.155] [WARN] Audio not found: ReelStop_V1"
+    ],
+    "timestamp": 1771909887156
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 17903.2,
+        "elapsedMs": 4642.6,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 2
+      }
+    ],
+    "timestamp": 1771909887156
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 17903.6,
+        "elapsedMs": 4643,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 3
+      }
+    ],
+    "timestamp": 1771909887157
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 3,
+        "symbols": [
+          45,
+          46,
+          41,
+          42
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909887157
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 57,
+        "targetSymbols": [
+          45,
+          46,
+          41,
+          42
+        ],
+        "targetPosition": 28,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909887157
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 3,
+        "finalSymbols": [
+          45,
+          46,
+          41,
+          42
+        ]
+      }
+    ],
+    "timestamp": 1771909888291
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] processNextReelStop: requesting stop for reel 4 (orderIndex=4)",
+    "args": [
+      "[DEV_REEL] processNextReelStop: requesting stop for reel 4 (orderIndex=4)"
+    ],
+    "timestamp": 1771909888528
+  },
+  {
+    "type": "warn",
+    "text": "[SlotEngine] [05:11:28.528] [WARN] Audio not found: ReelStop_V2",
+    "args": [
+      "[SlotEngine] [05:11:28.528] [WARN] Audio not found: ReelStop_V2"
+    ],
+    "timestamp": 1771909888529
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 19275.7,
+        "elapsedMs": 6015.1,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 3
+      }
+    ],
+    "timestamp": 1771909888529
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOP_REQUESTED",
+        "nowMs": 19276.2,
+        "elapsedMs": 6015.6,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 4
+      }
+    ],
+    "timestamp": 1771909888530
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] onStopReel outcome [object Object]",
+    "args": [
+      "[DEV_REEL] onStopReel outcome",
+      {
+        "stageIndex": 0,
+        "reelIndex": 4,
+        "symbols": [
+          91,
+          91,
+          51,
+          52
+        ],
+        "rowCount": 4
+      }
+    ],
+    "timestamp": 1771909888530
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] planStop [object Object]",
+    "args": [
+      "[DEV_REEL] planStop",
+      {
+        "currentPosition": 27,
+        "targetSymbols": [
+          91,
+          91,
+          51,
+          52
+        ],
+        "targetPosition": 4,
+        "spinDistance": 14,
+        "visibleRows": 4
+      }
+    ],
+    "timestamp": 1771909888530
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] beginStop finalSymbols [object Object]",
+    "args": [
+      "[DEV_REEL] beginStop finalSymbols",
+      {
+        "reelIndex": 4,
+        "finalSymbols": [
+          91,
+          91,
+          51,
+          52
+        ]
+      }
+    ],
+    "timestamp": 1771909889686
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:29.935] [DEBUG] [MechanicHost] No plugins support event type \"spinEnd\" (roundId=default, spinSeq=2)",
+    "args": [
+      "[SlotEngine] [05:11:29.935] [DEBUG] [MechanicHost] No plugins support event type \"spinEnd\" (roundId=default, spinSeq=2)"
+    ],
+    "timestamp": 1771909889935
+  },
+  {
+    "type": "debug",
+    "text": "[SlotEngine] [05:11:29.935] [DEBUG] [MechanicHost] Dispatching stage event to 1 plugin(s) (roundId=default, spinSeq=2, stageIndex=0, stageType=base)",
+    "args": [
+      "[SlotEngine] [05:11:29.935] [DEBUG] [MechanicHost] Dispatching stage event to 1 plugin(s) (roundId=default, spinSeq=2, stageIndex=0, stageType=base)"
+    ],
+    "timestamp": 1771909889935
+  },
+  {
+    "type": "log",
+    "text": "[GameUI] Spin complete: 5334c019-4710-41ed-9936-00aecf0c98b3, win: $0.00",
+    "args": [
+      "[GameUI] Spin complete: 5334c019-4710-41ed-9936-00aecf0c98b3, win: $0.00"
+    ],
+    "timestamp": 1771909889936
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "REEL_STOPPED",
+        "nowMs": 20682.2,
+        "elapsedMs": 7421.6,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reelIndex": 4
+      }
+    ],
+    "timestamp": 1771909889937
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] landing order [object Object]",
+    "args": [
+      "[DEV_REEL] landing order",
+      {
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "landedOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "timestamp": 1771909889937
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "ALL_REELS_STOPPED",
+        "nowMs": 20683,
+        "elapsedMs": 7422.4,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909889937
+  },
+  {
+    "type": "log",
+    "text": "[DEV_REEL] outcome vs display OK [object Object]",
+    "args": [
+      "[DEV_REEL] outcome vs display OK",
+      {
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "reels": 5,
+        "rows": 4
+      }
+    ],
+    "timestamp": 1771909889937
+  },
+  {
+    "type": "log",
+    "text": "[DEV_SPIN_TIMING] [object Object]",
+    "args": [
+      "[DEV_SPIN_TIMING]",
+      {
+        "event": "SPIN_COMPLETE",
+        "nowMs": 20684.5,
+        "elapsedMs": 7423.9,
+        "spinId": "5334c019-4710-41ed-9936-00aecf0c98b3",
+        "turboEnabled": false,
+        "quickStopTriggered": false,
+        "stopOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stopDelayMs": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "timestamp": 1771909889937
+  }
+]
