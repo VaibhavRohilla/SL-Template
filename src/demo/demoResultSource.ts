@@ -98,7 +98,6 @@ function getDemoLineWinOutcome(bet: number): SpinOutcome {
 export class DemoResultSource implements ISpinResultSource {
   private readonly mock: MockResultSource;
   private spinCount = 0;
-
   constructor(config: SlotConfig = slotConfig, seed?: number) {
     this.mock = new MockResultSource(config, seed);
   }
@@ -108,8 +107,9 @@ export class DemoResultSource implements ISpinResultSource {
   }
 
   async getSpinResult(request: SpinRequest): Promise<SpinOutcome> {
+    
     // const isFirstSpin = this.spinCount === 0;
-    // this.spinCount += 1;
+    this.spinCount += 1;
 
     // if (isFirstSpin) {
     //   return getDemoLineWinOutcome(request.bet);

@@ -5,7 +5,7 @@
 **Skip Animations is a branch; Real Turbo is a profile; they must not be coupled.**
 
 - **Skip Animations** (API: `turboMode: true`) = instant snap + applyFinalState, no reel motion, no timeline.
-- **Real Turbo** (API: `speedProfile: 'turbo'`) = normal path (onStopReel sequence + onPresentWins) with scaled time budgets (reel motion + stop spacing + win timeline).
+- **Real Turbo** (API: `speedProfile: 'turbo'`) = normal path (onStopReel sequence + onPresentWins) with **shorter durations** from config (duration-based; no time scale).
 - Never couple skipAnimations into “fast turbo” timing math. Skip is a branch, not a speed profile.
 - Turbo/skip are presentation-only; no backend payload or math changes.
 
@@ -14,11 +14,11 @@
 ## Required structure
 
 - **SpeedProfile** = `'normal' | 'turbo'`.
-- **Where it applies:**
-  - **Reels:** `ReelsView.setTimeScale(turboTimeScale)` only when `speedProfile === 'turbo'` **and** `!turboMode` (Real Turbo). Config: `SpinFeelConfig.turbo.timeScale` (1–10, default 2). Reset to 1 in `onSpinEnd` (finally-safe).
-  - **SpinFlow:** `effectiveDeltaMs = deltaMs * speedMultiplier` where `speedMultiplier = (speedProfile === 'turbo') ? getTurboTimeScale() : 1`. **turboMode must NOT appear in this condition.** `getTurboTimeScale()` reads `config.turbo.timeScale` (clamped 1–10).
-  - **Stop delays:** When `speedProfile === 'turbo'` and `!turboMode`, use `config.turbo.stopDelayMs` if present; else `Math.max(0, Math.floor(baseDelay / turboTimeScale))`.
-  - **TweenService (optional):** When Real Turbo spin starts, `tweenService.setTimeScale(turboTimeScale)`; reset to 1 in `onSpinEnd`.
+- **Where it applies (duration-based turbo):**
+  - **Reels:** When Real Turbo, `ReelsView.setTurboDurations(config.turbo)` at spin start; `setTurboDurations(null)` in `onSpinEnd`. Time scale is **not** set for turbo (stays 1).
+  - **SpinFlow:** No delta scaling. `getMinSpinMs()` returns `config.turbo.minSpinMs` when turbo (if set), else base `minSpinMs`. `getStopDelayForReel()` returns `config.turbo.stopDelayMs` when turbo.
+  - **Reel stop/snap:** Reels receive duration getters from ReelsView; when turbo, use `config.turbo.stopMotionDurationMs` / `snapDurationMs` if set.
+  - **Cascade:** Drop/fill use `config.turbo.dropDurationMs` / `fillDurationMs` when set via ReelsView getters.
 
 ## Rules
 
@@ -30,8 +30,8 @@
 
 | File | Change |
 |------|--------|
-| `SpinFlow.ts` | `SpeedProfile` type; `StartSpinOptions.speedProfile`; private `speedProfile`; `getTurboTimeScale()` from config (1–10); `effectiveDeltaMs` uses **only** `speedProfile` (not turboMode); `getStopDelayForReel(reelIndex)` uses `config.turbo.stopDelayMs` or scaled base; `onSpinEnd` callback; `releaseLockAndNotify()` used for all lock release paths; snapshot includes speedProfile. |
-| `SlotScene.ts` | `speedProfile` state; `setSpeedProfile(profile)`; pass `speedProfile` in `startSpin`; set `reelsView.setTimeScale(turboTimeScale)` and `tweenService.setTimeScale(turboTimeScale)` only when Real Turbo (`speedProfile === 'turbo' && !turboMode`); register `onSpinEnd` to reset both to 1. |
+| `SpinFlow.ts` | `SpeedProfile` type; `getMinSpinMs()` (turbo uses `config.turbo.minSpinMs` when set); no delta scaling; `getStopDelayForReel()` uses `config.turbo.stopDelayMs` when turbo; snapshot includes speedProfile. |
+| `SlotScene.ts` | `speedProfile` state; `setSpeedProfile(profile)`; pass `speedProfile` in `startSpin`; when Real Turbo call `reelsView.setTurboDurations(config.turbo)` (do **not** set time scale); `onSpinEnd` calls `setTurboDurations(null)` and resets time scale to 1. |
 | `SlotGameScene.ts` | `setSpeedProfile(profile)` delegating to slotScene. |
 | `App.ts` (Game) | `setSpeedProfile(profile)` delegating to slotGameScene. |
 
@@ -43,8 +43,8 @@
 
 ## DEV proof logs
 
-- **DEV_TURBO_FAST_TRACE:** Real Turbo active at spin start; reelsView/timeScale set and reset.
-- **DEV_SPIN_TIMING / DEV_SPIN_TIMING_TRACE:** Milestones include `speedProfile`, `turboTimeScale`, `stopDelayMode` (base vs turbo config vs turbo scaled).
+- **DEV_TURBO_FAST_TRACE:** Real Turbo active at spin start; turbo durations set and reset.
+- **DEV_SPIN_TIMING / DEV_SPIN_TIMING_TRACE:** Milestones include `speedProfile`, `durationBasedTurbo`, `stopDelayMode` (base vs turbo config).
 
 ---
 

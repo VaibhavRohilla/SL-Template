@@ -14,27 +14,38 @@ export const spinFeelConfig: SpinFeelConfig = {
     presetName: 'template-premium',
     spinSpeedPxPerSec: 3400,
     maxScrollPerFrame: 0.95,
-    startDelayMs: 0,
-    reelStopOrder: [4, 0, 3, 1, 2],
+    startDelayMs: [0, 120, 240, 360, 480],
+    reelStopOrder: [0, 1, 2, 3, 4],
     // Delay (ms) before each reel is requested to stop. Smaller step = reels stop closer together.
     // [0, 80, 160, 240, 320] = 80 ms between each reel (was 140 ms for a tighter cascade).
     stopDelayMs: [0, 120, 240, 360, 480] ,
     minSpinMs: 800,
     maxSpinMs: 10000,
-    spinEase: 'linear',
+    spinEase: 'backInOut',
     stopMotion: {
         style: 'spring',
         durationMs: 480,
+        overshootStrength: 1.4,
+    },
+    startMotion: {
+        style: 'spring',
+        durationMs: 380,
         overshootStrength: 1.4,
     },
     snap: {
         thresholdPx: 3,
         durationMs: 35,
     },
+    // Duration-based turbo: shorter running times (no time scale) for a more polished feel.
     turbo: {
-        timeScale: 1.2,
         skipWinAnimations: false,
         stopDelayMs: 60,
+        startDelayMs: 25,
+        minSpinMs: 400,
+        stopMotionDurationMs: 280,
+        snapDurationMs: 22,
+        dropDurationMs: 240,
+        fillDurationMs: 180,
     },
     anticipation: {
         enabled: true,
