@@ -67,7 +67,7 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.NINE,
       name: 'Nine',
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       displayType: 'sprite',
       spriteKey: 'symbols/9',
       isHighValue: false,
@@ -75,7 +75,7 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.TEN,
       name: 'Ten',
-      scaleMode: 'fit',
+      scaleMode: 'cover',
 
       displayType: 'sprite',
       spriteKey: 'symbols/10',
@@ -83,7 +83,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.JACK,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'Jack',
       displayType: 'sprite',
       spriteKey: 'symbols/J',
@@ -91,7 +91,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.QUEEN,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'Queen',
       displayType: 'sprite',
       spriteKey: 'symbols/Q',
@@ -99,7 +99,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.KING,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'King',
       displayType: 'sprite',
       spriteKey: 'symbols/K',
@@ -107,7 +107,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.ACE,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'Ace',
       displayType: 'sprite',
       spriteKey: 'symbols/A',
@@ -115,7 +115,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.BRONZE_PIGGY,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'Bronze Piggy',
       displayType: 'sprite',
       spriteKey: 'symbols/Bronze_Piggy',
@@ -124,7 +124,7 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.SILVER_PIGGY,
       name: 'Silver Piggy',
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       displayType: 'sprite',
       spriteKey: 'symbols/Silver_Piggy',
       isHighValue: true,
@@ -132,7 +132,7 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.GOLD_PIGGY,
       name: 'Gold Piggy',
-      scaleMode: 'fit',
+      scaleMode: 'cover',
 
       displayType: 'sprite',
       spriteKey: 'symbols/Gold_Piggy',
@@ -140,7 +140,7 @@ export const slotConfig: SlotConfig = {
     },
     {
       id: SymbolId.ROSE_GOLD_PIGGY,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'Rose Gold Piggy',
       displayType: 'sprite',
       spriteKey: 'symbols/Rose_Gold_Piggy',
@@ -149,14 +149,14 @@ export const slotConfig: SlotConfig = {
     {
       id: SymbolId.WILD,
       name: 'Wild',
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       displayType: 'sprite',
       spriteKey: 'symbols/WILD',
       isHighValue: true,
     },
     {
       id: SymbolId.SCATTER,
-      scaleMode: 'fit',
+      scaleMode: 'cover',
       name: 'Scatter',
       displayType: 'sprite',
       spriteKey: 'symbols/SCATTER',

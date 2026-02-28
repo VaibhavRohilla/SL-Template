@@ -111,9 +111,9 @@ export class DemoResultSource implements ISpinResultSource {
     // const isFirstSpin = this.spinCount === 0;
     this.spinCount += 1;
 
-    // if (isFirstSpin) {
-    //   return getDemoLineWinOutcome(request.bet);
-    // }
+    if (this.spinCount === 1) {
+      // return getDemoLineWinOutcome(request.bet);
+    }
     return this.mock.getSpinResult(request);
   }
 }

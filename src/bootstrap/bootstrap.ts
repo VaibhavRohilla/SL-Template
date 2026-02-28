@@ -6,9 +6,10 @@
  */
 
 import { Game, type GameOptions } from '@fnx/sl-engine';
+import type { ViewOrientationPayload } from '../types/orientation.js';
 import { slotConfig } from '../config/slotConfig.js';
 import { spinFeelConfig } from '../brand/SpinFeel.js';
-import { bootConfig as BOOTCONFIG, backgroundConfig, frameConfig, dimensions } from '../brand/BrandConfig.js';
+import { bootConfig as BOOTCONFIG, backgroundConfig, frameConfig, dimensions, orientationConfig } from '../brand/BrandConfig.js';
 import { GameUI } from '../ui/index.js';
 import { DemoResultSource } from '../demo/demoResultSource.js';
 
@@ -66,7 +67,7 @@ export async function bootstrap(): Promise<void> {
     decimals: 2,
   });
 
-  const gameOptions: GameOptions = {
+  const gameOptions = {
     canvas: 'game-canvas',
     width: dimensions.width,
     height: dimensions.height,
@@ -86,9 +87,15 @@ export async function bootstrap(): Promise<void> {
     gameUI,
     winFormatter: gameUI,
     logLevel: 'debug',
+    orientation: orientationConfig,
+    onOrientationChange: (payload: ViewOrientationPayload) => {
+      document.body.dataset.orientation = payload.orientation;
+      document.body.classList.remove('orientation-landscape', 'orientation-portrait');
+      document.body.classList.add(`orientation-${payload.orientation}`);
+    },
   };
 
-  const game = new Game(gameOptions);
+  const game = new Game(gameOptions as unknown as GameOptions);
 
   try {
     await game.start();
@@ -96,10 +103,27 @@ export async function bootstrap(): Promise<void> {
     wireSpinButton(game);
     wireSkipAnimationsButton();
     wireTurboFastButton();
+    wireOrientationChange(game);
     console.log('✅ Game started successfully');
   } catch (error) {
     console.error('❌ Failed to start game:', error);
   }
+}
+
+/**
+ * Subscribe to SDK orientation events (optional: for extra logic beyond onOrientationChange hook).
+ * Body class is already set via gameOptions.onOrientationChange.
+ */
+function wireOrientationChange(gameInstance: Game): void {
+  const gameWithBus = gameInstance as Game & { getEventBus?: () => { on: (e: string, fn: (p: ViewOrientationPayload) => void) => void } | null };
+  const bus = typeof gameWithBus.getEventBus === 'function' ? gameWithBus.getEventBus() : null;
+  if (!bus) return;
+
+  bus.on('view:orientationChange', (payload: ViewOrientationPayload) => {
+    if (typeof console !== 'undefined' && console.debug) {
+      console.debug('[Orientation]', payload.orientation, payload.viewportWidth, 'x', payload.viewportHeight);
+    }
+  });
 }
 
 /**

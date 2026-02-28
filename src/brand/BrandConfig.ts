@@ -5,6 +5,8 @@
  */
 
 import type { BackgroundConfig, SlotFrameConfig, BootConfig } from '@fnx/sl-engine';
+import type { OrientationConfig } from '../types/orientation.js';
+import { DEFAULT_ORIENTATION_BREAKPOINT_PX } from '../types/orientation.js';
 import { UI_ASSETS } from '../ui/reference/AssetMap.js';
 
 /**
@@ -50,7 +52,7 @@ export const frameConfig = {
   layer: 'game' as const,
   anchor: 'center' as const,
   scaleMode: 'fill' as const,
-  offset: [0, 0] as [number, number],
+  offset: [0, 40] as [number, number],
   scale: 1,
   zIndex: 100,
   opacity: 1,
@@ -107,10 +109,53 @@ export const dimensions = {
   width: 1920,
   height: 1080,
   symbolWidth: 180,
-  symbolHeight: 180,
+  symbolHeight: 150,
   symbolGap: 10,
-  reelGap: 50,
+  reelGap: 70,
 } as const;
+
+/**
+ * Orientation detection and per-orientation view config.
+ * When landscape/portrait are set, the engine switches background, frame, and layout on orientation change.
+ * Also emits 'view:orientationChange' and calls onOrientationChange hook for bet bar / custom UI.
+ */
+export const orientationConfig: OrientationConfig = {
+  enabled: true,
+  breakpointPx: DEFAULT_ORIENTATION_BREAKPOINT_PX,
+  landscape: {
+    width: dimensions.width,
+    height: dimensions.height,
+    layout: {
+      symbolWidth: dimensions.symbolWidth,
+      symbolHeight: dimensions.symbolHeight,
+      symbolGap: dimensions.symbolGap,
+      reelGap: dimensions.reelGap,
+    },
+    background: backgroundConfig,
+    frame: frameConfig,
+  },
+  portrait: {
+    width: 1080,
+    height: 1920,
+    layout: {
+      symbolWidth: 140,
+      symbolHeight: 120,
+      symbolGap: 8,
+      reelGap: 40,
+    },
+    background: {
+      type: 'image',
+      imageKey: UI_ASSETS.SCENE.BACKGROUND_PORTRAIT,
+      scaleMode: 'cover',
+      opacity: 1,
+      gradientAngle: 0,
+    },
+    frame: {
+      ...frameConfig,
+      offset: [0, 20] as [number, number],
+    },
+  },
+};
 
 export default {
   colors,
@@ -118,4 +163,5 @@ export default {
   frameConfig,
   bootConfig,
   dimensions,
+  orientationConfig,
 };

@@ -123,7 +123,7 @@
       left: 50%;
     }
 
-    /* Portrait mode warning placeholder (actual implementation in Pixi) */
+    /* Portrait mode warning placeholder (optional overlay; body.orientation-* set by SDK onOrientationChange) */
     #portrait-warning {
       display: none;
       position: fixed;
@@ -132,7 +132,7 @@
       right: 0;
       bottom: 0;
       background: #000000;
-      color: 0xffffff;
+      color: #ffffff;
       font-size: 18px;
       text-align: center;
       padding: 40px;
@@ -142,11 +142,21 @@
       align-items: center;
     }
 
-    /* Show portrait warning on mobile portrait */
+    /* Show portrait warning on narrow viewport in portrait (1024px = UI overlay only; SDK breakpoint is in BrandConfig.orientationConfig.breakpointPx, default 768) */
     @media screen and (max-width: 1024px) and (orientation: portrait) {
       #portrait-warning {
         display: flex;
       }
+    }
+
+    /* Bet bar / UI layout by SDK orientation (body.orientation-portrait | .orientation-landscape set by GameOptions.onOrientationChange on view:orientationChange) */
+    body.orientation-portrait #game-ui {
+      padding: 12px;
+    }
+    body.orientation-portrait #game-ui > div {
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px 14px;
     }
   </style>
 </head>
